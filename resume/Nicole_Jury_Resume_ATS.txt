@@ -1,0 +1,60 @@
+NICOLE JURY
+Cleveland, OH | (216) 544-4367 | cnjury@gmail.com | linkedin.com/in/nicolejury
+AI Enablement · Customer Success · Growth Operations
+
+PROFILE
+Senior operator with 15+ years turning messy workflows into adoption, retention, and executive clarity. Built CRM and QBR systems that protect recurring revenue, led marketing and customer operations for a national platform serving 100K+ monthly users, and partnered across product, sales, and operations so new tools actually get used. Completing MIT Professional Education’s Applied Agentic AI for Organizational Transformation (Prof. John Williams and Dr. Abel Sanchez) to lead enablement from use-case intake through last-mile adoption, with literacy in ecosystem integration, governance, agent risk, and ethics.
+
+SELECTED IMPACT
+- Cut monthly churn 15%
+- Held 90% average CSAT
+- Helped scale a platform to 100K+ monthly users
+- Managed $1M+ multi-channel budget
+- Reduced inbound call volume 80% with automated intake
+
+EXPERIENCE
+
+Principal Consultant, Customer Strategy | Paradise Unlocked | Cleveland, OH | Dec 2024 – Present
+- Built Salesforce and HubSpot CRM workflows for onboarding, lifecycle, and retention.
+- Used customer behavior data to improve conversion, engagement, and the end-to-end client experience.
+- Applying MIT Agentic AI coursework to customer-lifecycle design: connecting tools into a digital ecosystem and moving ideas from pilot to daily practice.
+
+Vice President, Marketing | Best Food Trucks | Cleveland, OH | Oct 2023 – Apr 2025
+National food-tech platform across dozens of municipalities; 100K+ monthly users
+- Led a distributed team spanning marketing, analytics, customer success, and operations across multiple time zones.
+- Directed full-funnel strategy connecting acquisition, onboarding, and lifecycle marketing to retention and lifetime value.
+- Managed multi-channel search and social spend, optimizing for efficient acquisition and long-term customer value.
+- Used CRM and behavioral data to increase engagement and repeat usage; built reporting that tied campaigns to revenue.
+- Partnered with product, sales, and operations so customer expectations matched service delivery.
+
+Customer Success Manager | Blue Technologies | Cleveland, OH | Jun 2022 – Oct 2023
+Enterprise managed IT services and recurring revenue
+- Owned a high-value enterprise portfolio as lead for managed IT services and renewal growth.
+- Designed data-rich Quality Business Reviews that translated technical infrastructure into executive roadmaps.
+- Reduced monthly churn 15% by redesigning renewal outreach and monitoring account health before expiration.
+- Built a health-score model from usage, NPS, and support data; maintained 90% average CSAT.
+
+Principal Consultant | Intellisite Consulting | Cleveland, OH | Jan 2021 – Jan 2022
+- Architected the marketing and customer-engagement strategy later scaled to 100K+ monthly users.
+- Designed cross-functional reporting on customer behavior and revenue that became the operating cadence as VP of Marketing.
+- Partnered with developers on automated data pipelines and SQL dashboards for executive growth insights.
+
+Senior Business Intelligence Consultant | Cogent LLC | Lafayette, LA | Jan 2019 – Feb 2020
+- Built Power BI and Excel ecosystems that turned fragmented sales, donor, and operational data into executive insight.
+- Deployed Google Analytics and tracking so clients could see web performance and ROI with clarity.
+- Managed a $1M+ multi-channel budget; automated digital intake that cut call volume 80% and gave stakeholders 24/7 data access.
+
+Manufacturing Cost Analyst | Stuller, Inc. | Lafayette, LA | Dec 2017 – Dec 2018
+- Partnered with SQL developers on MicroStrategy dashboards and KPI reporting; aligned analytics across supply chain, IT, and project management.
+
+EDUCATION
+Massachusetts Institute of Technology — Professional Education
+Applied Agentic AI for Organizational Transformation (in progress, 2026)
+Faculty: Prof. John Williams and Dr. Abel Sanchez
+Coursework: generative and agentic foundations; emerging AI platforms; connecting agents to digital ecosystems; AI agents by business function; last-mile adoption (pilot to practice); cybersecurity and agent risk; governance, compliance, and agent testing; ethics and capstone.
+
+John Carroll University — Master of Education (May 2014)
+Cleveland State University — B.B.A., International Business & Business Statistics (May 2010)
+
+SKILLS
+AI enablement & last-mile adoption; Agentic workflow literacy; Digital ecosystem / CRM integration; Governance, compliance & agent-testing literacy; Responsible AI & ethics; Change management; Customer success; QBR / executive reporting; Salesforce; HubSpot; SQL; Power BI
