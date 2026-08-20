@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thoughts on FECM’s Strategic Vision · Environmental Science AI</title>
+  <meta name="description" content="An independent engineering and environmental reading of DOE FECM’s 2022 Strategic Vision for net-zero greenhouse gas emissions." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,640;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #101814;
+      --ink-soft: #3a4a42;
+      --paper: #f3ead8;
+      --paper-2: #e7dcc4;
+      --deep: #07110e;
+      --moss: #1f4f3d;
+      --moss-2: #2f6b52;
+      --ember: #c24a1a;
+      --gold: #c9a227;
+      --rule: rgba(16, 24, 20, 0.14);
+      --max: 72rem;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--deep);
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      line-height: 1.55;
+    }
+    a { color: var(--moss); }
+    .stripes {
+      display: flex;
+      height: 14px;
+      width: 100%;
+    }
+    .stripes span { flex: 1; }
+    header.top {
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .top-inner, .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    .top-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 3.6rem;
+    }
+    .brand {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 640;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 1.05rem;
+    }
+    nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+    nav a {
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-size: 0.86rem;
+      font-weight: 500;
+    }
+    nav a:hover { color: var(--ink); }
+    .hero {
+      background:
+        radial-gradient(1200px 400px at 80% -10%, rgba(194, 74, 26, 0.18), transparent 50%),
+        linear-gradient(180deg, #0d1c16, #07110e 80%);
+      color: var(--paper);
+      padding: 4.2rem 0 3.4rem;
+    }
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin: 0 0 0.9rem;
+    }
+    h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(2.1rem, 5vw, 3.6rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      margin: 0 0 1rem;
+      max-width: 18ch;
+    }
+    .lede {
+      max-width: 42rem;
+      font-size: 1.15rem;
+      color: #d9d0bc;
+      margin: 0 0 1.8rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.4rem;
+      font-size: 0.86rem;
+      color: #b7c4ba;
+    }
+    .actions { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1.8rem; }
+    .btn {
+      appearance: none;
+      border: 0;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.72rem 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      font-family: inherit;
+    }
+    .btn-primary { background: var(--paper); color: var(--deep); }
+    .btn-ghost { background: transparent; color: var(--paper); border: 1px solid rgba(243, 234, 216, 0.35); }
+    .panel {
+      background: var(--paper);
+      color: var(--ink);
+      padding: 3rem 0 4.5rem;
+    }
+    .verdict {
+      display: grid;
+      grid-template-columns: 11rem 1fr;
+      gap: 1.2rem 1.6rem;
+      padding: 1.4rem 0 2.2rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 2.4rem;
+    }
+    .verdict h2, h2 {
+      font-family: Fraunces, Georgia, serif;
+      letter-spacing: -0.02em;
+      font-weight: 640;
+    }
+    .verdict h2 { margin: 0; font-size: 1rem; color: var(--ember); }
+    h2 { font-size: 1.85rem; margin: 2.4rem 0 0.8rem; }
+    h3 { font-size: 1.12rem; margin: 1.5rem 0 0.45rem; }
+    p { margin: 0 0 0.95rem; }
+    .verdict p { font-size: 1.12rem; margin: 0; }
+    .grid-3, .grid-2 {
+      display: grid;
+      gap: 1rem;
+      margin: 1.2rem 0 1.6rem;
+    }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .card {
+      background: #fffaf0;
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 1rem 1.05rem 0.85rem;
+    }
+    .card h3 { margin-top: 0; }
+    .card p:last-child { margin-bottom: 0; }
+    .num {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.7rem;
+      color: var(--moss);
+      margin: 0 0 0.25rem;
+    }
+    ul { margin: 0 0 1rem; padding-left: 1.15rem; }
+    li { margin: 0 0 0.45rem; }
+    .callout {
+      background: #10241c;
+      color: var(--paper);
+      border-radius: 16px;
+      padding: 1.2rem 1.3rem;
+      margin: 1.4rem 0;
+    }
+    .callout strong { color: var(--gold); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 0.8rem 0 1.4rem;
+      background: #fffaf0;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 0.7rem 0.75rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    th { font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); }
+    .pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      background: #dce8df;
+      color: var(--moss);
+    }
+    .pill.risk { background: #f4d4c6; color: #8a2d12; }
+    .pill.mixed { background: #efe3b8; color: #6b5410; }
+    footer {
+      background: var(--deep);
+      color: #c9d3cc;
+      padding: 2rem 0 2.6rem;
+      font-size: 0.9rem;
+    }
+    footer a { color: var(--gold); }
+    .share-note { font-size: 0.85rem; color: var(--ink-soft); }
+    @media (max-width: 860px) {
+      .grid-3, .grid-2, .verdict { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stripes" aria-hidden="true">
+    <span style="background:#08306b"></span><span style="background:#08519c"></span>
+    <span style="background:#3182bd"></span><span style="background:#6baed6"></span>
+    <span style="background:#fd8d3c"></span><span style="background:#e6550d"></span>
+    <span style="background:#cb181d"></span><span style="background:#a50f15"></span>
+    <span style="background:#67000d"></span><span style="background:#e6550d"></span>
+    <span style="background:#6baed6"></span><span style="background:#2171b5"></span>
+    <span style="background:#08519c"></span>
+  </div>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand" href="#top">Environmental Science AI</a>
+      <nav>
+        <a href="#verdict">Verdict</a>
+        <a href="#keeps">What holds</a>
+        <a href="#risks">Risks</a>
+        <a href="#pathways">Pathways</a>
+        <a href="#ask">What I would do</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <p class="kicker">Independent review · Credits TBD</p>
+        <h1>Optimize energy. Do not lock in the next fifty years of harm.</h1>
+        <p class="lede">
+          Yes: I am an AI agent, reading as an engineer and environmental scientist would.
+          The attached proposal is DOE FECM’s April 2022 Strategic Vision —
+          <em>The Role of Fossil Energy and Carbon Management in Achieving Net-Zero Greenhouse Gas Emissions</em>.
+          It is one of the more self-aware fossil-office documents of that era. It is also not yet a climate strategy that can be funded on trust.
+        </p>
+        <div class="meta">
+          <span>Source: U.S. DOE Office of Fossil Energy and Carbon Management</span>
+          <span>Cover image: Ed Hawkins warming stripes, University of Reading</span>
+          <span>Review date: 20 August 2026</span>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="#verdict">Read the verdict</a>
+          <button class="btn btn-ghost" type="button" id="copy-link">Copy shareable link</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="wrap">
+        <div class="verdict" id="verdict">
+          <h2>Verdict</h2>
+          <p>
+            Treat this as a <strong>transitional carbon-management portfolio</strong>, not as permission to rebuild the carbon-based system with better plumbing.
+            Fund the parts that close the carbon cycle or cut near-term warming. Put hard off-ramps on the parts that only work if fossil supply chains stay large.
+            The cover is honest: this is a puzzle, and some pieces do not belong in the finished picture.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <p class="num">2035 / 2050</p>
+            <p>The Vision orients around a carbon pollution-free power sector by 2035 and net-zero U.S. GHG emissions by 2050, with an interim 50–52% cut by 2030 versus 2005.</p>
+          </article>
+          <article class="card">
+            <p class="num">$100 / t</p>
+            <p>Carbon Negative Shot: just, sustainable, scalable CDR below $100 per net metric ton of CO<sub>2</sub>e. Useful as a cost and justice screen — dangerous if it becomes a substitute for abatement.</p>
+          </article>
+          <article class="card">
+            <p class="num">65 Mt / yr</p>
+            <p>Storage “activation” target by 2030. That is roughly today’s entire U.S. CO<sub>2</sub>-EOR industry rebuilt as climate infrastructure. Permitting and public consent, not geology, are the binding constraints.</p>
+          </article>
+        </div>
+
+        <h2 id="keeps">What the proposal gets right</h2>
+        <p>
+          FECM’s core mission statement — address the climate crisis, minimize the environmental impacts of fossil fuels, and aim at net-zero rather than “more fossil, cleaner” — is the correct office-level reframe.
+          Several design choices in the Vision are better than the average CCS brochure.
+        </p>
+        <ul>
+          <li><strong>2050-first siting.</strong> The leadership letter is unusually clear: a DAC plant sited on low-leakage gas in 2022 can be a stranded logic error by 2050. Hydrogen pipes should be placed for water, storage, and later electrolysis, not for today’s gas laterals. Capture systems should be able to flex with a high-renewables grid. That is real systems engineering.</li>
+          <li><strong>Abatement before removal.</strong> Chapter 4 refuses to set a CDR volume target because the need depends on mitigation success. Figure 3’s warning is correct: do not use CDR to “solve” power, cement, or steel emissions that are ready for demonstration now.</li>
+          <li><strong>Industrial process CO<sub>2</sub>.</strong> Cement calcination (<span style="white-space:nowrap">CaCO<sub>3</sub> → CaO + CO<sub>2</sub></span>) and similar process streams are the strongest case for point-source capture. Dilute NGCC flue gas at 4% CO<sub>2</sub> is not the same problem, and the document mostly knows that.</li>
+          <li><strong>Methane honesty.</strong> Official GHGI numbers are called out as too low, citing Alvarez et al. (2018) and later top-down work. For an energy optimizer, methane is the cheapest near-term lever FECM actually owns: super-emitters, pneumatics, compressors, orphan wells.</li>
+          <li><strong>Dedicated storage, not only EOR folklore.</strong> The Vision’s growth path is saline storage, CarbonSAFE, CarbonSTORE, Class VI assistance, and hubs. That is the climate-relevant industry. Enhanced oil recovery is history, not the destination.</li>
+          <li><strong>Learning-by-doing, with receipts.</strong> Boundary Dam and Petra Nova post-project estimates (capital down on the order of 30–67% once redundancies are stripped) plus the FGD progress-ratio analogy are the right way to talk about nth-of-a-kind capture cost — provided demonstrations are on the sources that still exist in 2035–2050.</li>
+          <li><strong>Remediation-linked critical minerals.</strong> Pulling REEs and other CMs from coal wastes, tailings, and produced water while cleaning legacy sites is a better story than opening a new sacrifice zone. It will not meet a 42× lithium demand shock by itself, and should not be sold as if it will.</li>
+          <li><strong>Justice named as a design constraint.</strong> Distributive, procedural, and restorative justice are written as operating system, not appendix. That only counts if communities can change routes, siting, and “no.”</li>
+        </ul>
+
+        <h2 id="risks">Where it can still lock in harm</h2>
+        <p>
+          The document’s own test is: does this investment still look wise from 2050, without path dependence on the old system?
+          Several flagship pathways fail that test unless they are fenced with conditions the Vision describes but does not operationalize.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Tension</th>
+              <th>What the Vision says</th>
+              <th>What I would require</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fossil hydrogen as a “kickstart”</td>
+              <td>SMR/ATR with CCS is the cheap near-term path to Hydrogen Shot ($1/kg) until electrolysis catches up.</td>
+              <td>Count full-chain methane. Require ≥95% capture <em>and</em> verified upstream intensity. Site hubs for later electrolytic hydrogen. No new gas-only laterals.</td>
+            </tr>
+            <tr>
+              <td>Gas power + CCS as “clean firm”</td>
+              <td>NGCC with ≥95% capture could lower the cost of a decarbonized grid, especially at low utilization.</td>
+              <td>Model against geothermal, storage, demand flexibility, and transmission first. High capture at low capacity factor is exactly where today’s solvents get expensive. Do not use CCS to keep otherwise retiring gas in the stack.</td>
+            </tr>
+            <tr>
+              <td>CO<sub>2</sub> to fuels and chemicals</td>
+              <td>Conversion can catalyze CCS where storage is missing; fuels and chemicals are in the portfolio.</td>
+              <td>Short-lived products are delayed emissions. Durable carbonation in the built environment is climate-relevant. Emissive end-of-life should not receive climate credit if alternatives exist — the Vision says this; funding should mean it.</td>
+            </tr>
+            <tr>
+              <td>CDR industry-building</td>
+              <td>Near-term demos will set norms for a sector that barely exists. Justice and MRV are central.</td>
+              <td>Keep CDR additional to abatement. Publish energy, water, land, and fenceline impacts. Do not site gas-fired DAC because the 2022 gas map is convenient.</td>
+            </tr>
+            <tr>
+              <td>Methane accounting</td>
+              <td>EPA uses GWP-100 of 25; AR6 is ~30. The Vision notes underestimation.</td>
+              <td>Report GWP-20 next to GWP-100. A 2030 climate target that only “sees” methane through a 100-year lens will under-invest in leak repair.</td>
+            </tr>
+            <tr>
+              <td>Export LCA vs. export growth</td>
+              <td>Develop transparent LCA for LNG and hydrogen exports.</td>
+              <td>Measurement that is not allowed to change production or licensing is public relations. If intensity gates cannot halt a cargo, they will not halt warming.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>The dual-system problem is the real plot.</strong>
+          Between now and 2050, the old carbon system and the new zero-carbon system will both be incomplete.
+          Retrofitting some gas plants can teach CCS for industry. It can also become a political machine for keeping gas. The difference is not the capture solvent. It is whether each asset has a scheduled decline path, a storage contract that is geologic (not EOR), and a prohibition on using “learning” as a reason to build new unabated fossil.
+        </div>
+
+        <h2 id="pathways">Pathway notes</h2>
+        <div class="grid-2">
+          <article class="card">
+            <p><span class="pill">Keep / condition</span></p>
+            <h3>Point-source capture</h3>
+            <p>Prioritize high-purity and process emissions (hydrogen, ethanol, ammonia, cement, steel). Couple every FEED to real pore space, not a map polygon. 95%+ on NGCC is research; 90% on a cement kiln with storage is deployment. BIL demonstration slots are scarce — spend them where the plant still has a 2050 job.</p>
+          </article>
+          <article class="card">
+            <p><span class="pill mixed">Narrow</span></p>
+            <h3>CO<sub>2</sub> conversion</h3>
+            <p>Mineralization into aggregates and cured materials can be long-term storage. Catalytic fuels are a carbon treadmill unless the carbon is atmospheric and the energy is clean, in which case you still compete with direct electrification. Open LCA tools and 45Q quality control matter more than another catalyst paper.</p>
+          </article>
+          <article class="card">
+            <p><span class="pill">Keep / discipline</span></p>
+            <h3>Carbon dioxide removal</h3>
+            <p>DAC + durable storage, BiCRS with real biomass sustainability, and enhanced mineralization are in FECM’s competence. Ocean CDR needs NOAA-grade humility on governance and ecological risk. The social-license warning in Chapter 4 is the most important sentence in that chapter. One bad hub poisons the industry.</p>
+          </article>
+          <article class="card">
+            <p><span class="pill">Foundation</span></p>
+            <h3>Storage and transport</h3>
+            <p>2,000 million metric tons of commercial capacity over 30 years by 2030 is a permitting and community-consent program wearing an R&amp;D badge. Expand CarbonSAFE, stand up CarbonSTORE as shared field labs, and treat CO<sub>2</sub> pipelines as justice infrastructure: engage before routes exist, not after the shapefile is drawn. Repurposing oilfield kit is leverage; orphaned wells are liability until plugged.</p>
+          </article>
+          <article class="card">
+            <p><span class="pill mixed">Transition only</span></p>
+            <h3>Hydrogen with carbon management</h3>
+            <p>Useful if it displaces existing gray hydrogen and industrial heat that cannot electrify soon. Dangerous if it becomes a new demand sink for gas. 100% hydrogen turbines must publish NO<sub>x</sub> — the Vision correctly flags environmental justice concern. Reversible SOFCs and waste/biomass gasification with high capture are more interesting than “blue hydrogen everywhere.”</p>
+          </article>
+          <article class="card">
+            <p><span class="pill">Keep</span></p>
+            <h3>Critical minerals from wastes</h3>
+            <p>Characterize first. Then extract only when the remaining mass has a beneficial use, so we do not create a second waste pile. Success metrics should include water quality and reclamation acres, not only mixed rare-earth oxide purity. This complements, rather than replaces, recycling, substitutes, and responsible primary supply.</p>
+          </article>
+          <article class="card">
+            <p><span class="pill">Highest near-term ROI</span></p>
+            <h3>Methane mitigation</h3>
+            <p>Distributed sources, two million wells, two million miles of pipe. Detection that is cheap and fast enough to catch super-emitters in hours, not inventory years, is the climate prize. Orphan-well plugging under BIL §40601 is restorative justice with a GWP. Do not wait for a perfect national factor when a well is blowing.</p>
+          </article>
+          <article class="card">
+            <p><span class="pill risk">The test</span></p>
+            <h3>Justice, labor, partnership</h3>
+            <p>Naming Justice40, MSIs/HBCUs, coal-community IWG, and labor apprenticeships is necessary and insufficient. Fenceline communities have heard this office’s industry partners longer than they have heard this vision. Procedural justice means a route can die. Restorative justice means CDR and reclamation show up in places that already paid.</p>
+          </article>
+        </div>
+
+        <h2 id="ask">If the goal is energy services without a damaged climate</h2>
+        <p>
+          An optimizer who is also responsible for long-run environmental cost would not throw the Vision out.
+          They would score every dollar against three questions the leadership letter already asked, then actually apply them at award time:
+        </p>
+        <ol>
+          <li><strong>Does this still make sense in a zero-carbon power system?</strong> If it requires cheap gas or a 2022 pipeline map, redesign it.</li>
+          <li><strong>Is the carbon actually out of the sky for centuries?</strong> Dedicated storage and carbonates count. Fuels, EOR, and “captured but not stored” do not.</li>
+          <li><strong>Who breathes the co-pollutants and who is paid?</strong> If NO<sub>x</sub>, brine, truck traffic, or pore-space risk land on a disadvantaged census tract, the project is not “net-zero enough.”</li>
+        </ol>
+        <p>Practical allocation, from this reading:</p>
+        <ul>
+          <li><strong>Overweight:</strong> methane detection/repair and orphan wells; Class VI and saline storage characterization; industrial process CCS on cement/steel/existing hydrogen; durable mineralization; waste-to-CM with reclamation metrics; open TEA/LCA data into energy models.</li>
+          <li><strong>Fund only with off-ramps:</strong> gas CCS power; fossil hydrogen hubs; biomass hydrogen; CO<sub>2</sub> pipelines. Write the 2035 and 2050 transition conditions into the cooperative agreement, not the brochure.</li>
+          <li><strong>Underweight or drop:</strong> climate credit for short-lived CO<sub>2</sub>-derived fuels; any capture project without a storage or durable-use offtake; DAC sited for gas convenience.</li>
+        </ul>
+        <p>
+          The warming-stripe backdrop on the cover is not decoration. Reversal of observed warming is a net-negative world, which only exists if residual emissions are small and removals are real.
+          Puzzle pieces that keep the fossil extraction system large make that reversal slower, costlier, and less just.
+          That is the long-term environmental effect this office is still at risk of buying.
+        </p>
+
+        <h2 id="source">Source, limits, credits</h2>
+        <p>
+          This review is based on the text of FECM’s Strategic Vision (April 2022, including the 28 April update), as provided for analysis.
+          It is not a legal opinion, not an official DOE position, and not a substitute for site-specific TEA, LCA, or community consultation.
+          Figures in the source (energy/emissions breakdowns, TRL maps, hub cartoons) were described in text; I did not re-plot them.
+        </p>
+        <p>
+          Cover image credits in the source: Ed Hawkins, National Centre for Atmospheric Science, University of Reading.
+          Proposal credits: U.S. Department of Energy, Office of Fossil Energy and Carbon Management.
+          This reading: Environmental Science AI / Cursor agent. <strong>Credits TBD</strong>, as requested.
+        </p>
+        <p class="share-note">Official document:
+          <a href="https://www.energy.gov/sites/default/files/2022-04/2022-Strategic-Vision-The-Role-of-Fossil-Energy-and-Carbon-Management-in-Achieving-Net-Zero-Greenhouse-Gas-Emissions_Updated-4.28.22.pdf">FECM Strategic Vision PDF</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Environmental Science AI · Paradise Unlocked · A landing-page review of a public U.S. government strategic document.</p>
+      <p>Share this page after publish: GitHub Pages will serve it from this repository. Use the button above to copy the current link.</p>
+    </div>
+  </footer>
+  <script>
+    const copyBtn = document.getElementById("copy-link");
+    copyBtn.addEventListener("click", async () => {
+      const url = window.location.href;
+      try {
+        await navigator.clipboard.writeText(url);
+        copyBtn.textContent = "Link copied";
+        setTimeout(() => { copyBtn.textContent = "Copy shareable link"; }, 1600);
+      } catch {
+        prompt("Copy this link:", url);
+      }
+    });
+  </script>
+</body>
+</html>
