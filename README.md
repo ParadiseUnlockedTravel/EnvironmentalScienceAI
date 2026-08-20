@@ -12,9 +12,13 @@ Alternate preview:
 
 **https://htmlpreview.github.io/?https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/blob/cursor/fecm-strategic-vision-ai-63db/index.html**
 
-After GitHub Pages is enabled on this repository, the stable URL will be:
+## Live page
 
 **https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/**
+
+## Cite this page (APA 7th)
+
+Paradise Unlocked. (2026, August 20). *Thoughts on FECM’s Strategic Vision*. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/
 
 ## What this is
 
