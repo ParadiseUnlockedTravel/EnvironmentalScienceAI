@@ -12,15 +12,19 @@ Alternate preview:
 
 **https://htmlpreview.github.io/?https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/blob/cursor/fecm-strategic-vision-ai-63db/index.html**
 
-After GitHub Pages is enabled on this repository, the stable URL will be:
+## Live page
 
 **https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/**
+
+## Cite this page (APA 7th)
+
+Paradise Unlocked Travel. (2026, August 20). *Thoughts on FECM’s Strategic Vision* [Review prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.]. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/
 
 ## What this is
 
 A landing-page reading from an AI agent working as an engineer/scientist would: optimize energy services without locking in decades of emissions, fenceline harm, or fossil path dependence.
 
-Credits for this review: TBD, as requested. Cover image in the source document: Ed Hawkins, National Centre for Atmospheric Science, University of Reading.
+Credits: Paradise Unlocked Travel used Cursor Grok 4.6 High Fast from 4:30 p.m. to 6:45 p.m. on 20 August 2026. Cover image in the source document: Ed Hawkins, National Centre for Atmospheric Science, University of Reading.
 
 Official source PDF:
 

@@ -216,7 +216,46 @@
       font-size: 0.9rem;
     }
     footer a { color: var(--gold); }
-    .share-note { font-size: 0.85rem; color: var(--ink-soft); }
+    .cite {
+      background: #fffaf0;
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      margin: 0.7rem 0;
+    }
+    .cite h3 {
+      margin: 0 0 0.35rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .cite pre {
+      margin: 0;
+      white-space: pre-wrap;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+    .cite-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    .cite button {
+      flex: 0 0 auto;
+      appearance: none;
+      border: 1px solid var(--rule);
+      background: #fff;
+      border-radius: 999px;
+      padding: 0.28rem 0.7rem;
+      font: inherit;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--moss);
+    }
     @media (max-width: 860px) {
       .grid-3, .grid-2, .verdict { grid-template-columns: 1fr; }
       nav { display: none; }
@@ -241,7 +280,9 @@
         <a href="#keeps">What holds</a>
         <a href="#risks">Risks</a>
         <a href="#pathways">Pathways</a>
-        <a href="#ask">What I would do</a>
+        <a href="#goals">Achievable goals</a>
+        <a href="#cite">Cite</a>
+        <a href="#source">Source</a>
       </nav>
     </div>
   </header>
@@ -249,13 +290,14 @@
   <main id="top">
     <section class="hero">
       <div class="wrap">
-        <p class="kicker">Independent review · Credits TBD</p>
+        <p class="kicker">Independent review · Paradise Unlocked Travel · 20 August 2026</p>
         <h1>Optimize energy. Do not lock in the next fifty years of harm.</h1>
         <p class="lede">
           Yes: I am an AI agent, reading as an engineer and environmental scientist would.
           The attached proposal is DOE FECM’s April 2022 Strategic Vision —
           <em>The Role of Fossil Energy and Carbon Management in Achieving Net-Zero Greenhouse Gas Emissions</em>.
           It is one of the more self-aware fossil-office documents of that era. It is also not yet a climate strategy that can be funded on trust.
+          This page adds a sorting of what in the text is actually achievable this decade, what belongs in a demonstration cycle, and what only works after the grid is clean.
         </p>
         <div class="meta">
           <span>Source: U.S. DOE Office of Fossil Energy and Carbon Management</span>
@@ -431,6 +473,128 @@
           That is the long-term environmental effect this office is still at risk of buying.
         </p>
 
+        <h2 id="goals">What can actually be done from here</h2>
+        <p>
+          The Vision is easy to misread as a 2050 poster. Read against its own timelines, it is more useful as a
+          sorting tool: some work is ready, some needs one or two honest demonstrations, and some only pays off
+          after the power system is clean. The addition this review tries to make is that sorting — realistic
+          targets that a program could hit without pretending the atmosphere waits for nth-of-a-kind everything.
+        </p>
+        <p>
+          Three clocks are running at once in the text. Mixing them up is how lock-in happens. Keeping them
+          separate is how the puzzle actually gets finished.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Clock</th>
+              <th>What the Vision already says</th>
+              <th>A goal that could be real</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>This decade</td>
+              <td>Methane, Class VI assistance, industrial FEED studies, CarbonSAFE, orphan wells, learning-by-doing on capture.</td>
+              <td>Measure and fix super-emitters in hours, not inventory years. Plug high-emitting orphan wells first. Award industrial capture only where a storage permit is in motion. Publish GWP-20 next to GWP-100 so 2030 methane work is visible.</td>
+            </tr>
+            <tr>
+              <td>Demonstration cycle</td>
+              <td>BIL CCS demos, DAC hubs, hydrogen hubs, nth-of-a-kind cost decline after first plants.</td>
+              <td>Spend scarce demo slots on cement, existing hydrogen, ethanol, and ammonia — high-purity streams that still exist in 2050. Pair every hub with public MRV and a community “no” that can kill a route. Treat one or two DAC plants as tests, and say so if they are not yet life-cycle negative.</td>
+            </tr>
+            <tr>
+              <td>After the grid is clean</td>
+              <td>Flexible DAC on clean power, electrolytic hydrogen, CDR for leftover agriculture and aviation, geothermal and storage jobs where extraction used to be.</td>
+              <td>Site new pipes and plants for water, transmission, and pore space — not for 2022 gas laterals. Do not use CDR to “solve” power, cement, or steel that can abate now. That is already Figure 3; it just has to govern awards.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Ideas that follow from the text, not from a different planet</h3>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Make the 2050 test an award screen</h3>
+            <p>The leadership letter already asks whether a DAC plant on low-leakage gas in 2022 still makes sense in 2050. Turn that into three yes/no questions on every FOA: Does this still work on a carbon-free grid? Is the carbon stored for centuries? Who breathes the co-pollutants? If a project fails one, it can still be research. It should not be infrastructure.</p>
+          </article>
+          <article class="card">
+            <h3>Industrial capture first, not every gas plant</h3>
+            <p>Process CO<sub>2</sub> from cement and existing hydrogen is the part of PSC that does not depend on a 40% gas grid lasting forever. A realistic cluster goal is a few commercial-scale industrial trains tied to saline storage this decade — not 95% capture on low-utilization NGCC as the flagship. The FGD learning curve still applies. It applies better on plants that have a 2050 job.</p>
+          </article>
+          <article class="card">
+            <h3>Storage as a permitting and consent program</h3>
+            <p>65 million tonnes a year by 2030 is the Vision’s activation target. Geology is not the bottleneck; Class VI throughput and public trust are. Finish the CarbonSAFE sites already in Phase III. Stand up CarbonSTORE as shared field labs. Draw no preferred pipeline corridor until the communities on it have seen the model and can change it. That is slower than a national trunkline cartoon and more likely to exist.</p>
+          </article>
+          <article class="card">
+            <h3>Hydrogen only where gray hydrogen already is</h3>
+            <p>The achievable near-term use of “hydrogen with carbon management” is cleaning up hydrogen that industry already buys, with ≥95% capture and measured upstream methane. New demand sinks for gas are not a transition. Any hub paid for as a 2022 asset should be sited for later electrolysis: water, storage, and wires, not a new gas lateral.</p>
+          </article>
+          <article class="card">
+            <h3>CDR as residual insurance, with public books</h3>
+            <p>The Vision refuses a gigatonne quota because avoidance comes first. Keep that discipline. Fund DAC and BiCRS to learn cost, energy, water, and fenceline impact — and publish those numbers. Do not sell removal as a way to keep emitting from sectors that Figure 3 says are ready to abate. One bad hub poisons social license; one honest hub that under-performs and says so builds it.</p>
+          </article>
+          <article class="card">
+            <h3>Minerals as cleanup with a side of supply</h3>
+            <p>Quadrupling clean-energy mineral demand, with lithium up on the order of 40× in some scenarios, will not be met from coal waste alone. A realistic CORE-CM goal is measured reclamation — water quality, waste volume, local jobs — plus whatever oxide purity the chemistry will actually yield. Count acres cleaned and tonnes produced. Do not count a domestic battery industry until both exist.</p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <strong>A 2030 scoreboard that would mean the Vision is working.</strong>
+          Super-emitter response time in hours. A public orphan-well emissions ranking that actually drives plugging order.
+          Industrial capture tonnes stored in saline formations, not EOR. Class VI permits issued with community
+          records attached. At least one CarbonSTORE lab publishing monitoring data. Hydrogen CCS only on existing
+          gray-hydrogen sites. No climate credit for short-lived CO<sub>2</sub> fuels. Census-tract benefit and burden
+          posted for every large award. None of that requires a new physics. It requires using the document as a
+          contract instead of as a brochure.
+        </div>
+
+        <h2 id="cite">How to cite this page</h2>
+        <p>
+          Use the stable URL
+          <a href="https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/">https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/</a>.
+          Suggested bibliographic entries:
+        </p>
+
+        <div class="cite">
+          <div class="cite-row">
+            <h3>APA 7th</h3>
+            <button type="button" data-copy="Paradise Unlocked Travel. (2026, August 20). Thoughts on FECM’s Strategic Vision [Review prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.]. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/">Copy</button>
+          </div>
+          <pre>Paradise Unlocked Travel. (2026, August 20). <i>Thoughts on FECM’s Strategic Vision</i> [Review prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.]. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/</pre>
+        </div>
+
+        <div class="cite">
+          <div class="cite-row">
+            <h3>Chicago 17th (notes-bibliography)</h3>
+            <button type="button" data-copy="Paradise Unlocked Travel. “Thoughts on FECM’s Strategic Vision.” Environmental Science AI. August 20, 2026. Prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/.">Copy</button>
+          </div>
+          <pre>Paradise Unlocked Travel. “Thoughts on FECM’s Strategic Vision.” Environmental Science AI. August 20, 2026. Prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/.</pre>
+        </div>
+
+        <div class="cite">
+          <div class="cite-row">
+            <h3>MLA 9th</h3>
+            <button type="button" data-copy="Paradise Unlocked Travel. “Thoughts on FECM’s Strategic Vision.” Environmental Science AI, 20 Aug. 2026, https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/. Prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.">Copy</button>
+          </div>
+          <pre>Paradise Unlocked Travel. “Thoughts on FECM’s Strategic Vision.” <i>Environmental Science AI</i>, 20 Aug. 2026, https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/. Prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.</pre>
+        </div>
+
+        <p>
+          If you need to cite the government source this review is reading, not the review itself:
+        </p>
+        <div class="cite">
+          <div class="cite-row">
+            <h3>Source document (APA 7th)</h3>
+            <button type="button" data-copy="U.S. Department of Energy, Office of Fossil Energy and Carbon Management. (2022). The role of fossil energy and carbon management in achieving net-zero greenhouse gas emissions (Strategic vision; updated April 28, 2022). https://www.energy.gov/sites/default/files/2022-04/2022-Strategic-Vision-The-Role-of-Fossil-Energy-and-Carbon-Management-in-Achieving-Net-Zero-Greenhouse-Gas-Emissions_Updated-4.28.22.pdf">Copy</button>
+          </div>
+          <pre>U.S. Department of Energy, Office of Fossil Energy and Carbon Management. (2022). <i>The role of fossil energy and carbon management in achieving net-zero greenhouse gas emissions</i> (Strategic vision; updated April 28, 2022). https://www.energy.gov/sites/default/files/2022-04/2022-Strategic-Vision-The-Role-of-Fossil-Energy-and-Carbon-Management-in-Achieving-Net-Zero-Greenhouse-Gas-Emissions_Updated-4.28.22.pdf</pre>
+        </div>
+        <p class="share-note">
+          Cover image credited in the source: Ed Hawkins, National Centre for Atmospheric Science, University of Reading (warming stripes).
+        </p>
+
         <h2 id="source">Source, limits, credits</h2>
         <p>
           This review is based on the text of FECM’s Strategic Vision (April 2022, including the 28 April update), as provided for analysis.
@@ -438,9 +602,11 @@
           Figures in the source (energy/emissions breakdowns, TRL maps, hub cartoons) were described in text; I did not re-plot them.
         </p>
         <p>
+        <p>
           Cover image credits in the source: Ed Hawkins, National Centre for Atmospheric Science, University of Reading.
           Proposal credits: U.S. Department of Energy, Office of Fossil Energy and Carbon Management.
-          This reading: Environmental Science AI / Cursor agent. <strong>Credits TBD</strong>, as requested.
+          This reading was prepared by Paradise Unlocked Travel using Cursor Grok 4.6 High Fast from 4:30 p.m. to 6:45 p.m. on 20 August 2026.
+        </p>
         </p>
         <p class="share-note">Official document:
           <a href="https://www.energy.gov/sites/default/files/2022-04/2022-Strategic-Vision-The-Role-of-Fossil-Energy-and-Carbon-Management-in-Achieving-Net-Zero-Greenhouse-Gas-Emissions_Updated-4.28.22.pdf">FECM Strategic Vision PDF</a>.
@@ -458,7 +624,7 @@
   <script>
     const copyBtn = document.getElementById("copy-link");
     copyBtn.addEventListener("click", async () => {
-      const url = window.location.href;
+      const url = "https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/";
       try {
         await navigator.clipboard.writeText(url);
         copyBtn.textContent = "Link copied";
@@ -466,6 +632,19 @@
       } catch {
         prompt("Copy this link:", url);
       }
+    });
+    document.querySelectorAll("button[data-copy]").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const text = btn.getAttribute("data-copy");
+        try {
+          await navigator.clipboard.writeText(text);
+          const prior = btn.textContent;
+          btn.textContent = "Copied";
+          setTimeout(() => { btn.textContent = prior; }, 1400);
+        } catch {
+          prompt("Copy this citation:", text);
+        }
+      });
     });
   </script>
 </body>
