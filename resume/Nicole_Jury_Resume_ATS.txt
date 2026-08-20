@@ -3,7 +3,7 @@ Cleveland, OH | (216) 544-4367 | cnjury@gmail.com | linkedin.com/in/nicolejury
 AI Enablement · Customer Success · Growth Operations
 
 PROFILE
-Senior operator with 15+ years turning messy workflows into adoption, retention, and executive clarity. Built CRM and QBR systems that protect recurring revenue, led marketing and customer operations for a national platform serving 100K+ monthly users, and partnered across product, sales, and operations so new tools actually get used. Completing an MIT Professional Education certificate in Agentic AI to lead enablement, intake, and responsible adoption of generative and agentic systems.
+Senior operator with 15+ years turning messy workflows into adoption, retention, and executive clarity. Built CRM and QBR systems that protect recurring revenue, led marketing and customer operations for a national platform serving 100K+ monthly users, and partnered across product, sales, and operations so new tools actually get used. Completing MIT Professional Education’s Applied Agentic AI for Organizational Transformation (Prof. John Williams and Dr. Abel Sanchez) to lead enablement from use-case intake through last-mile adoption, with literacy in ecosystem integration, governance, agent risk, and ethics.
 
 SELECTED IMPACT
 - Cut monthly churn 15%
@@ -17,7 +17,7 @@ EXPERIENCE
 Principal Consultant, Customer Strategy | Paradise Unlocked | Cleveland, OH | Dec 2024 – Present
 - Built Salesforce and HubSpot CRM workflows for onboarding, lifecycle, and retention.
 - Used customer behavior data to improve conversion, engagement, and the end-to-end client experience.
-- Designed data-driven strategies to grow lifetime value and make acquisition channels more efficient.
+- Applying MIT Agentic AI coursework to customer-lifecycle design: connecting tools into a digital ecosystem and moving ideas from pilot to daily practice.
 
 Vice President, Marketing | Best Food Trucks | Cleveland, OH | Oct 2023 – Apr 2025
 National food-tech platform across dozens of municipalities; 100K+ monthly users
@@ -45,13 +45,16 @@ Senior Business Intelligence Consultant | Cogent LLC | Lafayette, LA | Jan 2019 
 - Managed a $1M+ multi-channel budget; automated digital intake that cut call volume 80% and gave stakeholders 24/7 data access.
 
 Manufacturing Cost Analyst | Stuller, Inc. | Lafayette, LA | Dec 2017 – Dec 2018
-- Partnered with SQL developers to automate manufacturing data pipelines into MicroStrategy dashboards.
-- Built KPI reporting for operations and leadership; aligned analytics across supply chain, IT, and project management.
+- Partnered with SQL developers on MicroStrategy dashboards and KPI reporting; aligned analytics across supply chain, IT, and project management.
 
 EDUCATION
-Massachusetts Institute of Technology — Professional Education Certificate, Agentic AI (in progress, 2026)
+Massachusetts Institute of Technology — Professional Education
+Applied Agentic AI for Organizational Transformation (in progress, 2026)
+Faculty: Prof. John Williams and Dr. Abel Sanchez
+Coursework: generative and agentic foundations; emerging AI platforms; connecting agents to digital ecosystems; AI agents by business function; last-mile adoption (pilot to practice); cybersecurity and agent risk; governance, compliance, and agent testing; ethics and capstone.
+
 John Carroll University — Master of Education (May 2014)
 Cleveland State University — B.B.A., International Business & Business Statistics (May 2010)
 
 SKILLS
-AI enablement & change management; Responsible AI literacy; Customer success & retention; QBR / executive reporting; Salesforce; HubSpot; Revenue operations; Lifecycle marketing; SQL; Power BI; Google Analytics; Cross-functional leadership
+AI enablement & last-mile adoption; Agentic workflow literacy; Digital ecosystem / CRM integration; Governance, compliance & agent-testing literacy; Responsible AI & ethics; Change management; Customer success; QBR / executive reporting; Salesforce; HubSpot; SQL; Power BI

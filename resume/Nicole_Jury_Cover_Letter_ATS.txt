@@ -8,11 +8,11 @@ Re: [AI Enablement Manager / related title]
 
 Dear Hiring Manager,
 
-I am applying for the [AI Enablement Manager] role at [Company]. I help organizations get new systems actually used — not just launched. That work has lived in customer success, CRM, marketing operations, and executive reporting. I am now completing an MIT Professional Education certificate in Agentic AI so I can lead the same kind of adoption for generative and agentic tools: intake, training, workflow design, measurement, and responsible guardrails.
+I am applying for the [AI Enablement Manager] role at [Company]. I help organizations get new systems actually used — not just launched. That work has lived in customer success, CRM, marketing operations, and executive reporting. I am completing MIT Professional Education’s Applied Agentic AI for Organizational Transformation with Prof. John Williams and Dr. Abel Sanchez so I can lead the same work for generative and agentic tools.
 
 AI enablement succeeds when someone can sit between the business and the build. I have done that for years. At Blue Technologies I translated complex IT infrastructure into Quality Business Reviews leadership could act on, cut monthly churn 15% with proactive account-health work, and held 90% average CSAT. At Best Food Trucks I led a distributed team across marketing, analytics, customer success, and operations for a national platform serving 100K+ monthly users, and I used CRM and behavioral data to drive engagement rather than one-off campaigns. Earlier, at Cogent, I automated digital intake that reduced call volume 80% — a practical example of taking a painful workflow, putting a system in front of it, and proving the result.
 
-The MIT Agentic AI certificate is how I am formalizing the next chapter: how agentic systems attach to enterprise tools, where human-in-the-loop belongs, and why bias and governance cannot be an afterthought. I am not applying as a research scientist. I am applying as an operator who can run enablement like a product — clear problem statements, prioritized use cases, training that people will attend, and KPIs for adoption, time saved, quality, and risk.
+The MIT program is the bridge into this role. I am studying how agents connect to digital ecosystems (the CRM and data stacks I already run), how use cases differ by business function, and what it takes to get from a successful pilot to daily practice. That last-mile work is enablement: intake, training, measurement, and handoff. The curriculum also covers agent risk and cybersecurity, governance, compliance, agent testing, and ethics — including bias in automated decisions — so adoption does not outrun control. I am not applying as a research scientist. I am applying as an operator who can run enablement like a product: clear problem statements, prioritized use cases, training people will use, and KPIs for adoption, time saved, quality, and risk.
 
 I would be glad to talk about how this role’s use cases map to intake, change management, and value tracking. Thank you for your time.
 
@@ -22,6 +22,6 @@ Nicole Jury
 ---
 How to customize before sending
 1. Replace [Date], [Company], and the job title.
-2. Add one sentence that quotes a requirement from the posting (for example, “Your note about Copilot training and use-case intake is the work I want to do.”).
+2. Add one sentence that quotes a requirement from the posting.
 3. This letter also fits: AI Adoption Manager, AI Transformation Manager, Enterprise AI Enablement, Copilot Enablement Manager, AI Program Manager, Digital Transformation Manager (AI), and AI Change Manager.
-4. Do not claim you built production agent platforms unless a posting asks for that and you can point to a specific example.
+4. Do not claim you built production agent platforms unless you can point to a specific example.

@@ -35,6 +35,6 @@ Add one sentence from the job posting so it does not read as a blast.
 
 ## Note
 
-MIT is listed as **Professional Education Certificate, Agentic AI (in progress, 2026)**. Change “in progress” to the completion date when the certificate is in hand.
+MIT is listed as **Applied Agentic AI for Organizational Transformation** (Prof. John Williams and Dr. Abel Sanchez), in progress, 2026. Coursework on the resume matches the live modules: ecosystems, business-function agents, last-mile adoption, agent risk, governance/testing, and ethics.
 
 This GitHub repository is public. If you do not want phone and email on the open internet, keep this pull request draft or copy the files locally and do not merge.
