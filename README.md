@@ -16,9 +16,9 @@ Alternate preview:
 
 **https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/**
 
-## Cite this page (APA 7th)
+## Cite this page (Bluebook)
 
-Paradise Unlocked Travel. (2026, August 20). *Thoughts on FECM’s Strategic Vision* [Review prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.]. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/
+Paradise Unlocked Travel, *Thoughts on FECM’s Strategic Vision*, Env’t Sci. AI (Aug. 20, 2026), https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/ (prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.).
 
 ## What this is
 
