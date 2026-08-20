@@ -216,7 +216,46 @@
       font-size: 0.9rem;
     }
     footer a { color: var(--gold); }
-    .share-note { font-size: 0.85rem; color: var(--ink-soft); }
+    .cite {
+      background: #fffaf0;
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      margin: 0.7rem 0;
+    }
+    .cite h3 {
+      margin: 0 0 0.35rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .cite pre {
+      margin: 0;
+      white-space: pre-wrap;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+    .cite-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    .cite button {
+      flex: 0 0 auto;
+      appearance: none;
+      border: 1px solid var(--rule);
+      background: #fff;
+      border-radius: 999px;
+      padding: 0.28rem 0.7rem;
+      font: inherit;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--moss);
+    }
     @media (max-width: 860px) {
       .grid-3, .grid-2, .verdict { grid-template-columns: 1fr; }
       nav { display: none; }
@@ -241,7 +280,8 @@
         <a href="#keeps">What holds</a>
         <a href="#risks">Risks</a>
         <a href="#pathways">Pathways</a>
-        <a href="#ask">What I would do</a>
+        <a href="#cite">Cite</a>
+        <a href="#source">Source</a>
       </nav>
     </div>
   </header>
@@ -431,6 +471,51 @@
           That is the long-term environmental effect this office is still at risk of buying.
         </p>
 
+        <h2 id="cite">How to cite this page</h2>
+        <p>
+          Use the stable URL
+          <a href="https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/">https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/</a>.
+          Suggested bibliographic entries:
+        </p>
+
+        <div class="cite">
+          <div class="cite-row">
+            <h3>APA 7th</h3>
+            <button type="button" data-copy="Paradise Unlocked. (2026, August 20). Thoughts on FECM’s Strategic Vision. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/">Copy</button>
+          </div>
+          <pre>Paradise Unlocked. (2026, August 20). <i>Thoughts on FECM’s Strategic Vision</i>. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/</pre>
+        </div>
+
+        <div class="cite">
+          <div class="cite-row">
+            <h3>Chicago 17th (notes-bibliography)</h3>
+            <button type="button" data-copy="Paradise Unlocked. “Thoughts on FECM’s Strategic Vision.” Environmental Science AI. August 20, 2026. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/.">Copy</button>
+          </div>
+          <pre>Paradise Unlocked. “Thoughts on FECM’s Strategic Vision.” Environmental Science AI. August 20, 2026. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/.</pre>
+        </div>
+
+        <div class="cite">
+          <div class="cite-row">
+            <h3>MLA 9th</h3>
+            <button type="button" data-copy="Paradise Unlocked. “Thoughts on FECM’s Strategic Vision.” Environmental Science AI, 20 Aug. 2026, https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/.">Copy</button>
+          </div>
+          <pre>Paradise Unlocked. “Thoughts on FECM’s Strategic Vision.” <i>Environmental Science AI</i>, 20 Aug. 2026, https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/.</pre>
+        </div>
+
+        <p>
+          If you need to cite the government source this review is reading, not the review itself:
+        </p>
+        <div class="cite">
+          <div class="cite-row">
+            <h3>Source document (APA 7th)</h3>
+            <button type="button" data-copy="U.S. Department of Energy, Office of Fossil Energy and Carbon Management. (2022). The role of fossil energy and carbon management in achieving net-zero greenhouse gas emissions (Strategic vision; updated April 28, 2022). https://www.energy.gov/sites/default/files/2022-04/2022-Strategic-Vision-The-Role-of-Fossil-Energy-and-Carbon-Management-in-Achieving-Net-Zero-Greenhouse-Gas-Emissions_Updated-4.28.22.pdf">Copy</button>
+          </div>
+          <pre>U.S. Department of Energy, Office of Fossil Energy and Carbon Management. (2022). <i>The role of fossil energy and carbon management in achieving net-zero greenhouse gas emissions</i> (Strategic vision; updated April 28, 2022). https://www.energy.gov/sites/default/files/2022-04/2022-Strategic-Vision-The-Role-of-Fossil-Energy-and-Carbon-Management-in-Achieving-Net-Zero-Greenhouse-Gas-Emissions_Updated-4.28.22.pdf</pre>
+        </div>
+        <p class="share-note">
+          Cover image credited in the source: Ed Hawkins, National Centre for Atmospheric Science, University of Reading (warming stripes).
+        </p>
+
         <h2 id="source">Source, limits, credits</h2>
         <p>
           This review is based on the text of FECM’s Strategic Vision (April 2022, including the 28 April update), as provided for analysis.
@@ -458,7 +543,7 @@
   <script>
     const copyBtn = document.getElementById("copy-link");
     copyBtn.addEventListener("click", async () => {
-      const url = window.location.href;
+      const url = "https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/";
       try {
         await navigator.clipboard.writeText(url);
         copyBtn.textContent = "Link copied";
@@ -466,6 +551,19 @@
       } catch {
         prompt("Copy this link:", url);
       }
+    });
+    document.querySelectorAll("button[data-copy]").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const text = btn.getAttribute("data-copy");
+        try {
+          await navigator.clipboard.writeText(text);
+          const prior = btn.textContent;
+          btn.textContent = "Copied";
+          setTimeout(() => { btn.textContent = prior; }, 1400);
+        } catch {
+          prompt("Copy this citation:", text);
+        }
+      });
     });
   </script>
 </body>
