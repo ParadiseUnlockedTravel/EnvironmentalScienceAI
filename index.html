@@ -523,6 +523,7 @@
         <a href="#goals">Goals</a>
         <a href="#ledger">Ledger</a>
         <a href="#cite">Cite</a>
+        <a href="#uses">Uses</a>
         <a href="#disclaimer">Disclaimer</a>
         <a href="#discuss">Discuss</a>
       </nav>
@@ -1479,6 +1480,22 @@
           (April 2022 / 28 April update).
         </p>
 
+        <h2 id="uses">How this page gets used</h2>
+        <p>
+          There is no visitor tracker and no email. If this brief was useful, put it on the public record
+          with a GitHub issue whose title starts with <strong>Use:</strong> —
+          a cite, the three award questions on a real project, a specialist correction, or a hiring conversation.
+          Your username is the name on the note.
+        </p>
+        <p class="discuss-actions">
+          <a class="btn btn-primary" href="https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/new?template=how-i-used-this.md">Tell how you used this</a>
+          <a class="btn btn-secondary" href="#discuss">Join the discussion</a>
+        </p>
+        <p class="share-note" id="kpi-tally">Public record, no cookies: counting GitHub notes…</p>
+        <h3>Public Use: notes</h3>
+        <p class="share-note">Open issues whose titles start with “Use:”.</p>
+        <div id="use-list">Loading uses…</div>
+
         <h2 id="discuss">Discussion</h2>
         <p>
           Public comments live on GitHub Issue
@@ -1540,7 +1557,25 @@
     const ISSUE_URL = "https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/" + DISCUSSION_ISSUE;
     const commentList = document.getElementById("comment-list");
     const threadList = document.getElementById("thread-list");
+    const useList = document.getElementById("use-list");
     const featuredMeta = document.getElementById("featured-meta");
+    const kpiTally = document.getElementById("kpi-tally");
+    let nReplies = null;
+    let nUses = null;
+
+    function renderKpi() {
+      if (!kpiTally) return;
+      const parts = [];
+      if (nReplies !== null) {
+        parts.push(nReplies + " " + (nReplies === 1 ? "reply" : "replies") + " on Issue #10");
+      }
+      if (nUses !== null) {
+        parts.push(nUses + " Use: " + (nUses === 1 ? "note" : "notes"));
+      }
+      if (parts.length) {
+        kpiTally.textContent = "Public record, no cookies: " + parts.join(" · ") + ".";
+      }
+    }
 
     function escapeHtml(value) {
       return String(value || "")
@@ -1564,6 +1599,8 @@
         if (!featuredMeta) return;
         const user = issue.user && issue.user.login ? issue.user.login : "unknown";
         const n = issue.comments || 0;
+        nReplies = n;
+        renderKpi();
         featuredMeta.textContent = user + " · " + n + " " + (n === 1 ? "reply" : "replies") + " · Issue #" + issue.number;
       })
       .catch(() => {});
@@ -1595,12 +1632,27 @@
         return res.json();
       })
       .then((issues) => {
-        if (!threadList) return;
-        const threads = issues.filter((item) =>
-          !item.pull_request &&
+        if (!threadList && !useList) return;
+        const open = issues.filter((item) => !item.pull_request);
+        const threads = open.filter((item) =>
           item.number !== DISCUSSION_ISSUE &&
           /^discussion:/i.test(item.title)
         );
+        const uses = open.filter((item) => /^use:/i.test(item.title));
+        nUses = uses.length;
+        renderKpi();
+        if (useList) {
+          if (!uses.length) {
+            useList.innerHTML = "<p>No Use: notes yet. If this page helped, <a href=\"https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/new?template=how-i-used-this.md\">open one</a>.</p>";
+          } else {
+            useList.innerHTML = uses.map((item) => {
+              const title = escapeHtml(item.title);
+              const user = (item.user && item.user.login) ? escapeHtml(item.user.login) : "unknown";
+              return "<article class=\"thread\"><h3><a href=\"" + escapeHtml(item.html_url) + "\">" + title + "</a></h3><p class=\"meta-line\">" + user + " · " + item.comments + " " + (item.comments === 1 ? "reply" : "replies") + "</p><p>" + snippet(item.body, 280) + "</p></article>";
+            }).join("");
+          }
+        }
+        if (!threadList) return;
         if (!threads.length) {
           threadList.innerHTML = "<p>No additional Discussion: issues yet. Use “Start another thread” for a separate topic, and keep the title starting with Discussion:</p>";
           return;
@@ -1612,6 +1664,9 @@
         }).join("");
       })
       .catch(() => {
+        if (useList) {
+          useList.innerHTML = "<p>Uses could not be loaded here. Open a <a href=\"https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/new?template=how-i-used-this.md\">Use: issue</a> on GitHub.</p>";
+        }
         if (!threadList) return;
         threadList.innerHTML = "<p>Other threads could not be loaded here. The main discussion is <a href=\"" + ISSUE_URL + "\">Issue #10</a>.</p>";
       });

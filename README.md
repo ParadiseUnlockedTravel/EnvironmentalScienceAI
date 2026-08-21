@@ -46,6 +46,16 @@ Nicole Jury, *Thoughts on FECM’s Strategic Vision* (Rev. 3), Env’t Sci. AI (
 
 Main public thread: [GitHub Issue #10](https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/10). Additional topics can use Issues titled `Discussion:` (GitHub username is the name). There is no email contact form.
 
+## How we know if this worked
+
+No third-party analytics and no cookies. Count only what people put on the public record:
+
+- Issues titled [`Use:`](https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/new?template=how-i-used-this.md) — cite, award screen, specialist correction, or hiring conversation
+- Substantive comments on [Issue #10](https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/10)
+- Repo **Insights → Traffic** (admins only; unique visitors and clones, last 14 days)
+
+Do not treat raw hits as success. The live tally is on the page under [How this page gets used](https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/#uses).
+
 ## What this is
 
 A landing-page reading directed by Nicole Jury of Paradise Unlocked Travel through human-guided prompts. Cursor Grok 4.6 High Fast researched the public FECM Vision, drafted the analysis, and built this page with her. She is not a fossil-energy specialist; the method is to make a non-specialist reading checkable against the source.
