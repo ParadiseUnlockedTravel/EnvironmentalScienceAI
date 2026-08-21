@@ -362,6 +362,61 @@
       font-size: 0.78rem;
       color: var(--ink-soft);
     }
+    .chart-key {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 1.15rem;
+      margin: 0.65rem 0 0.35rem;
+      padding: 0;
+      list-style: none;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+    }
+    .chart-key li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .swatch {
+      display: inline-block;
+      width: 1.4rem;
+      height: 0.72rem;
+      border-radius: 999px;
+      flex: 0 0 auto;
+      border: 1px solid var(--rule);
+    }
+    .swatch.moss { background: var(--moss); }
+    .swatch.gold {
+      background-color: var(--gold-fill);
+      background-image: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.35) 0 2px,
+        transparent 2px 6px
+      );
+    }
+    .swatch.ember {
+      background-color: var(--ember);
+      background-image: repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.4) 0 3px,
+        transparent 3px 8px
+      );
+    }
+    .swatch.line {
+      height: 0;
+      width: 1.5rem;
+      border: 0;
+      border-top: 3px solid var(--moss);
+      border-radius: 0;
+      background: transparent;
+    }
+    .swatch.dot {
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      background: var(--ember);
+      border: 1.5px solid var(--ink);
+    }
     .hbar { display: grid; gap: 0.38rem; margin-top: 0.65rem; }
     .hbar-row { display: grid; grid-template-columns: 7.2rem 1fr 3.6rem; gap: 0.45rem; align-items: center; }
     .hbar-row span:first-child { font-size: 0.78rem; color: var(--ink-soft); }
@@ -667,6 +722,13 @@
           Axes are labeled. Captions name the page or chapter. Each bar has a name and a value, so the figure still reads if green, gold, and ember look the same; hatch and stripe are a second cue.
           This is not a re-plot of FECM’s figures; it is the same statistics in a form a decision-maker can scan.
         </p>
+        <ul class="chart-key" aria-label="How to read the figures">
+          <li><span class="swatch moss" aria-hidden="true"></span> Solid moss — baseline in the Vision: world total, existing stock, published pathway, captured share</li>
+          <li><span class="swatch gold" aria-hidden="true"></span> Gold stripe — comparator: China, other countries, prospective tonnes, the 65 Mt/yr yardstick</li>
+          <li><span class="swatch ember" aria-hidden="true"></span> Ember hatch — U.S. number or U.S. constraint: American emissions, residual carbon, plants too small, siting conflict</li>
+          <li><span class="swatch line" aria-hidden="true"></span> Moss line — same as solid moss: the published injectivity pathway (Ch. 5 Figure 5.1)</li>
+        </ul>
+        <p class="chart-src">Those three tokens mean the same thing on every figure. Bar length is the value. Read the name on the left.</p>
 
         <div class="chart-grid">
           <article class="chart-card">
@@ -687,7 +749,7 @@
             <div class="hbar" aria-hidden="true">
               <div class="hbar-row"><span>United States</span><div class="hbar-track"><span class="hbar-fill ember" style="width:100%"></span></div><span>14 t</span></div>
               <div class="hbar-row"><span>China</span><div class="hbar-track"><span class="hbar-fill gold" style="width:50%"></span></div><span>7 t</span></div>
-              <div class="hbar-row"><span>Kenya / Haiti</span><div class="hbar-track"><span class="hbar-fill" style="width:2.1%"></span></div><span>0.3 t</span></div>
+              <div class="hbar-row"><span>Kenya / Haiti</span><div class="hbar-track"><span class="hbar-fill gold" style="width:2.1%"></span></div><span>0.3 t</span></div>
             </div>
             <p class="chart-src">Source: Exec. summary, Global Carbon Budget (2021). The Vision uses this gap as a justice and leadership obligation, not as a capture-rate input.</p>
           </article>
@@ -713,10 +775,10 @@
               <text x="540" y="252" font-size="12" fill="#2f433b">2040</text>
               <text x="78" y="22" font-size="12" fill="#2f433b">Million tonnes CO₂ / year injectivity</text>
               <polyline fill="none" stroke="#184a38" stroke-width="3" points="100,228 250,203 400,124 550,40"/>
-              <circle cx="100" cy="228" r="5" fill="#9b3410" stroke="#10211a" stroke-width="1.5"/><text x="110" y="224" font-size="11" fill="#10211a">5</text>
-              <circle cx="250" cy="203" r="5" fill="#9b3410" stroke="#10211a" stroke-width="1.5"/><text x="260" y="198" font-size="11" fill="#10211a">65</text>
-              <circle cx="400" cy="124" r="5" fill="#9b3410" stroke="#10211a" stroke-width="1.5"/><text x="410" y="120" font-size="11" fill="#10211a">250</text>
-              <circle cx="550" cy="40" r="5" fill="#9b3410" stroke="#10211a" stroke-width="1.5"/><text x="512" y="36" font-size="11" fill="#10211a">450</text>
+              <circle cx="100" cy="228" r="5" fill="#184a38" stroke="#10211a" stroke-width="1.5"/><text x="110" y="224" font-size="11" fill="#10211a">5</text>
+              <circle cx="250" cy="203" r="5" fill="#184a38" stroke="#10211a" stroke-width="1.5"/><text x="260" y="198" font-size="11" fill="#10211a">65</text>
+              <circle cx="400" cy="124" r="5" fill="#184a38" stroke="#10211a" stroke-width="1.5"/><text x="410" y="120" font-size="11" fill="#10211a">250</text>
+              <circle cx="550" cy="40" r="5" fill="#184a38" stroke="#10211a" stroke-width="1.5"/><text x="512" y="36" font-size="11" fill="#10211a">450</text>
             </svg>
             <p class="chart-src">Source: Ch. 5 Figure 5.1 labels (5 / 65 / 250 / 450 Mt/yr) with 2030 = 65 Mt/yr also in chapter prose (Larson et al., 2020). Years 2025/2035/2040 follow the figure’s Activation / Expansion / At-scale markers.</p>
           </article>
@@ -724,8 +786,8 @@
           <article class="chart-card">
             <h3>Commercial storage capacity in Figure 5.1</h3>
             <div class="hbar" aria-hidden="true">
-              <div class="hbar-row"><span>~2030</span><div class="hbar-track"><span class="hbar-fill" style="width:15%"></span></div><span>2,000 Mt</span></div>
-              <div class="hbar-row"><span>~2035</span><div class="hbar-track"><span class="hbar-fill gold" style="width:56%"></span></div><span>7,500 Mt</span></div>
+              <div class="hbar-row"><span>~2030</span><div class="hbar-track"><span class="hbar-fill ember" style="width:15%"></span></div><span>2,000 Mt</span></div>
+              <div class="hbar-row"><span>~2035</span><div class="hbar-track"><span class="hbar-fill ember" style="width:56%"></span></div><span>7,500 Mt</span></div>
               <div class="hbar-row"><span>~2040</span><div class="hbar-track"><span class="hbar-fill ember" style="width:100%"></span></div><span>13,500 Mt</span></div>
             </div>
             <p class="chart-src">Source: Ch. 5 Figure 5.1 million-metric-ton labels. Prose independently states two billion tonnes (2,000 Mt) of commercial capacity by 2030 at 65 Mt/yr for 30 years. Prospective saline resource in the Carbon Storage Atlas: 8.328 billion tonnes (NETL, 2015).</p>
@@ -748,9 +810,9 @@
           <article class="chart-card">
             <h3>Clean-energy mineral demand shock to 2040</h3>
             <div class="hbar" aria-hidden="true">
-              <div class="hbar-row"><span>Lithium</span><div class="hbar-track"><span class="hbar-fill ember" style="width:100%"></span></div><span>42×</span></div>
-              <div class="hbar-row"><span>Graphite</span><div class="hbar-track"><span class="hbar-fill gold" style="width:60%"></span></div><span>25×</span></div>
-              <div class="hbar-row"><span>Cobalt</span><div class="hbar-track"><span class="hbar-fill gold" style="width:50%"></span></div><span>21×</span></div>
+              <div class="hbar-row"><span>Lithium</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>42×</span></div>
+              <div class="hbar-row"><span>Graphite</span><div class="hbar-track"><span class="hbar-fill" style="width:60%"></span></div><span>25×</span></div>
+              <div class="hbar-row"><span>Cobalt</span><div class="hbar-track"><span class="hbar-fill" style="width:50%"></span></div><span>21×</span></div>
               <div class="hbar-row"><span>Nickel</span><div class="hbar-track"><span class="hbar-fill" style="width:45%"></span></div><span>19×</span></div>
               <div class="hbar-row"><span>REEs</span><div class="hbar-track"><span class="hbar-fill" style="width:17%"></span></div><span>7×</span></div>
               <div class="hbar-row"><span>Average CMs</span><div class="hbar-track"><span class="hbar-fill" style="width:10%"></span></div><span>4×</span></div>
@@ -762,9 +824,9 @@
             <h3>Flue-gas CO<sub>2</sub> concentration (why industrial first)</h3>
             <div class="hbar" aria-hidden="true">
               <div class="hbar-row"><span>Air (DAC)</span><div class="hbar-track"><span class="hbar-fill" style="width:4%"></span></div><span>~400 ppm</span></div>
-              <div class="hbar-row"><span>NGCC</span><div class="hbar-track"><span class="hbar-fill gold" style="width:16%"></span></div><span>4%</span></div>
+              <div class="hbar-row"><span>NGCC</span><div class="hbar-track"><span class="hbar-fill ember" style="width:16%"></span></div><span>4%</span></div>
               <div class="hbar-row"><span>Coal utility</span><div class="hbar-track"><span class="hbar-fill" style="width:48%"></span></div><span>~12%</span></div>
-              <div class="hbar-row"><span>High-purity</span><div class="hbar-track"><span class="hbar-fill ember" style="width:100%"></span></div><span>&gt;98%</span></div>
+              <div class="hbar-row"><span>High-purity</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>&gt;98%</span></div>
             </div>
             <p class="chart-src">Source: Ch. 2. Capture cost rises as concentration falls. High-purity streams (gas processing, ethanol, hydrogen, fertilizer) are the mature fleet; NGCC at 4% is the hard problem.</p>
           </article>
@@ -953,14 +1015,19 @@
           </tbody>
         </table>
 
+        <ul class="chart-key" aria-label="How to read the figures">
+          <li><span class="swatch moss" aria-hidden="true"></span> Solid moss — baseline: world total, existing stock, published pathway, captured share</li>
+          <li><span class="swatch gold" aria-hidden="true"></span> Gold stripe — comparator: China, other countries, prospective tonnes, 65 Mt/yr yardstick</li>
+          <li><span class="swatch ember" aria-hidden="true"></span> Ember hatch — U.S. number or U.S. constraint</li>
+        </ul>
         <div class="chart-grid">
           <article class="chart-card">
             <h3>Storage: prospective vs actually stored vs needed</h3>
             <div class="hbar" aria-hidden="true">
-              <div class="hbar-row"><span>RCSP stored</span><div class="hbar-track"><span class="hbar-fill" style="width:1%"></span></div><span>11 Mt</span></div>
+              <div class="hbar-row"><span>RCSP stored</span><div class="hbar-track"><span class="hbar-fill ember" style="width:1%"></span></div><span>11 Mt</span></div>
               <div class="hbar-row"><span>Global to 2020</span><div class="hbar-track"><span class="hbar-fill gold" style="width:10%"></span></div><span>&gt;200 Mt</span></div>
               <div class="hbar-row"><span>Commercial by 2030</span><div class="hbar-track"><span class="hbar-fill ember" style="width:24%"></span></div><span>2,000 Mt</span></div>
-              <div class="hbar-row"><span>Atlas saline*</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>8,328 Mt</span></div>
+              <div class="hbar-row"><span>Atlas saline*</span><div class="hbar-track"><span class="hbar-fill gold" style="width:100%"></span></div><span>8,328 Mt</span></div>
             </div>
             <p class="chart-src">Source: Ch. 5. *Prospective onshore saline (NETL Atlas 2015) is not permitted injectivity. Most of the 200 Mt already stored was EOR, geographically tied to oilfields, not a national saline network. Geology is widespread; commercial, consented pore space is not.</p>
           </article>
@@ -968,7 +1035,7 @@
             <h3>Geographic mismatch: gas CCS vs methane</h3>
             <div class="hbar" aria-hidden="true">
               <div class="hbar-row"><span>NGCC too small for CCS</span><div class="hbar-track"><span class="hbar-fill ember" style="width:65%"></span></div><span>65%</span></div>
-              <div class="hbar-row"><span>CO<sub>2</sub> pipes today</span><div class="hbar-track"><span class="hbar-fill gold" style="width:25%"></span></div><span>5,000 mi / 13 states</span></div>
+              <div class="hbar-row"><span>CO<sub>2</sub> pipes today</span><div class="hbar-track"><span class="hbar-fill ember" style="width:25%"></span></div><span>5,000 mi / 13 states</span></div>
               <div class="hbar-row"><span>O&amp;G pipe network</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>&gt;2 million mi</span></div>
               <div class="hbar-row"><span>Wells (active/abandoned)</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>&gt;2 million</span></div>
             </div>
@@ -1035,6 +1102,11 @@
 
           <div class="lab-box">
             <h3 style="margin-top:0;">Live result</h3>
+            <ul class="chart-key" aria-label="How to read the lab meters">
+              <li><span class="swatch moss" aria-hidden="true"></span> Captured share (baseline)</li>
+              <li><span class="swatch gold" aria-hidden="true"></span> vs 65 Mt/yr yardstick (comparator)</li>
+              <li><span class="swatch ember" aria-hidden="true"></span> Residual and siting conflict (U.S. constraint)</li>
+            </ul>
             <div class="live-nums">
               <div class="live-num"><b id="out-ch4">240</b><span id="out-ch4-cap">8 MMT CH₄ × GWP-30, million t CO₂e</span></div>
               <div class="live-num"><b id="out-og">236</b><span>Oil &amp; gas GHGI 197 Mt CO₂e at GWP-25, rescaled</span></div>
@@ -1048,8 +1120,8 @@
               <div class="hbar-row"><span>Residual</span><div class="hbar-track"><span class="hbar-fill ember" id="bar-res" style="width:5%"></span></div><span id="bar-res-n">5%</span></div>
               <div class="hbar-row"><span>vs 65 Mt/yr</span><div class="hbar-track"><span class="hbar-fill gold" id="bar-vs65" style="width:1.5%"></span></div><span id="bar-vs65-n">1.5%</span></div>
               <div class="hbar-row"><span>Water conflict</span><div class="hbar-track"><span class="hbar-fill ember" id="bar-water" style="width:10%"></span></div><span id="bar-water-n">low</span></div>
-              <div class="hbar-row"><span>Pore conflict</span><div class="hbar-track"><span class="hbar-fill gold" id="bar-pore" style="width:20%"></span></div><span id="bar-pore-n">med</span></div>
-              <div class="hbar-row"><span>Power conflict</span><div class="hbar-track"><span class="hbar-fill" id="bar-power" style="width:15%"></span></div><span id="bar-power-n">low</span></div>
+              <div class="hbar-row"><span>Pore conflict</span><div class="hbar-track"><span class="hbar-fill ember" id="bar-pore" style="width:20%"></span></div><span id="bar-pore-n">med</span></div>
+              <div class="hbar-row"><span>Power conflict</span><div class="hbar-track"><span class="hbar-fill ember" id="bar-power" style="width:15%"></span></div><span id="bar-power-n">low</span></div>
               <div class="hbar-row"><span>Consent risk</span><div class="hbar-track"><span class="hbar-fill ember" id="bar-consent" style="width:10%"></span></div><span id="bar-consent-n">low</span></div>
             </div>
             <p class="lab-verdict" id="out-geo-note"></p>
@@ -1596,11 +1668,11 @@
         return res.json();
       })
       .then((issue) => {
-        if (!featuredMeta) return;
-        const user = issue.user && issue.user.login ? issue.user.login : "unknown";
         const n = issue.comments || 0;
         nReplies = n;
         renderKpi();
+        if (!featuredMeta) return;
+        const user = issue.user && issue.user.login ? issue.user.login : "unknown";
         featuredMeta.textContent = user + " · " + n + " " + (n === 1 ? "reply" : "replies") + " · Issue #" + issue.number;
       })
       .catch(() => {});
