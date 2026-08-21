@@ -128,7 +128,18 @@
     }
     .btn-primary { background: var(--paper); color: var(--deep); }
     .panel .btn-primary { background: var(--moss); color: #fff; }
+    .panel .btn-secondary {
+      background: transparent;
+      color: var(--moss);
+      border: 1px solid var(--moss);
+    }
     .btn-ghost { background: transparent; color: var(--paper); border: 1px solid rgba(243, 234, 216, 0.35); }
+    .discuss-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 0 0 1.2rem;
+    }
     .panel {
       background: var(--paper);
       color: var(--ink);
@@ -257,6 +268,19 @@
     .thread h3 { margin: 0 0 0.25rem; font-size: 1.02rem; }
     .thread .meta-line { font-size: 0.8rem; color: var(--ink-soft); margin: 0 0 0.4rem; }
     .thread p { margin: 0; font-size: 0.92rem; }
+    .thread-featured {
+      background: #fffaf0;
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 1rem 1.05rem 0.9rem;
+      margin: 0 0 1.2rem;
+    }
+    .comment {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.75rem 0;
+    }
+    .comment .meta-line { font-size: 0.8rem; color: var(--ink-soft); margin: 0 0 0.35rem; }
+    .comment p { margin: 0; font-size: 0.92rem; }
     caption {
       text-align: left;
       font-size: 0.82rem;
@@ -1211,15 +1235,24 @@
 
         <h2 id="discuss">Discussion</h2>
         <p>
-          Public comments live on GitHub, not by email. Open an issue titled <strong>Discussion:</strong>
-          if you have a GitHub account. Your username is the name on the thread.
+          Public comments live on GitHub Issue
+          <a href="https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/10">#10</a>,
+          not by email. Reply there with a GitHub account. Your username is the name on the comment.
         </p>
-        <p>
-          <a class="btn btn-primary" href="https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/new?title=Discussion:%20&amp;body=Comment%20on%20the%20FECM%20Strategic%20Vision%20review:%0A%0A">Start a public thread</a>
+        <p class="discuss-actions">
+          <a class="btn btn-primary" href="https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/10">Join the discussion</a>
+          <a class="btn btn-secondary" href="https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/new?title=Discussion:%20&amp;body=Comment%20on%20the%20FECM%20Strategic%20Vision%20review:%0A%0ARelated%20to%20https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/10%0A%0A">Start another thread</a>
         </p>
-        <h3>Public threads</h3>
-        <p class="share-note">Pulled from open GitHub issues whose titles start with “Discussion:”.</p>
-        <div id="thread-list">Loading public threads…</div>
+        <article class="thread thread-featured">
+          <h3><a href="https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/10">Discussion: Comment on the FECM Strategic Vision review</a></h3>
+          <p class="meta-line" id="featured-meta">Opened by ParadiseUnlockedTravel · GitHub Issue #10</p>
+          <p>Main public thread for this review. Add a comment on the issue to join.</p>
+        </article>
+        <h3>Recent comments</h3>
+        <div id="comment-list">Loading comments from Issue #10…</div>
+        <h3>Other public threads</h3>
+        <p class="share-note">Additional open GitHub issues whose titles start with “Discussion:”.</p>
+        <div id="thread-list">Loading other threads…</div>
       </div>
     </section>
   </main>
@@ -1255,27 +1288,83 @@
         }
       });
     });
+    const DISCUSSION_ISSUE = 10;
+    const REPO_API = "https://api.github.com/repos/ParadiseUnlockedTravel/EnvironmentalScienceAI";
+    const ISSUE_URL = "https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/" + DISCUSSION_ISSUE;
+    const commentList = document.getElementById("comment-list");
     const threadList = document.getElementById("thread-list");
-    fetch("https://api.github.com/repos/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues?state=open&per_page=20")
+    const featuredMeta = document.getElementById("featured-meta");
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    function snippet(value, max) {
+      const text = String(value || "").replace(/\s+/g, " ").trim();
+      const cut = text.slice(0, max);
+      return escapeHtml(cut) + (text.length > max ? "…" : "");
+    }
+
+    fetch(REPO_API + "/issues/" + DISCUSSION_ISSUE)
+      .then((res) => {
+        if (!res.ok) throw new Error("GitHub API " + res.status);
+        return res.json();
+      })
+      .then((issue) => {
+        if (!featuredMeta) return;
+        const user = issue.user && issue.user.login ? issue.user.login : "unknown";
+        const n = issue.comments || 0;
+        featuredMeta.textContent = user + " · " + n + " " + (n === 1 ? "reply" : "replies") + " · Issue #" + issue.number;
+      })
+      .catch(() => {});
+
+    fetch(REPO_API + "/issues/" + DISCUSSION_ISSUE + "/comments?per_page=20")
+      .then((res) => {
+        if (!res.ok) throw new Error("GitHub API " + res.status);
+        return res.json();
+      })
+      .then((comments) => {
+        if (!commentList) return;
+        if (!comments.length) {
+          commentList.innerHTML = "<p>No replies yet. <a href=\"" + ISSUE_URL + "\">Be the first to comment on Issue #10</a>.</p>";
+          return;
+        }
+        commentList.innerHTML = comments.map((item) => {
+          const user = item.user && item.user.login ? escapeHtml(item.user.login) : "unknown";
+          return "<article class=\"comment\"><p class=\"meta-line\"><a href=\"" + escapeHtml(item.html_url) + "\">" + user + "</a></p><p>" + snippet(item.body, 400) + "</p></article>";
+        }).join("");
+      })
+      .catch(() => {
+        commentList.innerHTML = "<p>Comments could not be loaded here. Open <a href=\"" + ISSUE_URL + "\">Issue #10</a> on GitHub.</p>";
+      });
+
+    fetch(REPO_API + "/issues?state=open&per_page=20")
       .then((res) => {
         if (!res.ok) throw new Error("GitHub API " + res.status);
         return res.json();
       })
       .then((issues) => {
-        const threads = issues.filter((item) => !item.pull_request && /^discussion:/i.test(item.title));
+        if (!threadList) return;
+        const threads = issues.filter((item) =>
+          !item.pull_request &&
+          item.number !== DISCUSSION_ISSUE &&
+          /^discussion:/i.test(item.title)
+        );
         if (!threads.length) {
-          threadList.innerHTML = "<p>No public discussion threads yet. Use “Start a public thread” above. Keep the title starting with Discussion:</p>";
+          threadList.innerHTML = "<p>No additional Discussion: issues yet. Use “Start another thread” for a separate topic, and keep the title starting with Discussion:</p>";
           return;
         }
         threadList.innerHTML = threads.map((item) => {
-          const snippet = (item.body || "").replace(/</g, "&lt;").slice(0, 280);
-          const title = item.title.replace(/</g, "&lt;");
-          const user = (item.user && item.user.login) ? item.user.login.replace(/</g, "&lt;") : "unknown";
-          return "<article class=\"thread\"><h3><a href=\"" + item.html_url + "\">" + title + "</a></h3><p class=\"meta-line\">" + user + " · " + item.comments + " " + (item.comments === 1 ? "reply" : "replies") + "</p><p>" + snippet + (snippet.length === 280 ? "…" : "") + "</p></article>";
+          const title = escapeHtml(item.title);
+          const user = (item.user && item.user.login) ? escapeHtml(item.user.login) : "unknown";
+          return "<article class=\"thread\"><h3><a href=\"" + escapeHtml(item.html_url) + "\">" + title + "</a></h3><p class=\"meta-line\">" + user + " · " + item.comments + " " + (item.comments === 1 ? "reply" : "replies") + "</p><p>" + snippet(item.body, 280) + "</p></article>";
         }).join("");
       })
       .catch(() => {
-        threadList.innerHTML = "<p>Public threads could not be loaded here. Open them on <a href=\"https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues\">GitHub Issues</a>.</p>";
+        threadList.innerHTML = "<p>Other threads could not be loaded here. The main discussion is <a href=\"" + ISSUE_URL + "\">Issue #10</a>.</p>";
       });
 
     function fmt(n) {
