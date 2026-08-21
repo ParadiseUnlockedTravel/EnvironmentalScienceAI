@@ -250,26 +250,6 @@
     .warn {
       border-left-color: var(--ember);
     }
-    .discuss-form {
-      display: grid;
-      gap: 0.65rem;
-      margin: 0.8rem 0 1.2rem;
-    }
-    .discuss-form label {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--ink-soft);
-    }
-    .discuss-form input,
-    .discuss-form textarea {
-      width: 100%;
-      font: inherit;
-      padding: 0.55rem 0.7rem;
-      border: 1px solid var(--rule);
-      border-radius: 10px;
-      background: #fff;
-    }
-    .discuss-form textarea { min-height: 7.5rem; resize: vertical; }
     .thread {
       border-bottom: 1px solid var(--rule);
       padding: 0.85rem 0;
@@ -1231,50 +1211,12 @@
 
         <h2 id="discuss">Discussion</h2>
         <p>
-          This is a static GitHub Pages site. It cannot host a live anonymous comment database on its own —
-          that would need a separate service and a login or spam filter. Rather than fake a board that
-          forgets every refresh, here are two paths that actually work.
+          Public comments live on GitHub, not by email. Open an issue titled <strong>Discussion:</strong>
+          if you have a GitHub account. Your username is the name on the thread.
         </p>
-        <div class="grid-2">
-          <article class="card">
-            <h3>Public, with your name</h3>
-            <p>
-              Open a GitHub issue titled <strong>Discussion:</strong> on this repository. Your GitHub username
-              is the name on the thread. Replies stay public, dated, and citable. No GitHub account means
-              this path is not available.
-            </p>
-            <p>
-              <a class="btn btn-primary" href="https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/new?title=Discussion:%20&amp;body=Comment%20on%20the%20FECM%20Strategic%20Vision%20review:%0A%0A">Start a public thread</a>
-            </p>
-          </article>
-          <article class="card">
-            <h3>Private or anonymous</h3>
-            <p>
-              Send a note by email. Leave the name blank to stay anonymous. These notes go to Paradise Unlocked Travel;
-              they do not appear on this page unless someone chooses to post a summary.
-            </p>
-          </article>
-        </div>
-
-        <form class="discuss-form" id="anon-form">
-          <div>
-            <label for="discuss-name">Name (optional — leave blank to stay anonymous)</label>
-            <input id="discuss-name" type="text" maxlength="80" autocomplete="name" placeholder="Your name, or blank" />
-          </div>
-          <div>
-            <label for="discuss-body">Comment</label>
-            <textarea id="discuss-body" required maxlength="4000" placeholder="What should a decision-maker notice, challenge, or add?"></textarea>
-          </div>
-          <div>
-            <button class="btn btn-primary" type="submit">Open email to send</button>
-          </div>
-        </form>
-        <p class="share-note">
-          If your device has no email app, write
-          <a href="mailto:info@paradiseunlocked.com">info@paradiseunlocked.com</a>
-          with subject “FECM review comment.”
+        <p>
+          <a class="btn btn-primary" href="https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/new?title=Discussion:%20&amp;body=Comment%20on%20the%20FECM%20Strategic%20Vision%20review:%0A%0A">Start a public thread</a>
         </p>
-
         <h3>Public threads</h3>
         <p class="share-note">Pulled from open GitHub issues whose titles start with “Discussion:”.</p>
         <div id="thread-list">Loading public threads…</div>
@@ -1313,17 +1255,6 @@
         }
       });
     });
-    document.getElementById("anon-form").addEventListener("submit", (event) => {
-      event.preventDefault();
-      const name = document.getElementById("discuss-name").value.trim();
-      const body = document.getElementById("discuss-body").value.trim();
-      if (!body) return;
-      const who = name || "Anonymous";
-      const subject = "FECM review comment";
-      const message = "Name: " + who + "\n\n" + body + "\n\nSource: https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/";
-      window.location.href = "mailto:info@paradiseunlocked.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(message);
-    });
-
     const threadList = document.getElementById("thread-list");
     fetch("https://api.github.com/repos/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues?state=open&per_page=20")
       .then((res) => {
