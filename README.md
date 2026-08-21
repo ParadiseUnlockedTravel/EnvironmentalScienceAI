@@ -8,6 +8,26 @@ Independent review of the U.S. Department of Energy Office of Fossil Energy and 
 
 The page is a decision-maker brief of the Vision: lock-in test, chapter cites, claim ledger, sourced bar and line charts, an interactive action lab, and a 21 August 2026 docket check of what changed after April 2022. The Vision reading is not a live award list; check current DOE and EPA dockets before treating any project as real.
 
+## Pulls 1–13 on this page
+
+Checked 21 August 2026. The public review stacks these GitHub pulls:
+
+| Pull | On this public page |
+| --- | --- |
+| #1 Independent FECM review, github.io URL | Yes |
+| #2 Separate draft application pack | No — stays off this public page |
+| #3 Citations, achievable goals, Cursor Grok 4:30–6:45 p.m. credit | Yes |
+| #4 “this era,” not “that era” | Yes |
+| #5 Bluebook legal form | Yes, kept as one of two styles |
+| #6 APA 7th and legal Bluebook (not Kelley Blue Book); Chicago/MLA not used | Yes |
+| #7 Decision brief, methods, claim ledger, charts, action lab, siting | Yes |
+| #8 Lede without “funded on trust” | Yes |
+| #9 Charts at the top; **See the charts**; nav visible on small screens | Yes |
+| — | No pull #10. [Issue #10](https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/10) is the discussion thread |
+| #11 No email contact to Paradise Unlocked Travel | Yes |
+| #12 Discuss wired to Issue #10 | Yes |
+| #13 2022–2026 docket check and disclaimer | Yes |
+
 ## Disclaimer
 
 Paradise Unlocked Travel is not responsible for this output or for any implementation based on it. This page is an independent reading of a public DOE document, prepared with an AI system. It is not legal, engineering, financial, tax, or investment advice; not an official DOE or EPA position; and not a warranty of completeness or accuracy. Anyone who uses this page does so at their own risk. Verify every number, citation, and project status against primary sources before acting.
