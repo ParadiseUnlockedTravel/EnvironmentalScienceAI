@@ -20,12 +20,7 @@ Paradise Unlocked Travel, *Thoughts on FECM’s Strategic Vision* (Rev. 2), Env�
 
 ## Discussion
 
-GitHub Pages cannot host a live anonymous comment database on its own. The page therefore offers:
-
-- **Public, named threads** via GitHub Issues titled `Discussion:` (GitHub username is the name)
-- **Private or anonymous notes** by email to info@paradiseunlocked.com (name field optional)
-
-To turn this into a fuller board later, enable GitHub Discussions on the repository (Settings → Features → Discussions).
+Public comments are GitHub Issues titled `Discussion:` (GitHub username is the name). There is no email contact form.
 
 ## What this is
 
