@@ -1,6 +1,6 @@
 # Nicole Jury — resume pack
 
-Printable resume and a generic cover letter aimed at **AI Enablement Manager** and nearby titles that match MIT Professional Education in Agentic AI.
+Printable resume and a generic cover letter aimed at **AI Enablement Manager** and nearby titles that match MIT Professional Education in Agentic AI. Framing: a capable visionary who makes a meaningful contribution in whatever room she enters — direction plus systems, including the public FECM brief as proof she can add value in a domain she was not trained in.
 
 ## Files
 
