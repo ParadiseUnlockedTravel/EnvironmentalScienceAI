@@ -306,8 +306,8 @@
     .hbar-row { display: grid; grid-template-columns: 7.2rem 1fr 3.6rem; gap: 0.45rem; align-items: center; }
     .hbar-row span:first-child { font-size: 0.78rem; color: var(--ink-soft); }
     .hbar-row span:last-child { font-size: 0.78rem; font-weight: 600; text-align: right; }
-    .hbar-track { height: 0.72rem; background: #e7dcc4; border-radius: 999px; overflow: hidden; }
-    .hbar-fill { display: block; height: 100%; border-radius: 999px; background: var(--moss); }
+    .hbar-track { height: 1.15rem; background: #d9ccb0; border-radius: 999px; overflow: hidden; }
+    .hbar-fill { display: block; height: 1.15rem; min-height: 1.15rem; border-radius: 999px; background: var(--moss); }
     .hbar-fill.ember { background: var(--ember); }
     .hbar-fill.gold { background: var(--gold); }
     .chart-card svg { width: 100%; height: auto; display: block; }
@@ -389,7 +389,7 @@
     }
     @media (max-width: 860px) {
       .grid-3, .grid-2, .verdict, .chart-grid, .lab { grid-template-columns: 1fr; }
-      nav { display: none; }
+      nav { gap: 0.65rem; }
     }
     @media print {
       header.top { position: static; }
@@ -449,7 +449,7 @@
           <span>First reading: 20 August 2026 · Reliability revision: 21 August 2026</span>
         </div>
         <div class="actions">
-          <a class="btn btn-primary" href="#verdict">Read the verdict</a>
+          <a class="btn btn-primary" href="#metrics">See the charts</a>
           <a class="btn btn-ghost" href="#lab">Test modes of action</a>
           <button class="btn btn-ghost" type="button" id="copy-link">Copy shareable link</button>
         </div>
@@ -511,22 +511,6 @@
             <p class="num">≥65 Mt / yr</p>
             <p>Storage infrastructure “must accommodate at least 65 million tonnes of CO<sub>2</sub> per year by 2030,” “roughly equivalent to the demand of the entire CO<sub>2</sub> EOR industry” (Larson et al., 2020). Thirty years at that rate is two billion tonnes of commercial capacity. Permitting and consent, not geology, are the binding constraints. <span class="pin">Ch. 5, p. 26</span></p>
           </article>
-        </div>
-
-        <div class="note" id="methods">
-          <strong>How this review was done.</strong>
-          The source is the public PDF of FECM’s Strategic Vision (April 2022, including the 28 April update): leadership letter, executive summary, and Chapters 1–8.
-          Claims below that quote numbers, BIL sections, or program names were checked against that text on 21 August 2026.
-          This is not a legal opinion, not an official DOE position, and not a 2026 implementation audit.
-          Figures were read in text; they were not re-plotted. Site-specific TEA, LCA, and community consultation still govern any real award.
-        </div>
-
-        <div class="note warn">
-          <strong>2022 document, 2026 reading.</strong>
-          From 2026 this is still this era, not a closed historical period. It is also four years old.
-          Inflation Reduction Act changes to 45Q, hydrogen-hub selections, EPA methane rules, Class VI primacy, and later project cancellations are
-          <em>outside the source</em>. Check current DOE and EPA dockets for whether a given project exists.
-          Use this page for the lock-in test the Vision already wrote down.
         </div>
 
         <h2 id="metrics">Numbers in the Vision, plotted</h2>
@@ -646,6 +630,22 @@
             </div>
             <p class="chart-src">Source: Ch. 2. Taylor et al. (2005) FGD; CCS Knowledge (2018) Boundary Dam total capital; Tanaka et al. (2018) Petra Nova EPC. Different metrics — do not average them into one “CCS learning rate.”</p>
           </article>
+        </div>
+
+        <div class="note" id="methods">
+          <strong>How this review was done.</strong>
+          The source is the public PDF of FECM’s Strategic Vision (April 2022, including the 28 April update): leadership letter, executive summary, and Chapters 1–8.
+          Claims below that quote numbers, BIL sections, or program names were checked against that text on 21 August 2026.
+          This is not a legal opinion, not an official DOE position, and not a 2026 implementation audit.
+          Figures were read in text; they were not re-plotted. Site-specific TEA, LCA, and community consultation still govern any real award.
+        </div>
+
+        <div class="note warn">
+          <strong>2022 document, 2026 reading.</strong>
+          From 2026 this is still this era, not a closed historical period. It is also four years old.
+          Inflation Reduction Act changes to 45Q, hydrogen-hub selections, EPA methane rules, Class VI primacy, and later project cancellations are
+          <em>outside the source</em>. Check current DOE and EPA dockets for whether a given project exists.
+          Use this page for the lock-in test the Vision already wrote down.
         </div>
 
         <h2 id="siting">Resources, current use, and where it cannot go</h2>
@@ -1495,10 +1495,12 @@
 
     ["mode-methane","mode-industry","mode-storage","mode-gasccs","mode-h2new","mode-fuels","mode-dacgas","mode-dacclean","lab-gwp","lab-capture","lab-source","lab-store","lab-site","res-water","res-pore","res-power","res-biomass","res-consent"].forEach((id) => {
       const el = document.getElementById(id);
-      el.addEventListener("input", updateLab);
-      el.addEventListener("change", updateLab);
+      if (el) {
+        el.addEventListener("input", updateLab);
+        el.addEventListener("change", updateLab);
+      }
     });
-    updateLab();
+    if (document.getElementById("lab-gwp")) updateLab();
   </script>
 </body>
 </html>
