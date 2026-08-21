@@ -6,11 +6,11 @@ Independent review of the U.S. Department of Energy Office of Fossil Energy and 
 
 **https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/**
 
-The page is a decision-maker brief of the Vision: lock-in test, chapter cites, claim ledger, sourced bar and line charts, an interactive action lab, a 21 August 2026 docket check of what changed after April 2022, and a Laid out map of those tools for activists, public agencies, and operators. The Vision reading is not a live award list; check current DOE and EPA dockets before treating any project as real.
+The page is a decision-maker brief of the Vision: lock-in test, chapter cites, claim ledger, sourced bar and line charts, an interactive action lab, a 20 August 2026 docket check of what changed after April 2022, and a Laid out map of those tools for activists, public agencies, and operators. The Vision reading is not a live award list; check current DOE and EPA dockets before treating any project as real.
 
 ## Pulls 1–13 on this page
 
-Checked 21 August 2026. The public review stacks these GitHub pulls:
+Checked 20 August 2026. The public review stacks these GitHub pulls:
 
 | Pull | On this public page |
 | --- | --- |
@@ -36,11 +36,11 @@ Paradise Unlocked Travel is not responsible for this output or for any implement
 
 APA 7th (environmental science):
 
-Jury, N. (2026, August 21). *Thoughts on FECM’s Strategic Vision* (Rev. 3) [Independent review first prepared 20 August 2026: Nicole Jury directed human-guided prompts; Cursor Grok 4.6 High Fast researched the source and built this page with her; Rev. 3 adds a 21 August 2026 docket check of IRA 45Q, hydrogen hubs, EPA methane rules, Class VI primacy, and later cancellations]. Paradise Unlocked Travel. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/
+Jury, N. (2026, August 20). *Thoughts on FECM’s Strategic Vision* (Rev. 3) [Independent review first prepared 20 August 2026: Nicole Jury directed human-guided prompts; Cursor Grok 4.6 High Fast researched the source and built this page with her; Rev. 3 adds a 20 August 2026 docket check of IRA 45Q, hydrogen hubs, EPA methane rules, Class VI primacy, and later cancellations]. Paradise Unlocked Travel. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/
 
 Bluebook (legal citation — not Kelley Blue Book for cars):
 
-Nicole Jury, *Thoughts on FECM’s Strategic Vision* (Rev. 3), Env’t Sci. AI (Aug. 21, 2026), https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/ (Paradise Unlocked Travel; first prepared Aug. 20, 2026: Jury directed human-guided prompts; Cursor Grok 4.6 High Fast researched the source and built this page with her).
+Nicole Jury, *Thoughts on FECM’s Strategic Vision* (Rev. 3), Env’t Sci. AI (Aug. 20, 2026), https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/ (Paradise Unlocked Travel; first prepared Aug. 20, 2026: Jury directed human-guided prompts; Cursor Grok 4.6 High Fast researched the source and built this page with her).
 
 ## Discussion
 
@@ -60,7 +60,7 @@ Do not treat raw hits as success. The live tally is on the page under [How this 
 
 A landing-page reading directed by Nicole Jury of Paradise Unlocked Travel through human-guided prompts. Cursor Grok 4.6 High Fast researched the public FECM Vision, drafted the analysis, and built this page with her. She is not a fossil-energy specialist; the method is to make a non-specialist reading checkable against the source.
 
-Credits: Nicole Jury of Paradise Unlocked Travel directed human-guided prompts; Cursor Grok 4.6 High Fast researched the source and built this landing page with her on 20 August 2026. Reliability revision and 2022–2026 docket check 21 August 2026. Cover image in the source document: Ed Hawkins, National Centre for Atmospheric Science, University of Reading.
+Credits: Nicole Jury of Paradise Unlocked Travel directed human-guided prompts; Cursor Grok 4.6 High Fast researched the source and built this landing page with her on 20 August 2026. Reliability revision and 2022–2026 docket check 20 August 2026. Cover image in the source document: Ed Hawkins, National Centre for Atmospheric Science, University of Reading.
 
 Official source PDF:
 
