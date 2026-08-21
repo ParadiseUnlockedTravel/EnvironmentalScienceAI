@@ -127,6 +127,7 @@
       font-family: inherit;
     }
     .btn-primary { background: var(--paper); color: var(--deep); }
+    .panel .btn-primary { background: var(--moss); color: #fff; }
     .btn-ghost { background: transparent; color: var(--paper); border: 1px solid rgba(243, 234, 216, 0.35); }
     .panel {
       background: var(--paper);
@@ -209,6 +210,136 @@
     }
     .pill.risk { background: #f4d4c6; color: #8a2d12; }
     .pill.mixed { background: #efe3b8; color: #6b5410; }
+    .pin {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--moss);
+      white-space: nowrap;
+    }
+    .brief {
+      background: #10241c;
+      color: var(--paper);
+      border-radius: 16px;
+      padding: 1.35rem 1.4rem 1.2rem;
+      margin: 0 0 2rem;
+    }
+    .brief h2 {
+      color: var(--gold);
+      margin: 0 0 0.7rem;
+      font-size: 1.35rem;
+    }
+    .brief p, .brief li { color: #e7deca; }
+    .brief ol { margin: 0.4rem 0 0.9rem; padding-left: 1.2rem; }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 1.1rem;
+      font-size: 0.82rem;
+      margin: 0 0 1rem;
+      color: var(--ink-soft);
+    }
+    .note {
+      background: #fffaf0;
+      border-left: 4px solid var(--moss);
+      padding: 0.9rem 1rem;
+      margin: 1rem 0 1.4rem;
+      font-size: 0.95rem;
+    }
+    .warn {
+      border-left-color: var(--ember);
+    }
+    .discuss-form {
+      display: grid;
+      gap: 0.65rem;
+      margin: 0.8rem 0 1.2rem;
+    }
+    .discuss-form label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+    }
+    .discuss-form input,
+    .discuss-form textarea {
+      width: 100%;
+      font: inherit;
+      padding: 0.55rem 0.7rem;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      background: #fff;
+    }
+    .discuss-form textarea { min-height: 7.5rem; resize: vertical; }
+    .thread {
+      border-bottom: 1px solid var(--rule);
+      padding: 0.85rem 0;
+    }
+    .thread h3 { margin: 0 0 0.25rem; font-size: 1.02rem; }
+    .thread .meta-line { font-size: 0.8rem; color: var(--ink-soft); margin: 0 0 0.4rem; }
+    .thread p { margin: 0; font-size: 0.92rem; }
+    caption {
+      text-align: left;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      padding: 0.4rem 0.1rem 0.6rem;
+      caption-side: bottom;
+    }
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.1rem 0 1.6rem;
+    }
+    .chart-card {
+      background: #fffaf0;
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 1rem 1.05rem 0.9rem;
+    }
+    .chart-card h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+    .chart-src {
+      margin: 0.55rem 0 0;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+    }
+    .hbar { display: grid; gap: 0.38rem; margin-top: 0.65rem; }
+    .hbar-row { display: grid; grid-template-columns: 7.2rem 1fr 3.6rem; gap: 0.45rem; align-items: center; }
+    .hbar-row span:first-child { font-size: 0.78rem; color: var(--ink-soft); }
+    .hbar-row span:last-child { font-size: 0.78rem; font-weight: 600; text-align: right; }
+    .hbar-track { height: 0.72rem; background: #e7dcc4; border-radius: 999px; overflow: hidden; }
+    .hbar-fill { display: block; height: 100%; border-radius: 999px; background: var(--moss); }
+    .hbar-fill.ember { background: var(--ember); }
+    .hbar-fill.gold { background: var(--gold); }
+    .chart-card svg { width: 100%; height: auto; display: block; }
+    .lab {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    fieldset.lab-box {
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      background: #fffaf0;
+      padding: 0.85rem 1rem 1rem;
+      margin: 0;
+    }
+    fieldset.lab-box legend {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 640;
+      padding: 0 0.35rem;
+    }
+    .lab-box label { display: flex; gap: 0.45rem; align-items: flex-start; font-size: 0.9rem; margin: 0.35rem 0; }
+    .lab-box select, .lab-box input[type="range"] { width: 100%; margin: 0.2rem 0 0.55rem; }
+    .live-nums { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin: 0.4rem 0 0.8rem; }
+    .live-num { background: #10241c; color: var(--paper); border-radius: 12px; padding: 0.7rem 0.8rem; }
+    .live-num b { display: block; font-family: Fraunces, Georgia, serif; font-size: 1.15rem; color: var(--gold); }
+    .live-num span { font-size: 0.75rem; color: #c9d3cc; }
+    .lab-verdict { font-size: 0.95rem; margin: 0; }
+    @media (max-width: 860px) {
+      .chart-grid, .lab { grid-template-columns: 1fr; }
+      .hbar-row { grid-template-columns: 5.5rem 1fr 3.2rem; }
+    }
     footer {
       background: var(--deep);
       color: #c9d3cc;
@@ -257,8 +388,16 @@
       color: var(--moss);
     }
     @media (max-width: 860px) {
-      .grid-3, .grid-2, .verdict { grid-template-columns: 1fr; }
+      .grid-3, .grid-2, .verdict, .chart-grid, .lab { grid-template-columns: 1fr; }
       nav { display: none; }
+    }
+    @media print {
+      header.top { position: static; }
+      nav, .actions, .stripes, .cite button { display: none; }
+      body { background: #fff; }
+      .hero, .brief, .callout, footer { background: #fff !important; color: #111 !important; }
+      .panel { background: #fff; }
+      a { color: #111; }
     }
   </style>
 </head>
@@ -276,13 +415,17 @@
     <div class="top-inner">
       <a class="brand" href="#top">Environmental Science AI</a>
       <nav>
-        <a href="#verdict">Verdict</a>
+        <a href="#brief">Decision brief</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#siting">Siting</a>
+        <a href="#lab">Action lab</a>
         <a href="#keeps">What holds</a>
         <a href="#risks">Risks</a>
         <a href="#pathways">Pathways</a>
-        <a href="#goals">Achievable goals</a>
+        <a href="#goals">Goals</a>
+        <a href="#ledger">Ledger</a>
         <a href="#cite">Cite</a>
-        <a href="#source">Source</a>
+        <a href="#discuss">Discuss</a>
       </nav>
     </div>
   </header>
@@ -290,22 +433,24 @@
   <main id="top">
     <section class="hero">
       <div class="wrap">
-        <p class="kicker">Independent review · Paradise Unlocked Travel · 20 August 2026</p>
+        <p class="kicker">Independent review · Paradise Unlocked Travel · Revised 21 August 2026</p>
         <h1>Optimize energy. Do not lock in the next fifty years of harm.</h1>
         <p class="lede">
-          Yes: I am an AI agent, reading as an engineer and environmental scientist would.
-          The attached proposal is DOE FECM’s April 2022 Strategic Vision —
+          The question we were asked: are you an engineer, scientist, human, or AI agent seeking to optimize energy
+          but also concerned with decades of risky, destructive, and costly emissions? Analyze the attached proposal.
+          Yes — this is that reading. The proposal is DOE FECM’s April 2022 Strategic Vision,
           <em>The Role of Fossil Energy and Carbon Management in Achieving Net-Zero Greenhouse Gas Emissions</em>.
           It is one of the more self-aware fossil-office documents of this era. It is also not yet a climate strategy that can be funded on trust.
-          This page adds a sorting of what in the text is actually achievable this decade, what belongs in a demonstration cycle, and what only works after the grid is clean.
+          What follows is the Vision’s own 2050 test, applied as an award screen, with chapter cites a decision-maker can check.
         </p>
         <div class="meta">
-          <span>Source: U.S. DOE Office of Fossil Energy and Carbon Management</span>
+          <span>Source: U.S. DOE Office of Fossil Energy and Carbon Management, April 2022 (28 Apr. update)</span>
           <span>Cover image: Ed Hawkins warming stripes, University of Reading</span>
-          <span>Review date: 20 August 2026</span>
+          <span>First reading: 20 August 2026 · Reliability revision: 21 August 2026</span>
         </div>
         <div class="actions">
           <a class="btn btn-primary" href="#verdict">Read the verdict</a>
+          <a class="btn btn-ghost" href="#lab">Test modes of action</a>
           <button class="btn btn-ghost" type="button" id="copy-link">Copy shareable link</button>
         </div>
       </div>
@@ -322,35 +467,377 @@
           </p>
         </div>
 
+        <div class="brief" id="brief">
+          <h2>For decision-makers</h2>
+          <p>
+            <strong>Use this page to test the Vision’s logic against lock-in.</strong>
+            Do not use it as a 2026 program status report. The source is an April 2022 office vision.
+            Later law, awards, and cancellations are outside the document and are labeled that way below.
+          </p>
+          <p>Three questions the leadership letter already asked — apply them at award time, not in the brochure:</p>
+          <ol>
+            <li>Does this still make sense on a carbon-free grid? If it needs cheap gas or a 2022 pipeline map, redesign it. <span class="pin">Leadership letter, pp. iii–v</span></li>
+            <li>Is the carbon out of the sky for centuries? Dedicated saline storage and carbonates count. Fuels, EOR, and captured-but-not-stored do not. <span class="pin">Ch. 3–5</span></li>
+            <li>Who breathes the co-pollutants, and who is paid? Census-tract benefits and burdens, or it is not net-zero enough. <span class="pin">Ch. 1</span></li>
+          </ol>
+          <p>
+            <strong>Do now, from the text:</strong> methane detection/repair and orphan-well plugging;
+            Class VI assistance and CarbonSAFE / CarbonSTORE;
+            industrial process capture on cement, existing hydrogen, ethanol, and ammonia tied to saline storage;
+            Justice40 accounting that can kill a route.
+          </p>
+          <p>
+            <strong>Fund only with written 2035 and 2050 off-ramps:</strong> gas power + CCS; fossil hydrogen hubs; CO<sub>2</sub> pipelines; biomass hydrogen.
+            <strong>Do not treat as climate infrastructure:</strong> short-lived CO<sub>2</sub>-derived fuels; any capture project without storage or durable-use offtake; DAC sited for 2022 gas convenience.
+          </p>
+        </div>
+
+        <p class="legend">
+          <span><strong>FECM says</strong> = in the April 2022 Vision.</span>
+          <span><strong>This review requires</strong> = judgment, not a DOE position.</span>
+          <span><strong>Outside the source</strong> = 2022–2026 implementation, not audited here.</span>
+        </p>
+
         <div class="grid-3">
           <article class="card">
             <p class="num">2035 / 2050</p>
-            <p>The Vision orients around a carbon pollution-free power sector by 2035 and net-zero U.S. GHG emissions by 2050, with an interim 50–52% cut by 2030 versus 2005.</p>
+            <p>FECM orients around a carbon pollution-free power sector by 2035 and net-zero U.S. GHG emissions by 2050, with an interim 50–52% cut by 2030 versus 2005. <span class="pin">Exec. summary; EO 14008</span></p>
           </article>
           <article class="card">
             <p class="num">$100 / t</p>
-            <p>Carbon Negative Shot: just, sustainable, scalable CDR below $100 per net metric ton of CO<sub>2</sub>e. Useful as a cost and justice screen — dangerous if it becomes a substitute for abatement.</p>
+            <p>Carbon Negative Shot: just, sustainable, scalable CDR below $100 per net metric ton of CO<sub>2</sub>e (Ch. 4 also dates this to 2032). Useful as a cost and justice screen — dangerous if it becomes a substitute for abatement. <span class="pin">Summary; Ch. 4, p. 22</span></p>
           </article>
           <article class="card">
-            <p class="num">65 Mt / yr</p>
-            <p>Storage “activation” target by 2030. That is roughly today’s entire U.S. CO<sub>2</sub>-EOR industry rebuilt as climate infrastructure. Permitting and public consent, not geology, are the binding constraints.</p>
+            <p class="num">≥65 Mt / yr</p>
+            <p>Storage infrastructure “must accommodate at least 65 million tonnes of CO<sub>2</sub> per year by 2030,” “roughly equivalent to the demand of the entire CO<sub>2</sub> EOR industry” (Larson et al., 2020). Thirty years at that rate is two billion tonnes of commercial capacity. Permitting and consent, not geology, are the binding constraints. <span class="pin">Ch. 5, p. 26</span></p>
           </article>
         </div>
+
+        <div class="note" id="methods">
+          <strong>How this review was done.</strong>
+          The source is the public PDF of FECM’s Strategic Vision (April 2022, including the 28 April update): leadership letter, executive summary, and Chapters 1–8.
+          Claims below that quote numbers, BIL sections, or program names were checked against that text on 21 August 2026.
+          This is not a legal opinion, not an official DOE position, and not a 2026 implementation audit.
+          Figures were read in text; they were not re-plotted. Site-specific TEA, LCA, and community consultation still govern any real award.
+        </div>
+
+        <div class="note warn">
+          <strong>2022 document, 2026 reading.</strong>
+          From 2026 this is still this era, not a closed historical period. It is also four years old.
+          Inflation Reduction Act changes to 45Q, hydrogen-hub selections, EPA methane rules, Class VI primacy, and later project cancellations are
+          <em>outside the source</em>. Check current DOE and EPA dockets for whether a given project exists.
+          Use this page for the lock-in test the Vision already wrote down.
+        </div>
+
+        <h2 id="metrics">Numbers in the Vision, plotted</h2>
+        <p>
+          Every bar and point below is a number the April 2022 document publishes or cites.
+          Axes are labeled. Captions name the page or chapter. This is not a re-plot of FECM’s figures;
+          it is the same statistics in a form a decision-maker can scan.
+        </p>
+
+        <div class="chart-grid">
+          <article class="chart-card">
+            <h3>2020 fossil CO<sub>2</sub> — annual vs cumulative</h3>
+            <p class="chart-src">Annual: China 11 Gt, U.S. 5 Gt, world ~35 Gt. Cumulative: U.S. 420 Gt, China 240 Gt.</p>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>World, 2020</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>35 Gt</span></div>
+              <div class="hbar-row"><span>China, 2020</span><div class="hbar-track"><span class="hbar-fill gold" style="width:31.4%"></span></div><span>11 Gt</span></div>
+              <div class="hbar-row"><span>U.S., 2020</span><div class="hbar-track"><span class="hbar-fill ember" style="width:14.3%"></span></div><span>5 Gt</span></div>
+              <div class="hbar-row"><span>U.S. historical</span><div class="hbar-track"><span class="hbar-fill ember" style="width:100%"></span></div><span>420 Gt</span></div>
+              <div class="hbar-row"><span>China historical</span><div class="hbar-track"><span class="hbar-fill gold" style="width:57%"></span></div><span>240 Gt</span></div>
+            </div>
+            <p class="chart-src">Source: Exec. summary, citing Ritchie &amp; Roser (2020), UCS (2018), Global Carbon Budget (2021). Annual and cumulative use different scales — they are two comparisons, not one axis.</p>
+          </article>
+
+          <article class="chart-card">
+            <h3>2020 CO<sub>2</sub> per person</h3>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>United States</span><div class="hbar-track"><span class="hbar-fill ember" style="width:100%"></span></div><span>14 t</span></div>
+              <div class="hbar-row"><span>China</span><div class="hbar-track"><span class="hbar-fill gold" style="width:50%"></span></div><span>7 t</span></div>
+              <div class="hbar-row"><span>Kenya / Haiti</span><div class="hbar-track"><span class="hbar-fill" style="width:2.1%"></span></div><span>0.3 t</span></div>
+            </div>
+            <p class="chart-src">Source: Exec. summary, Global Carbon Budget (2021). The Vision uses this gap as a justice and leadership obligation, not as a capture-rate input.</p>
+          </article>
+
+          <article class="chart-card">
+            <h3>Storage injectivity pathway (line)</h3>
+            <svg viewBox="0 0 640 280" role="img" aria-label="CO2 injectivity rising from 5 million tonnes per year around 2025 to 65 in 2030, 250 in 2035, and 450 in 2040">
+              <rect x="0" y="0" width="640" height="280" fill="#fffaf0"/>
+              <g stroke="rgba(16,24,20,0.14)" stroke-width="1">
+                <line x1="70" y1="40" x2="70" y2="230"/>
+                <line x1="70" y1="230" x2="610" y2="230"/>
+                <line x1="70" y1="203" x2="610" y2="203"/>
+                <line x1="70" y1="124" x2="610" y2="124"/>
+                <line x1="70" y1="40" x2="610" y2="40"/>
+              </g>
+              <text x="8" y="44" font-size="11" fill="#3a4a42">450</text>
+              <text x="8" y="128" font-size="11" fill="#3a4a42">250</text>
+              <text x="14" y="207" font-size="11" fill="#3a4a42">65</text>
+              <text x="22" y="234" font-size="11" fill="#3a4a42">0</text>
+              <text x="78" y="252" font-size="12" fill="#3a4a42">2025</text>
+              <text x="232" y="252" font-size="12" fill="#3a4a42">2030</text>
+              <text x="386" y="252" font-size="12" fill="#3a4a42">2035</text>
+              <text x="540" y="252" font-size="12" fill="#3a4a42">2040</text>
+              <text x="78" y="22" font-size="12" fill="#3a4a42">Million tonnes CO₂ / year injectivity</text>
+              <polyline fill="none" stroke="#1f4f3d" stroke-width="3" points="100,228 250,203 400,124 550,40"/>
+              <circle cx="100" cy="228" r="5" fill="#c24a1a"/><text x="110" y="224" font-size="11" fill="#101814">5</text>
+              <circle cx="250" cy="203" r="5" fill="#c24a1a"/><text x="260" y="198" font-size="11" fill="#101814">65</text>
+              <circle cx="400" cy="124" r="5" fill="#c24a1a"/><text x="410" y="120" font-size="11" fill="#101814">250</text>
+              <circle cx="550" cy="40" r="5" fill="#c24a1a"/><text x="512" y="36" font-size="11" fill="#101814">450</text>
+            </svg>
+            <p class="chart-src">Source: Ch. 5 Figure 5.1 labels (5 / 65 / 250 / 450 Mt/yr) with 2030 = 65 Mt/yr also in chapter prose (Larson et al., 2020). Years 2025/2035/2040 follow the figure’s Activation / Expansion / At-scale markers.</p>
+          </article>
+
+          <article class="chart-card">
+            <h3>Commercial storage capacity in Figure 5.1</h3>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>~2030</span><div class="hbar-track"><span class="hbar-fill" style="width:15%"></span></div><span>2,000 Mt</span></div>
+              <div class="hbar-row"><span>~2035</span><div class="hbar-track"><span class="hbar-fill gold" style="width:56%"></span></div><span>7,500 Mt</span></div>
+              <div class="hbar-row"><span>~2040</span><div class="hbar-track"><span class="hbar-fill ember" style="width:100%"></span></div><span>13,500 Mt</span></div>
+            </div>
+            <p class="chart-src">Source: Ch. 5 Figure 5.1 million-metric-ton labels. Prose independently states two billion tonnes (2,000 Mt) of commercial capacity by 2030 at 65 Mt/yr for 30 years. Prospective saline resource in the Carbon Storage Atlas: 8.328 billion tonnes (NETL, 2015).</p>
+          </article>
+
+          <article class="chart-card">
+            <h3>Global CCS fleet to 2020 (n = 28)</h3>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>Gas processing</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>12</span></div>
+              <div class="hbar-row"><span>Fertilizer</span><div class="hbar-track"><span class="hbar-fill" style="width:33%"></span></div><span>4</span></div>
+              <div class="hbar-row"><span>Ethanol</span><div class="hbar-track"><span class="hbar-fill" style="width:25%"></span></div><span>3</span></div>
+              <div class="hbar-row"><span>Gasification chem.</span><div class="hbar-track"><span class="hbar-fill" style="width:25%"></span></div><span>3</span></div>
+              <div class="hbar-row"><span>Hydrogen</span><div class="hbar-track"><span class="hbar-fill" style="width:25%"></span></div><span>3</span></div>
+              <div class="hbar-row"><span>Steel</span><div class="hbar-track"><span class="hbar-fill" style="width:8%"></span></div><span>1</span></div>
+              <div class="hbar-row"><span>Coal power</span><div class="hbar-track"><span class="hbar-fill ember" style="width:17%"></span></div><span>2</span></div>
+            </div>
+            <p class="chart-src">Source: Ch. 2, citing GCCSI (2020). &gt;200 million tonnes stored, much of it EOR. Only two plants captured from &lt;20% CO<sub>2</sub> streams: Boundary Dam and Petra Nova.</p>
+          </article>
+
+          <article class="chart-card">
+            <h3>Clean-energy mineral demand shock to 2040</h3>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>Lithium</span><div class="hbar-track"><span class="hbar-fill ember" style="width:100%"></span></div><span>42×</span></div>
+              <div class="hbar-row"><span>Graphite</span><div class="hbar-track"><span class="hbar-fill gold" style="width:60%"></span></div><span>25×</span></div>
+              <div class="hbar-row"><span>Cobalt</span><div class="hbar-track"><span class="hbar-fill gold" style="width:50%"></span></div><span>21×</span></div>
+              <div class="hbar-row"><span>Nickel</span><div class="hbar-track"><span class="hbar-fill" style="width:45%"></span></div><span>19×</span></div>
+              <div class="hbar-row"><span>REEs</span><div class="hbar-track"><span class="hbar-fill" style="width:17%"></span></div><span>7×</span></div>
+              <div class="hbar-row"><span>Average CMs</span><div class="hbar-track"><span class="hbar-fill" style="width:10%"></span></div><span>4×</span></div>
+            </div>
+            <p class="chart-src">Source: Ch. 7, citing IEA. 2017 U.S. REE consumption ~16,000 tons (USGS). Waste-to-CM cannot close a 42× lithium gap alone.</p>
+          </article>
+
+          <article class="chart-card">
+            <h3>Flue-gas CO<sub>2</sub> concentration (why industrial first)</h3>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>Air (DAC)</span><div class="hbar-track"><span class="hbar-fill" style="width:4%"></span></div><span>~400 ppm</span></div>
+              <div class="hbar-row"><span>NGCC</span><div class="hbar-track"><span class="hbar-fill gold" style="width:16%"></span></div><span>4%</span></div>
+              <div class="hbar-row"><span>Coal utility</span><div class="hbar-track"><span class="hbar-fill" style="width:48%"></span></div><span>~12%</span></div>
+              <div class="hbar-row"><span>High-purity</span><div class="hbar-track"><span class="hbar-fill ember" style="width:100%"></span></div><span>&gt;98%</span></div>
+            </div>
+            <p class="chart-src">Source: Ch. 2. Capture cost rises as concentration falls. High-purity streams (gas processing, ethanol, hydrogen, fertilizer) are the mature fleet; NGCC at 4% is the hard problem.</p>
+          </article>
+
+          <article class="chart-card">
+            <h3>Reported next-plant cost cuts (not one comparable series)</h3>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>FGD capital, 20 yr</span><div class="hbar-track"><span class="hbar-fill" style="width:50%"></span></div><span>−50%</span></div>
+              <div class="hbar-row"><span>Boundary Dam capex</span><div class="hbar-track"><span class="hbar-fill gold" style="width:67%"></span></div><span>−67%</span></div>
+              <div class="hbar-row"><span>Petra Nova EPC</span><div class="hbar-track"><span class="hbar-fill ember" style="width:30%"></span></div><span>−30%</span></div>
+            </div>
+            <p class="chart-src">Source: Ch. 2. Taylor et al. (2005) FGD; CCS Knowledge (2018) Boundary Dam total capital; Tanaka et al. (2018) Petra Nova EPC. Different metrics — do not average them into one “CCS learning rate.”</p>
+          </article>
+        </div>
+
+        <h2 id="siting">Resources, current use, and where it cannot go</h2>
+        <p>
+          Until this section, the lab scored <em>what</em> to fund, not <em>where</em> it can exist.
+          This is still not a GIS of U.S. basins. It encodes the Vision’s own geographic and resource tests:
+          capture must be co-located with storage or a pipeline; hydrogen needs water, not just gas;
+          CDR competes for energy, water, and land; pore space, biomass, and transport can be bid for by more than one pathway;
+          CO<sub>2</sub> pipelines already exist in some states and not others; methane work is the distributed exception.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Resource already in use</th>
+              <th>What the Vision says it is needed for</th>
+              <th>Where implementation fails</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pore space / mineral rights (DOI, Class VI)</td>
+              <td>Dedicated saline storage, DAC + storage, BiCRS, sometimes H<sub>2</sub> with CCS. Ch. 4 warns pathways can compete for the same pore space.</td>
+              <td>No characterized saline site, no CarbonSAFE linkage, or the pore space is already EOR. Prospective Atlas tonnes (8.328 Gt) are not the same as permitted commercial capacity.</td>
+            </tr>
+            <tr>
+              <td>Water (current irrigation, cities, cooling, drought)</td>
+              <td>H<sub>2</sub> pipes should sit where there is water and storage, not today’s gas laterals. CDR’s water demand competes with other uses.</td>
+              <td>Arid gas fields used as a “cheap H<sub>2</sub> or DAC” site. Leadership letter: that is 2022 logic, not 2050 logic.</td>
+            </tr>
+            <tr>
+              <td>Carbon-free electricity and transmission</td>
+              <td>Flexible DAC and CCS as demand on a clean grid. Conversion’s “tri-location” problem: CO<sub>2</sub>, cheap clean power, and a market are often in three places.</td>
+              <td>DAC or electrolytic H<sub>2</sub> on a gas-only node. Ch. 4: early DAC may not even be life-cycle negative before the grid is clean.</td>
+            </tr>
+            <tr>
+              <td>Land, biomass, USDA-relevant acres</td>
+              <td>BiCRS / biomass H<sub>2</sub> need sustainable biomass. CDR land competes with food and habitat.</td>
+              <td>Gigatonne biomass stories in places that already use the residue. No biomass surplus → that pathway is not implementable there.</td>
+            </tr>
+            <tr>
+              <td>Existing CO<sub>2</sub> pipes (5,000 miles, 13 states) vs everyone else</td>
+              <td>A mature industry in some regions. National-scale build-out is still required to move hundreds of millions of tonnes per year.</td>
+              <td>A capture plant with no nearby pipe and no storage is not “shovel-ready CCS.” It is a new corridor — Ch. 1 says engage before the shapefile, not after.</td>
+            </tr>
+            <tr>
+              <td>Small gas plants (65% of NGCC &lt; 2 Mt CO<sub>2</sub>/yr)</td>
+              <td>CCS economics were shown on ~2 Mt/yr blocks. Smaller units are unattractive at classical scale.</td>
+              <td>Most U.S. gas plants geographically cannot host flagship CCS without pretending they are Boundary Dam.</td>
+            </tr>
+            <tr>
+              <td>Oil &amp; gas wells and pipes already in the ground</td>
+              <td>~8 MMT methane; &gt;2 million wells; &gt;2 million miles of pipe. Methane repair and orphan plugging (BIL §40601) follow the existing footprint.</td>
+              <td>This is the rare pathway that <em>is</em> implementable almost everywhere that fossil infrastructure already exists. That is why it is the highest near-term ROI.</td>
+            </tr>
+            <tr>
+              <td>Basalts, serpentines, offshore pore space, ocean</td>
+              <td>Non-traditional storage and ocean CDR are geology- and governance-specific. NOAA on ocean; offshore CarbonSAFE is an expansion, not a default.</td>
+              <td>Mineralization or ocean CDR in a place without that geology or without governance is not a 2030 activation project.</td>
+            </tr>
+            <tr>
+              <td>Fenceline air, truck traffic, induced seismicity, brine</td>
+              <td>Extraction already contaminates water and can induce seismicity. Justice40 census-tract accounting. A route can die.</td>
+              <td>If the host community was not in the model before the corridor was drawn, procedural justice has already failed — wherever the geology is.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="chart-grid">
+          <article class="chart-card">
+            <h3>Storage: prospective vs actually stored vs needed</h3>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>RCSP stored</span><div class="hbar-track"><span class="hbar-fill" style="width:1%"></span></div><span>11 Mt</span></div>
+              <div class="hbar-row"><span>Global to 2020</span><div class="hbar-track"><span class="hbar-fill gold" style="width:10%"></span></div><span>&gt;200 Mt</span></div>
+              <div class="hbar-row"><span>Commercial by 2030</span><div class="hbar-track"><span class="hbar-fill ember" style="width:24%"></span></div><span>2,000 Mt</span></div>
+              <div class="hbar-row"><span>Atlas saline*</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>8,328 Mt</span></div>
+            </div>
+            <p class="chart-src">Source: Ch. 5. *Prospective onshore saline (NETL Atlas 2015) is not permitted injectivity. Most of the 200 Mt already stored was EOR, geographically tied to oilfields, not a national saline network. Geology is widespread; commercial, consented pore space is not.</p>
+          </article>
+          <article class="chart-card">
+            <h3>Geographic mismatch: gas CCS vs methane</h3>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>NGCC too small for CCS</span><div class="hbar-track"><span class="hbar-fill ember" style="width:65%"></span></div><span>65%</span></div>
+              <div class="hbar-row"><span>CO<sub>2</sub> pipes today</span><div class="hbar-track"><span class="hbar-fill gold" style="width:25%"></span></div><span>5,000 mi / 13 states</span></div>
+              <div class="hbar-row"><span>O&amp;G pipe network</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>&gt;2 million mi</span></div>
+              <div class="hbar-row"><span>Wells (active/abandoned)</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>&gt;2 million</span></div>
+            </div>
+            <p class="chart-src">Source: Ch. 2 and Ch. 5 and Ch. 8. CCS is hub-and-geology limited. Methane work follows pipes and wells that already exist. Those are different maps.</p>
+          </article>
+        </div>
+
+        <h2 id="lab">Action lab — test a mode before you fund it</h2>
+        <p>
+          This is not an integrated assessment model. It applies the Vision’s published numbers to the three award questions
+          in the leadership letter. Change the controls. The meters update from those numbers, not from a private forecast.
+        </p>
+
+        <div class="lab">
+          <fieldset class="lab-box">
+            <legend>Mode of action</legend>
+            <label><input type="checkbox" id="mode-methane" checked /> Methane repair this decade (Ch. 8: ~8 MMT oil &amp; gas; eliminate non-trivial leaks by 2030)</label>
+            <label><input type="checkbox" id="mode-industry" checked /> Industrial process CCS on cement / existing hydrogen / ethanol / ammonia (Ch. 2)</label>
+            <label><input type="checkbox" id="mode-storage" checked /> Dedicated saline storage + Class VI / CarbonSAFE (Ch. 5)</label>
+            <label><input type="checkbox" id="mode-gasccs" /> Gas power + CCS as the flagship, no 2035 off-ramp (Ch. 2)</label>
+            <label><input type="checkbox" id="mode-h2new" /> New fossil-hydrogen demand (beyond cleaning today’s gray hydrogen) (Ch. 6)</label>
+            <label><input type="checkbox" id="mode-fuels" /> Climate credit for short-lived CO<sub>2</sub> fuels (Ch. 3 says no if alternatives exist)</label>
+            <label><input type="checkbox" id="mode-dacgas" /> DAC sited for 2022 low-leakage gas (leadership letter: 2050 logic error)</label>
+            <label><input type="checkbox" id="mode-dacclean" /> DAC only after clean power, as residual insurance (Ch. 4)</label>
+
+            <label for="lab-gwp">Methane GWP lens</label>
+            <select id="lab-gwp">
+              <option value="25">25 — EPA GHGI in the Vision (Ch. 8)</option>
+              <option value="30" selected>30 — IPCC AR6, as the Vision notes</option>
+              <option value="82.5">82.5 — IPCC AR6 GWP-20 fossil CH₄ (not in the Vision; this review)</option>
+            </select>
+
+            <label for="lab-capture">Point-source capture rate: <strong id="lab-capture-label">95%</strong></label>
+            <input id="lab-capture" type="range" min="90" max="99" value="95" />
+
+            <label for="lab-source">Source size (Mt CO<sub>2</sub>/yr): <strong id="lab-source-label">1.0</strong> — Vision range ~0.1–3.7</label>
+            <input id="lab-source" type="range" min="1" max="37" value="10" />
+
+            <label for="lab-store">Where does the captured CO<sub>2</sub> go?</label>
+            <select id="lab-store">
+              <option value="saline" selected>Dedicated saline storage (Vision destination)</option>
+              <option value="eor">EOR (most of the historical 200 Mt; not the 2050 destination)</option>
+              <option value="none">Captured but not stored</option>
+            </select>
+
+            <label for="lab-site">Where is this project? (geography / current resource use)</label>
+            <select id="lab-site">
+              <option value="cluster" selected>Industrial cluster next to CarbonSAFE / saline (Ch. 2 FEED linkage)</option>
+              <option value="stranded">Small NGCC far from storage — typical of 65% of U.S. gas blocks</option>
+              <option value="arid">Gas supply, scarce water (bad 2050 siting for H₂ / DAC)</option>
+              <option value="trilocation">CO₂, cheap clean power, and the market are in three different places</option>
+              <option value="coalwaste">Coal community with wastes / produced water and a cleanup job</option>
+              <option value="methanefield">Existing wells and gas pipes (methane geography)</option>
+              <option value="ocean">Coastal / ocean CDR</option>
+              <option value="basalt">Basalt or serpentine mineralization geology</option>
+              <option value="fenceline">Disadvantaged census tract, corridor already drawn</option>
+            </select>
+            <label><input type="checkbox" id="res-water" /> Water is already fully allocated (drought, cities, irrigation, cooling)</label>
+            <label><input type="checkbox" id="res-pore" /> Pore space already used or bid (EOR, another hub, DAC vs CCS)</label>
+            <label><input type="checkbox" id="res-power" /> No spare carbon-free kWh or transmission</label>
+            <label><input type="checkbox" id="res-biomass" /> Biomass / land already claimed for food or fuel</label>
+            <label><input type="checkbox" id="res-consent" /> Host community was not in the model before the route existed</label>
+          </fieldset>
+
+          <div class="lab-box" style="border-style:solid;border-width:1px;border-radius:14px;background:#fffaf0;padding:0.85rem 1rem 1rem;">
+            <h3 style="margin-top:0;">Live result</h3>
+            <div class="live-nums">
+              <div class="live-num"><b id="out-ch4">240</b><span id="out-ch4-cap">8 MMT CH₄ × GWP-30, million t CO₂e</span></div>
+              <div class="live-num"><b id="out-og">236</b><span>Oil &amp; gas GHGI 197 Mt CO₂e at GWP-25, rescaled</span></div>
+              <div class="live-num"><b id="out-stored">0.95</b><span>Captured from this source, Mt/yr</span></div>
+              <div class="live-num"><b id="out-resid">0.05</b><span>Residual from this source, Mt/yr (needs phase-out or CDR)</span></div>
+              <div class="live-num"><b id="out-geo">Check site</b><span>Implementable at this geography?</span></div>
+              <div class="live-num"><b id="out-draw">—</b><span>Highest resource conflict with current use</span></div>
+            </div>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>Captured</span><div class="hbar-track"><span class="hbar-fill" id="bar-cap" style="width:95%"></span></div><span id="bar-cap-n">95%</span></div>
+              <div class="hbar-row"><span>Residual</span><div class="hbar-track"><span class="hbar-fill ember" id="bar-res" style="width:5%"></span></div><span id="bar-res-n">5%</span></div>
+              <div class="hbar-row"><span>vs 65 Mt/yr</span><div class="hbar-track"><span class="hbar-fill gold" id="bar-vs65" style="width:1.5%"></span></div><span id="bar-vs65-n">1.5%</span></div>
+              <div class="hbar-row"><span>Water conflict</span><div class="hbar-track"><span class="hbar-fill ember" id="bar-water" style="width:10%"></span></div><span id="bar-water-n">low</span></div>
+              <div class="hbar-row"><span>Pore conflict</span><div class="hbar-track"><span class="hbar-fill gold" id="bar-pore" style="width:20%"></span></div><span id="bar-pore-n">med</span></div>
+              <div class="hbar-row"><span>Power conflict</span><div class="hbar-track"><span class="hbar-fill" id="bar-power" style="width:15%"></span></div><span id="bar-power-n">low</span></div>
+              <div class="hbar-row"><span>Consent risk</span><div class="hbar-track"><span class="hbar-fill ember" id="bar-consent" style="width:10%"></span></div><span id="bar-consent-n">low</span></div>
+            </div>
+            <p class="lab-verdict" id="out-geo-note"></p>
+            <p class="lab-verdict" id="out-verdict"></p>
+            <p class="chart-src" id="out-math"></p>
+          </div>
+        </div>
+        <p class="chart-src">
+          Hydrogen Shot context, not on the sliders: IEA (2019) via Ch. 6 puts SMR + 90% CCS at $1.50/kg; the Shot is $1/kg in a decade with lifecycle GHG, including methane, down 90% versus then-current levels.
+          U.S. 2019 GHGI total 6,558 MMT CO<sub>2</sub>e; methane 656 MMT CO<sub>2</sub>e (8%); oil and gas 197 MMT CO<sub>2</sub>e (30% of methane) at GWP-100 = 25 (Ch. 8, EPA 2021).
+        </p>
 
         <h2 id="keeps">What the proposal gets right</h2>
         <p>
           FECM’s core mission statement — address the climate crisis, minimize the environmental impacts of fossil fuels, and aim at net-zero rather than “more fossil, cleaner” — is the correct office-level reframe.
+          <span class="pin">Leadership letter, p. iii</span>
           Several design choices in the Vision are better than the average CCS brochure.
         </p>
         <ul>
-          <li><strong>2050-first siting.</strong> The leadership letter is unusually clear: a DAC plant sited on low-leakage gas in 2022 can be a stranded logic error by 2050. Hydrogen pipes should be placed for water, storage, and later electrolysis, not for today’s gas laterals. Capture systems should be able to flex with a high-renewables grid. That is real systems engineering.</li>
-          <li><strong>Abatement before removal.</strong> Chapter 4 refuses to set a CDR volume target because the need depends on mitigation success. Figure 3’s warning is correct: do not use CDR to “solve” power, cement, or steel emissions that are ready for demonstration now.</li>
-          <li><strong>Industrial process CO<sub>2</sub>.</strong> Cement calcination (<span style="white-space:nowrap">CaCO<sub>3</sub> → CaO + CO<sub>2</sub></span>) and similar process streams are the strongest case for point-source capture. Dilute NGCC flue gas at 4% CO<sub>2</sub> is not the same problem, and the document mostly knows that.</li>
-          <li><strong>Methane honesty.</strong> Official GHGI numbers are called out as too low, citing Alvarez et al. (2018) and later top-down work. For an energy optimizer, methane is the cheapest near-term lever FECM actually owns: super-emitters, pneumatics, compressors, orphan wells.</li>
-          <li><strong>Dedicated storage, not only EOR folklore.</strong> The Vision’s growth path is saline storage, CarbonSAFE, CarbonSTORE, Class VI assistance, and hubs. That is the climate-relevant industry. Enhanced oil recovery is history, not the destination.</li>
-          <li><strong>Learning-by-doing, with receipts.</strong> Boundary Dam and Petra Nova post-project estimates (capital down on the order of 30–67% once redundancies are stripped) plus the FGD progress-ratio analogy are the right way to talk about nth-of-a-kind capture cost — provided demonstrations are on the sources that still exist in 2035–2050.</li>
-          <li><strong>Remediation-linked critical minerals.</strong> Pulling REEs and other CMs from coal wastes, tailings, and produced water while cleaning legacy sites is a better story than opening a new sacrifice zone. It will not meet a 42× lithium demand shock by itself, and should not be sold as if it will.</li>
-          <li><strong>Justice named as a design constraint.</strong> Distributive, procedural, and restorative justice are written as operating system, not appendix. That only counts if communities can change routes, siting, and “no.”</li>
+          <li><strong>2050-first siting.</strong> The leadership letter is unusually clear: a DAC plant sited on low-leakage gas in 2022 can be a stranded logic error by 2050. Hydrogen pipes should be placed for water, storage, and later electrolysis, not for today’s gas laterals. Capture systems should be able to flex with a high-renewables grid. That is real systems engineering. <span class="pin">pp. iii–v</span></li>
+          <li><strong>Abatement before removal.</strong> Chapter 4 refuses to set a CDR volume target because the need depends on mitigation success. Executive Summary Figure 3 is correct: do not use CDR to “solve” power, cement, or steel emissions that are ready for demonstration now. <span class="pin">Exec. summary Fig. 3; Ch. 4, p. 22</span></li>
+          <li><strong>Industrial process CO<sub>2</sub>.</strong> Cement calcination (<span style="white-space:nowrap">CaCO<sub>3</sub> → CaO + CO<sub>2</sub></span>) and similar process streams are the strongest case for point-source capture. Dilute NGCC flue gas at 4% CO<sub>2</sub> (about 12% for coal) is not the same problem, and the document mostly knows that. <span class="pin">Ch. 2, pp. 9–14</span></li>
+          <li><strong>Methane honesty.</strong> Official GHGI numbers are called out as too low, citing Alvarez et al. (2018) and later top-down work. Chapter 8’s own vision is to eliminate non-trivial methane from carbon-based fuel supply chains <em>by 2030</em>. For an energy optimizer, that is the cheapest near-term lever FECM actually owns: super-emitters, pneumatics, compressors, orphan wells. <span class="pin">Exec. summary; Ch. 8, p. 48</span></li>
+          <li><strong>Dedicated storage, not only EOR folklore.</strong> Globally to 2020 the Vision counts 28 CCS facilities and more than 200 million tonnes stored, much of it EOR. The growth path it actually wants is saline storage, CarbonSAFE (50+ million tonnes per site), CarbonSTORE, Class VI assistance, and hubs. That is the climate-relevant industry. Enhanced oil recovery is history, not the destination. <span class="pin">Ch. 2; Ch. 5</span></li>
+          <li><strong>Learning-by-doing, with receipts.</strong> Post-project estimates: about 67% lower total capital for a next Boundary Dam (redundancies stripped) and about 30% lower EPC for a next Petra Nova, plus the FGD progress-ratio analogy. That is the right way to talk about nth-of-a-kind capture cost — provided demonstrations are on the sources that still exist in 2035–2050. <span class="pin">Ch. 2</span></li>
+          <li><strong>Remediation-linked critical minerals.</strong> Pulling REEs and other CMs from coal wastes, tailings, and produced water while cleaning legacy sites is a better story than opening a new sacrifice zone. The Vision itself cites IEA-scale demand shocks (lithium 42×, graphite 25×, cobalt 21×). Waste recovery will not meet that alone, and should not be sold as if it will. <span class="pin">Ch. 7, p. 42</span></li>
+          <li><strong>Justice named as a design constraint.</strong> Distributive, procedural, and restorative justice are written as operating system, not appendix — including census-tract accounting for Justice40 and engaging communities before CO<sub>2</sub> routes exist. That only counts if communities can change routes, siting, and “no.” <span class="pin">Ch. 1</span></li>
         </ul>
 
         <h2 id="risks">Where it can still lock in harm</h2>
@@ -364,38 +851,38 @@
             <tr>
               <th>Tension</th>
               <th>What the Vision says</th>
-              <th>What I would require</th>
+              <th>What this review would require</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Fossil hydrogen as a “kickstart”</td>
-              <td>SMR/ATR with CCS is the cheap near-term path to Hydrogen Shot ($1/kg) until electrolysis catches up.</td>
+              <td>SMR/ATR with CCS is the cheap near-term path to Hydrogen Shot ($1/kg in a decade, with lifecycle GHG including methane down 90% vs then-current levels) until electrolysis catches up. <span class="pin">Ch. 6, p. 35</span></td>
               <td>Count full-chain methane. Require ≥95% capture <em>and</em> verified upstream intensity. Site hubs for later electrolytic hydrogen. No new gas-only laterals.</td>
             </tr>
             <tr>
               <td>Gas power + CCS as “clean firm”</td>
-              <td>NGCC with ≥95% capture could lower the cost of a decarbonized grid, especially at low utilization.</td>
+              <td>NGCC with ≥95% capture could lower the cost of a decarbonized grid, especially at low utilization. About 65% of U.S. NGCC blocks emit less than 2 million tonnes CO<sub>2</sub>/year and are unattractive CCS targets at classical scale. <span class="pin">Ch. 2</span></td>
               <td>Model against geothermal, storage, demand flexibility, and transmission first. High capture at low capacity factor is exactly where today’s solvents get expensive. Do not use CCS to keep otherwise retiring gas in the stack.</td>
             </tr>
             <tr>
               <td>CO<sub>2</sub> to fuels and chemicals</td>
-              <td>Conversion can catalyze CCS where storage is missing; fuels and chemicals are in the portfolio.</td>
+              <td>Conversion can catalyze CCS where storage is missing. Many products are too small or short-lived; “carbon conversion products cannot have an emissive end-of-life if alternatives exist.” <span class="pin">Ch. 3, p. 15</span></td>
               <td>Short-lived products are delayed emissions. Durable carbonation in the built environment is climate-relevant. Emissive end-of-life should not receive climate credit if alternatives exist — the Vision says this; funding should mean it.</td>
             </tr>
             <tr>
               <td>CDR industry-building</td>
-              <td>Near-term demos will set norms for a sector that barely exists. Justice and MRV are central.</td>
-              <td>Keep CDR additional to abatement. Publish energy, water, land, and fenceline impacts. Do not site gas-fired DAC because the 2022 gas map is convenient.</td>
+              <td>Near-term demos will set norms for a sector that barely exists. Early demos “might not enact true life cycle GHG removal, particularly before the energy sector is fully decarbonized.” BIL §40308 DAC hubs; §41005 prizes. <span class="pin">Ch. 4</span></td>
+              <td>Keep CDR additional to abatement. Publish energy, water, land, and fenceline impacts. Do not site gas-fired DAC because the 2022 gas map is convenient. Say so in public if a hub is not yet life-cycle negative.</td>
             </tr>
             <tr>
               <td>Methane accounting</td>
-              <td>EPA uses GWP-100 of 25; AR6 is ~30. The Vision notes underestimation.</td>
-              <td>Report GWP-20 next to GWP-100. A 2030 climate target that only “sees” methane through a 100-year lens will under-invest in leak repair.</td>
+              <td>EPA GHGI uses GWP-100 of 25; AR6 is about 30. The Vision notes that reported 100-year CO<sub>2</sub>e values are therefore underestimates. Chapter 8 still aims to eliminate non-trivial supply-chain methane by 2030 (~8 MMT across oil and gas; &gt;2 million miles of pipe; &gt;2 million wells). <span class="pin">Ch. 8</span></td>
+              <td>Report GWP-20 next to GWP-100 (reviewer requirement; the Vision does not prescribe GWP-20). A 2030 climate target that only “sees” methane through a 100-year lens will under-invest in leak repair. Also flag the document’s own Figure 1 prose, which states a GWP-100 of 100 for methane while the figure caption uses AR6’s 30 — an internal inconsistency a lawyer should not paper over.</td>
             </tr>
             <tr>
               <td>Export LCA vs. export growth</td>
-              <td>Develop transparent LCA for LNG and hydrogen exports.</td>
+              <td>Develop transparent LCA for LNG and hydrogen exports. <span class="pin">Ch. 1, international</span></td>
               <td>Measurement that is not allowed to change production or licensing is public relations. If intensity gates cannot halt a cargo, they will not halt warming.</td>
             </tr>
           </tbody>
@@ -412,42 +899,42 @@
           <article class="card">
             <p><span class="pill">Keep / condition</span></p>
             <h3>Point-source capture</h3>
-            <p>Prioritize high-purity and process emissions (hydrogen, ethanol, ammonia, cement, steel). Couple every FEED to real pore space, not a map polygon. 95%+ on NGCC is research; 90% on a cement kiln with storage is deployment. BIL demonstration slots are scarce — spend them where the plant still has a 2050 job.</p>
+            <p>Prioritize high-purity and process emissions (hydrogen, ethanol, ammonia, cement, steel). Couple every FEED to real pore space, not a map polygon. 95%+ on NGCC is research; 90% on a cement kiln with storage is deployment. BIL demonstration slots (including §41004) are scarce — spend them where the plant still has a 2050 job. <span class="pin">Ch. 2</span></p>
           </article>
           <article class="card">
             <p><span class="pill mixed">Narrow</span></p>
             <h3>CO<sub>2</sub> conversion</h3>
-            <p>Mineralization into aggregates and cured materials can be long-term storage. Catalytic fuels are a carbon treadmill unless the carbon is atmospheric and the energy is clean, in which case you still compete with direct electrification. Open LCA tools and 45Q quality control matter more than another catalyst paper.</p>
+            <p>Mineralization into aggregates and cured materials can be long-term storage. Catalytic fuels are a carbon treadmill unless the carbon is atmospheric and the energy is clean, in which case you still compete with direct electrification. Open LCA tools and 45Q quality control matter more than another catalyst paper. <span class="pin">Ch. 3</span></p>
           </article>
           <article class="card">
             <p><span class="pill">Keep / discipline</span></p>
             <h3>Carbon dioxide removal</h3>
-            <p>DAC + durable storage, BiCRS with real biomass sustainability, and enhanced mineralization are in FECM’s competence. Ocean CDR needs NOAA-grade humility on governance and ecological risk. The social-license warning in Chapter 4 is the most important sentence in that chapter. One bad hub poisons the industry.</p>
+            <p>DAC + durable storage, BiCRS with real biomass sustainability, and enhanced mineralization are in FECM’s competence. Ocean CDR needs NOAA-grade humility on governance and ecological risk. The social-license warning in Chapter 4 is the most important sentence in that chapter. One bad hub poisons the industry. <span class="pin">Ch. 4</span></p>
           </article>
           <article class="card">
             <p><span class="pill">Foundation</span></p>
             <h3>Storage and transport</h3>
-            <p>2,000 million metric tons of commercial capacity over 30 years by 2030 is a permitting and community-consent program wearing an R&amp;D badge. Expand CarbonSAFE, stand up CarbonSTORE as shared field labs, and treat CO<sub>2</sub> pipelines as justice infrastructure: engage before routes exist, not after the shapefile is drawn. Repurposing oilfield kit is leverage; orphaned wells are liability until plugged.</p>
+            <p>Two billion tonnes of commercial capacity by 2030 is a permitting and community-consent program wearing an R&amp;D badge. Expand CarbonSAFE (BIL §40305), stand up CarbonSTORE as shared field labs, and treat CO<sub>2</sub> pipelines as justice infrastructure: engage before routes exist, not after the shapefile is drawn. Repurposing oilfield kit is leverage; orphaned wells are liability until plugged. Later cartoons in the same chapter show 250 and 450 million tonnes/year injectivity — those are not this decade’s job. <span class="pin">Ch. 5</span></p>
           </article>
           <article class="card">
             <p><span class="pill mixed">Transition only</span></p>
             <h3>Hydrogen with carbon management</h3>
-            <p>Useful if it displaces existing gray hydrogen and industrial heat that cannot electrify soon. Dangerous if it becomes a new demand sink for gas. 100% hydrogen turbines must publish NO<sub>x</sub> — the Vision correctly flags environmental justice concern. Reversible SOFCs and waste/biomass gasification with high capture are more interesting than “blue hydrogen everywhere.”</p>
+            <p>Useful if it displaces existing gray hydrogen and industrial heat that cannot electrify soon. Dangerous if it becomes a new demand sink for gas. 100% hydrogen turbines must publish NO<sub>x</sub> — the Vision flags environmental-justice concern about criteria pollutants. Reversible SOFCs and waste/biomass gasification with high capture are more interesting than “blue hydrogen everywhere.” BIL §40314 hydrogen hubs. <span class="pin">Ch. 6</span></p>
           </article>
           <article class="card">
             <p><span class="pill">Keep</span></p>
             <h3>Critical minerals from wastes</h3>
-            <p>Characterize first. Then extract only when the remaining mass has a beneficial use, so we do not create a second waste pile. Success metrics should include water quality and reclamation acres, not only mixed rare-earth oxide purity. This complements, rather than replaces, recycling, substitutes, and responsible primary supply.</p>
+            <p>Characterize first. Then extract only when the remaining mass has a beneficial use, so we do not create a second waste pile. Success metrics should include water quality and reclamation acres, not only mixed rare-earth oxide purity. This complements, rather than replaces, recycling, substitutes, and responsible primary supply. <span class="pin">Ch. 7</span></p>
           </article>
           <article class="card">
             <p><span class="pill">Highest near-term ROI</span></p>
             <h3>Methane mitigation</h3>
-            <p>Distributed sources, two million wells, two million miles of pipe. Detection that is cheap and fast enough to catch super-emitters in hours, not inventory years, is the climate prize. Orphan-well plugging under BIL §40601 is restorative justice with a GWP. Do not wait for a perfect national factor when a well is blowing.</p>
+            <p>Distributed sources, two million wells, two million miles of pipe. Detection that is cheap and fast enough to catch super-emitters in hours, not inventory years, is the climate prize. Orphan-well plugging under BIL §40601 is restorative justice with a GWP. Do not wait for a perfect national factor when a well is blowing. <span class="pin">Ch. 8</span></p>
           </article>
           <article class="card">
             <p><span class="pill risk">The test</span></p>
             <h3>Justice, labor, partnership</h3>
-            <p>Naming Justice40, MSIs/HBCUs, coal-community IWG, and labor apprenticeships is necessary and insufficient. Fenceline communities have heard this office’s industry partners longer than they have heard this vision. Procedural justice means a route can die. Restorative justice means CDR and reclamation show up in places that already paid.</p>
+            <p>Naming Justice40, MSIs/HBCUs, coal-community IWG, and labor apprenticeships is necessary and insufficient. Fenceline communities have heard this office’s industry partners longer than they have heard this vision. Procedural justice means a route can die. Restorative justice means CDR and reclamation show up in places that already paid. <span class="pin">Ch. 1</span></p>
           </article>
         </div>
 
@@ -507,7 +994,7 @@
             <tr>
               <td>After the grid is clean</td>
               <td>Flexible DAC on clean power, electrolytic hydrogen, CDR for leftover agriculture and aviation, geothermal and storage jobs where extraction used to be.</td>
-              <td>Site new pipes and plants for water, transmission, and pore space — not for 2022 gas laterals. Do not use CDR to “solve” power, cement, or steel that can abate now. That is already Figure 3; it just has to govern awards.</td>
+              <td>Site new pipes and plants for water, transmission, and pore space — not for 2022 gas laterals. Do not use CDR to “solve” power, cement, or steel that can abate now. That is already Executive Summary Figure 3; it just has to govern awards.</td>
             </tr>
           </tbody>
         </table>
@@ -524,7 +1011,7 @@
           </article>
           <article class="card">
             <h3>Storage as a permitting and consent program</h3>
-            <p>65 million tonnes a year by 2030 is the Vision’s activation target. Geology is not the bottleneck; Class VI throughput and public trust are. Finish the CarbonSAFE sites already in Phase III. Stand up CarbonSTORE as shared field labs. Draw no preferred pipeline corridor until the communities on it have seen the model and can change it. That is slower than a national trunkline cartoon and more likely to exist.</p>
+            <p>65 million tonnes a year by 2030 is the Vision’s activation rate (at least). Geology is not the bottleneck; Class VI throughput and public trust are. Finish the CarbonSAFE sites already in Phase III. Stand up CarbonSTORE as shared field labs. Draw no preferred pipeline corridor until the communities on it have seen the model and can change it. That is slower than a national trunkline cartoon and more likely to exist.</p>
           </article>
           <article class="card">
             <h3>Hydrogen only where gray hydrogen already is</h3>
@@ -532,11 +1019,11 @@
           </article>
           <article class="card">
             <h3>CDR as residual insurance, with public books</h3>
-            <p>The Vision refuses a gigatonne quota because avoidance comes first. Keep that discipline. Fund DAC and BiCRS to learn cost, energy, water, and fenceline impact — and publish those numbers. Do not sell removal as a way to keep emitting from sectors that Figure 3 says are ready to abate. One bad hub poisons social license; one honest hub that under-performs and says so builds it.</p>
+            <p>The Vision refuses a gigatonne quota because avoidance comes first. Keep that discipline. Fund DAC and BiCRS to learn cost, energy, water, and fenceline impact — and publish those numbers. Do not sell removal as a way to keep emitting from sectors that Executive Summary Figure 3 says are ready to abate. One bad hub poisons social license; one honest hub that under-performs and says so builds it.</p>
           </article>
           <article class="card">
             <h3>Minerals as cleanup with a side of supply</h3>
-            <p>Quadrupling clean-energy mineral demand, with lithium up on the order of 40× in some scenarios, will not be met from coal waste alone. A realistic CORE-CM goal is measured reclamation — water quality, waste volume, local jobs — plus whatever oxide purity the chemistry will actually yield. Count acres cleaned and tonnes produced. Do not count a domestic battery industry until both exist.</p>
+            <p>Quadrupling clean-energy mineral demand, with lithium up 42× in the IEA scenario the Vision cites, will not be met from coal waste alone. A realistic CORE-CM goal is measured reclamation — water quality, waste volume, local jobs — plus whatever oxide purity the chemistry will actually yield. Count acres cleaned and tonnes produced. Do not count a domestic battery industry until both exist.</p>
           </article>
         </div>
 
@@ -550,26 +1037,154 @@
           contract instead of as a brochure.
         </div>
 
+        <h2 id="ledger">Claim ledger — what a GS-15 or counsel can verify</h2>
+        <p>
+          Every number below is in the April 2022 Vision unless marked as a reviewer requirement.
+          Page numbers follow the PDF pagination (roman front matter, then Arabic chapters).
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Claim</th>
+              <th>Where in the Vision</th>
+              <th>Why it matters for lock-in</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Carbon-free power by 2035; net-zero by 2050; 50–52% GHG cut by 2030 vs 2005</td>
+              <td>Leadership letter; Exec. summary; EO 14008</td>
+              <td>These are Administration goals the office is aligning to, not FECM-invented physics.</td>
+            </tr>
+            <tr>
+              <td>Do not create path dependencies; pipes and plants can last a century</td>
+              <td>Leadership letter, pp. iii–v</td>
+              <td>This is the user’s original concern, already in FECM’s own charge.</td>
+            </tr>
+            <tr>
+              <td>DAC sited on low-leakage gas in 2022 vs geothermal/transmission in 2050; H<sub>2</sub> pipes for water and storage, not gas</td>
+              <td>Leadership letter</td>
+              <td>The 2050 siting test. If awards ignore it, the letter is decoration.</td>
+            </tr>
+            <tr>
+              <td>Figure 1 prose: GWP-100 of 100 for methane; figure caption: GWP-100 = 30 (AR6)</td>
+              <td>Exec. summary, Figure 1</td>
+              <td>Internal inconsistency. Do not cite the “100” figure as EPA or IPCC.</td>
+            </tr>
+            <tr>
+              <td>EPA GHGI uses GWP-100 of 25; AR6 ≈ 30; official methane estimates too low (Alvarez et al. 2018)</td>
+              <td>Exec. summary; Ch. 8</td>
+              <td>Near-term warming is under-counted in the inventory the office itself distrusts.</td>
+            </tr>
+            <tr>
+              <td>Do not use CDR on power, cement, or steel that can abate now</td>
+              <td>Exec. summary, Figure 3</td>
+              <td>The cheapest lock-in is paying for removal instead of stopping the stack.</td>
+            </tr>
+            <tr>
+              <td>NGCC flue gas ~4% CO<sub>2</sub> vs coal ~12%; 65% of NGCC blocks &lt; 2 Mt CO<sub>2</sub>/yr</td>
+              <td>Ch. 2</td>
+              <td>Gas CCS as the flagship is the expensive problem, not the easy one.</td>
+            </tr>
+            <tr>
+              <td>Cement calcination: CaCO<sub>3</sub> → CaO + CO<sub>2</sub>; process CO<sub>2</sub> needs capture</td>
+              <td>Ch. 2</td>
+              <td>Strongest industrial case; does not depend on a 40% gas grid lasting forever.</td>
+            </tr>
+            <tr>
+              <td>Boundary Dam next-plant capital −67%; Petra Nova next-plant EPC −30%; FGD analogy</td>
+              <td>Ch. 2</td>
+              <td>Learning is real. It is not a reason to build new unabated fossil.</td>
+            </tr>
+            <tr>
+              <td>28 CCS facilities globally to 2020; &gt;200 Mt stored, much of it EOR</td>
+              <td>Ch. 2</td>
+              <td>History is EOR. The Vision’s destination is dedicated saline storage.</td>
+            </tr>
+            <tr>
+              <td>Short-lived CO<sub>2</sub> products re-enter the atmosphere; no emissive end-of-life if alternatives exist</td>
+              <td>Ch. 3</td>
+              <td>Fuels are delayed emissions. Do not pay climate credit for them.</td>
+            </tr>
+            <tr>
+              <td>No quantitative CDR deployment target; Carbon Negative Shot &lt;$100/net t CO<sub>2</sub>e (by 2032 in Ch. 4)</td>
+              <td>Ch. 4; summary</td>
+              <td>Keep removal as residual insurance, not a substitute for abatement.</td>
+            </tr>
+            <tr>
+              <td>≥65 Mt CO<sub>2</sub>/yr injectivity by 2030 ≈ entire CO<sub>2</sub>-EOR industry demand; 2 billion tonnes commercial capacity</td>
+              <td>Ch. 5 (Larson et al. 2020)</td>
+              <td>This is a permitting and consent program. NETL Atlas prospective saline: 8.328 billion tonnes.</td>
+            </tr>
+            <tr>
+              <td>CarbonSAFE 50+ Mt sites; CarbonSTORE field labs; Class VI assistance; BIL §40305</td>
+              <td>Ch. 5</td>
+              <td>Spend here before drawing a national trunkline cartoon.</td>
+            </tr>
+            <tr>
+              <td>Hydrogen Shot $1/kg; 90% lifecycle GHG cut including methane vs then-current; SMR+CCS as “kickstart”</td>
+              <td>Ch. 6</td>
+              <td>Useful on existing gray hydrogen. Dangerous as a new gas demand sink. BIL §40314 hubs.</td>
+            </tr>
+            <tr>
+              <td>Publish low NO<sub>x</sub> from 100% H<sub>2</sub> turbines — EJ concern on criteria pollutants</td>
+              <td>Ch. 6</td>
+              <td>Zero carbon is not zero fenceline harm.</td>
+            </tr>
+            <tr>
+              <td>Clean-energy mineral demand at least 4× by 2040; lithium 42×, graphite 25×, cobalt 21×</td>
+              <td>Ch. 7 (IEA)</td>
+              <td>Waste-to-CM is cleanup with a side of supply, not a battery industry by itself.</td>
+            </tr>
+            <tr>
+              <td>Eliminate non-trivial methane from carbon-based fuel supply chains by 2030; ~8 MMT; BIL §40601 orphan wells</td>
+              <td>Ch. 8</td>
+              <td>Highest near-term ROI in the whole portfolio. Matches the original “costly emissions” concern.</td>
+            </tr>
+            <tr>
+              <td>Report GWP-20 next to GWP-100</td>
+              <td>Not in the Vision — reviewer requirement</td>
+              <td>Otherwise a 2030 methane program is half-invisible in CO<sub>2</sub>e.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Bipartisan Infrastructure Law hooks named in the Vision</h3>
+        <p>
+          These are the statutory handles the 2022 text is already pointing at. They are not an audit of later awards.
+        </p>
+        <ul>
+          <li><strong>§40302</strong> — grants to procure CO<sub>2</sub>-derived products</li>
+          <li><strong>§40303 / §40304</strong> — CO<sub>2</sub> pipeline FEEDs and transport financing with the Loan Programs Office</li>
+          <li><strong>§40305</strong> — carbon storage validation and testing (CarbonSAFE-scale facilities)</li>
+          <li><strong>§40308</strong> — regional clean DAC hubs; <strong>§41005</strong> — DAC prizes</li>
+          <li><strong>§40314</strong> — regional clean hydrogen hubs</li>
+          <li><strong>§40601</strong> — orphaned well plugging, measurement, and ranking</li>
+          <li><strong>§41004(a)</strong> — industrial carbon-capture pilots (cement, steel, hydrogen, ammonia, ethanol)</li>
+          <li><strong>§41004(b)</strong> — six CCS demonstrations</li>
+        </ul>
+
         <h2 id="cite">How to cite this page</h2>
         <p>
           Two citation forms: APA 7th (environmental science and most government reports) and legal Bluebook
           (<i>The Bluebook: A Uniform System of Citation</i> — courts and agencies, not Kelley Blue Book for cars).
+          Cite this revision if you are using the decision brief and claim ledger.
         </p>
 
         <div class="cite">
           <div class="cite-row">
             <h3>APA 7th</h3>
-            <button type="button" data-copy="Paradise Unlocked Travel. (2026, August 20). Thoughts on FECM’s Strategic Vision [Review prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.]. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/">Copy</button>
+            <button type="button" data-copy="Paradise Unlocked Travel. (2026, August 21). Thoughts on FECM’s Strategic Vision (Rev. 2) [Independent review first prepared 20 August 2026 with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.]. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/">Copy</button>
           </div>
-          <pre>Paradise Unlocked Travel. (2026, August 20). <i>Thoughts on FECM’s Strategic Vision</i> [Review prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.]. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/</pre>
+          <pre>Paradise Unlocked Travel. (2026, August 21). <i>Thoughts on FECM’s Strategic Vision</i> (Rev. 2) [Independent review first prepared 20 August 2026 with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.]. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/</pre>
         </div>
 
         <div class="cite">
           <div class="cite-row">
             <h3>Bluebook (legal)</h3>
-            <button type="button" data-copy="Paradise Unlocked Travel, Thoughts on FECM’s Strategic Vision, Env’t Sci. AI (Aug. 20, 2026), https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/ (prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.).">Copy</button>
+            <button type="button" data-copy="Paradise Unlocked Travel, Thoughts on FECM’s Strategic Vision (Rev. 2), Env’t Sci. AI (Aug. 21, 2026), https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/ (first prepared Aug. 20, 2026, with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.).">Copy</button>
           </div>
-          <pre>Paradise Unlocked Travel, <i>Thoughts on FECM’s Strategic Vision</i>, Env’t Sci. AI (Aug. 20, 2026), https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/ (prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.).</pre>
+          <pre>Paradise Unlocked Travel, <i>Thoughts on FECM’s Strategic Vision</i> (Rev. 2), Env’t Sci. AI (Aug. 21, 2026), https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/ (first prepared Aug. 20, 2026, with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.).</pre>
         </div>
 
         <p>
@@ -595,26 +1210,82 @@
 
         <h2 id="source">Source, limits, credits</h2>
         <p>
-          This review is based on the text of FECM’s Strategic Vision (April 2022, including the 28 April update), as provided for analysis.
+          This review is based on the text of FECM’s Strategic Vision (April 2022, including the 28 April update):
+          leadership letter (pp. iii–v), executive summary, and Chapters 1–8
+          (justice/labor/engagement; point-source capture; CO<sub>2</sub> conversion; CDR; dedicated storage and transport;
+          hydrogen with carbon management; critical minerals; methane mitigation).
           It is not a legal opinion, not an official DOE position, and not a substitute for site-specific TEA, LCA, or community consultation.
-          Figures in the source (energy/emissions breakdowns, TRL maps, hub cartoons) were described in text; I did not re-plot them.
+          Figures in the source were described in text; they were not re-plotted.
+          Implementation after April 2022 is outside the source and is not audited here.
         </p>
         <p>
           Cover image credits in the source: Ed Hawkins, National Centre for Atmospheric Science, University of Reading.
           Proposal credits: U.S. Department of Energy, Office of Fossil Energy and Carbon Management.
-          This reading was prepared by Paradise Unlocked Travel using Cursor Grok 4.6 High Fast from 4:30 p.m. to 6:45 p.m. on 20 August 2026.
+          First reading prepared by Paradise Unlocked Travel using Cursor Grok 4.6 High Fast from 4:30 p.m. to 6:45 p.m. on 20 August 2026.
+          This reliability revision (decision brief, chapter cites, claim ledger, sourced charts, action lab, GWP inconsistency, 2022-versus-2026 limit) is dated 21 August 2026.
         </p>
         <p class="share-note">Official document:
-          <a href="https://www.energy.gov/sites/default/files/2022-04/2022-Strategic-Vision-The-Role-of-Fossil-Energy-and-Carbon-Management-in-Achieving-Net-Zero-Greenhouse-Gas-Emissions_Updated-4.28.22.pdf">FECM Strategic Vision PDF</a>.
+          <a href="https://www.energy.gov/sites/default/files/2022-04/2022-Strategic-Vision-The-Role-of-Fossil-Energy-and-Carbon-Management-in-Achieving-Net-Zero-Greenhouse-Gas-Emissions_Updated-4.28.22.pdf">FECM Strategic Vision PDF</a>
+          (April 2022 / 28 April update).
         </p>
+
+        <h2 id="discuss">Discussion</h2>
+        <p>
+          This is a static GitHub Pages site. It cannot host a live anonymous comment database on its own —
+          that would need a separate service and a login or spam filter. Rather than fake a board that
+          forgets every refresh, here are two paths that actually work.
+        </p>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Public, with your name</h3>
+            <p>
+              Open a GitHub issue titled <strong>Discussion:</strong> on this repository. Your GitHub username
+              is the name on the thread. Replies stay public, dated, and citable. No GitHub account means
+              this path is not available.
+            </p>
+            <p>
+              <a class="btn btn-primary" href="https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/new?title=Discussion:%20&amp;body=Comment%20on%20the%20FECM%20Strategic%20Vision%20review:%0A%0A">Start a public thread</a>
+            </p>
+          </article>
+          <article class="card">
+            <h3>Private or anonymous</h3>
+            <p>
+              Send a note by email. Leave the name blank to stay anonymous. These notes go to Paradise Unlocked Travel;
+              they do not appear on this page unless someone chooses to post a summary.
+            </p>
+          </article>
+        </div>
+
+        <form class="discuss-form" id="anon-form">
+          <div>
+            <label for="discuss-name">Name (optional — leave blank to stay anonymous)</label>
+            <input id="discuss-name" type="text" maxlength="80" autocomplete="name" placeholder="Your name, or blank" />
+          </div>
+          <div>
+            <label for="discuss-body">Comment</label>
+            <textarea id="discuss-body" required maxlength="4000" placeholder="What should a decision-maker notice, challenge, or add?"></textarea>
+          </div>
+          <div>
+            <button class="btn btn-primary" type="submit">Open email to send</button>
+          </div>
+        </form>
+        <p class="share-note">
+          If your device has no email app, write
+          <a href="mailto:info@paradiseunlocked.com">info@paradiseunlocked.com</a>
+          with subject “FECM review comment.”
+        </p>
+
+        <h3>Public threads</h3>
+        <p class="share-note">Pulled from open GitHub issues whose titles start with “Discussion:”.</p>
+        <div id="thread-list">Loading public threads…</div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <p>Environmental Science AI · Paradise Unlocked Travel · Prepared with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m., 20 August 2026.</p>
-      <p>Share this page after publish: GitHub Pages will serve it from this repository. Use the button above to copy the current link.</p>
+      <p>Environmental Science AI · Paradise Unlocked Travel · First reading 20 August 2026, 4:30–6:45 p.m. · Reliability revision 21 August 2026.</p>
+      <p>Stable URL: <a href="https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/">https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/</a></p>
     </div>
   </footer>
   <script>
@@ -642,6 +1313,192 @@
         }
       });
     });
+    document.getElementById("anon-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const name = document.getElementById("discuss-name").value.trim();
+      const body = document.getElementById("discuss-body").value.trim();
+      if (!body) return;
+      const who = name || "Anonymous";
+      const subject = "FECM review comment";
+      const message = "Name: " + who + "\n\n" + body + "\n\nSource: https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/";
+      window.location.href = "mailto:info@paradiseunlocked.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(message);
+    });
+
+    const threadList = document.getElementById("thread-list");
+    fetch("https://api.github.com/repos/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues?state=open&per_page=20")
+      .then((res) => {
+        if (!res.ok) throw new Error("GitHub API " + res.status);
+        return res.json();
+      })
+      .then((issues) => {
+        const threads = issues.filter((item) => !item.pull_request && /^discussion:/i.test(item.title));
+        if (!threads.length) {
+          threadList.innerHTML = "<p>No public discussion threads yet. Use “Start a public thread” above. Keep the title starting with Discussion:</p>";
+          return;
+        }
+        threadList.innerHTML = threads.map((item) => {
+          const snippet = (item.body || "").replace(/</g, "&lt;").slice(0, 280);
+          const title = item.title.replace(/</g, "&lt;");
+          const user = (item.user && item.user.login) ? item.user.login.replace(/</g, "&lt;") : "unknown";
+          return "<article class=\"thread\"><h3><a href=\"" + item.html_url + "\">" + title + "</a></h3><p class=\"meta-line\">" + user + " · " + item.comments + " " + (item.comments === 1 ? "reply" : "replies") + "</p><p>" + snippet + (snippet.length === 280 ? "…" : "") + "</p></article>";
+        }).join("");
+      })
+      .catch(() => {
+        threadList.innerHTML = "<p>Public threads could not be loaded here. Open them on <a href=\"https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues\">GitHub Issues</a>.</p>";
+      });
+
+    function fmt(n) {
+      if (Math.abs(n) >= 100) return n.toFixed(0);
+      if (Math.abs(n) >= 10) return n.toFixed(1);
+      return n.toFixed(2);
+    }
+
+    function updateLab() {
+      const gwp = parseFloat(document.getElementById("lab-gwp").value);
+      const capture = parseInt(document.getElementById("lab-capture").value, 10) / 100;
+      const source = parseInt(document.getElementById("lab-source").value, 10) / 10;
+      const store = document.getElementById("lab-store").value;
+      const methane = document.getElementById("mode-methane").checked;
+      const industry = document.getElementById("mode-industry").checked;
+      const storage = document.getElementById("mode-storage").checked;
+      const gasccs = document.getElementById("mode-gasccs").checked;
+      const h2new = document.getElementById("mode-h2new").checked;
+      const fuels = document.getElementById("mode-fuels").checked;
+      const dacgas = document.getElementById("mode-dacgas").checked;
+      const dacclean = document.getElementById("mode-dacclean").checked;
+
+      document.getElementById("lab-capture-label").textContent = Math.round(capture * 100) + "%";
+      document.getElementById("lab-source-label").textContent = source.toFixed(1);
+
+      const ch4 = 8 * gwp;
+      const og = 197 * (gwp / 25);
+      const stored = source * capture;
+      const resid = source * (1 - capture);
+      const vs65 = (stored / 65) * 100;
+
+      document.getElementById("out-ch4").textContent = fmt(ch4);
+      document.getElementById("out-ch4-cap").textContent = "8 MMT CH₄ × GWP-" + (gwp === 82.5 ? "20" : "100") + " (" + gwp + "), million t CO₂e";
+      document.getElementById("out-og").textContent = fmt(og);
+      document.getElementById("out-stored").textContent = store === "saline" ? fmt(stored) : "0*";
+      document.getElementById("out-resid").textContent = fmt(resid);
+      document.getElementById("bar-cap").style.width = (capture * 100) + "%";
+      document.getElementById("bar-res").style.width = ((1 - capture) * 100) + "%";
+      document.getElementById("bar-cap-n").textContent = Math.round(capture * 100) + "%";
+      document.getElementById("bar-res-n").textContent = Math.round((1 - capture) * 100) + "%";
+      document.getElementById("bar-vs65").style.width = Math.min(vs65, 100) + "%";
+      document.getElementById("bar-vs65-n").textContent = store === "saline" ? fmt(vs65) + "%" : "n/a";
+
+      const fails = [];
+      if (gasccs) fails.push("gas CCS as flagship without an off-ramp (Ch. 2: 65% of NGCC blocks are already too small; ≥95% at low utilization is the expensive problem)");
+      if (h2new) fails.push("new fossil-hydrogen demand (Ch. 6 kickstart is for existing uses until electrolysis is cheap)");
+      if (fuels) fails.push("climate credit for short-lived fuels (Ch. 3: no emissive end-of-life if alternatives exist)");
+      if (dacgas) fails.push("DAC sited on 2022 gas (leadership letter: 2050 logic error)");
+      if (store === "eor") fails.push("EOR as the storage destination (historical 200 Mt; Vision growth path is saline)");
+      if (store === "none") fails.push("capture without storage (carbon is not out of the sky)");
+      if (!methane) fails.push("skipping methane this decade (Ch. 8 vision is eliminate non-trivial leaks by 2030)");
+      if (!storage && industry) fails.push("industrial capture with no saline/Class VI path");
+
+      const site = document.getElementById("lab-site").value;
+      const waterTight = document.getElementById("res-water").checked || site === "arid";
+      const poreTight = document.getElementById("res-pore").checked;
+      const noPower = document.getElementById("res-power").checked;
+      const biomassTight = document.getElementById("res-biomass").checked;
+      const noConsent = document.getElementById("res-consent").checked || site === "fenceline";
+      const farStorage = site === "stranded" || site === "trilocation";
+
+      let waterN = 12, poreN = 18, powerN = 12, consentN = 12;
+      if (h2new || dacgas || dacclean) waterN += 38;
+      if (waterTight) waterN += 42;
+      if (industry || storage || dacgas || dacclean) poreN += 28;
+      if (poreTight || store === "eor") poreN += 40;
+      if (dacgas || dacclean || fuels) powerN += 38;
+      if (noPower || site === "arid") powerN += 35;
+      if (farStorage && (industry || gasccs || storage)) consentN += 40;
+      if (noConsent) consentN += 48;
+      waterN = Math.min(waterN, 100);
+      poreN = Math.min(poreN, 100);
+      powerN = Math.min(powerN, 100);
+      consentN = Math.min(consentN, 100);
+      const band = (n) => n >= 70 ? "high" : n >= 40 ? "med" : "low";
+      document.getElementById("bar-water").style.width = waterN + "%";
+      document.getElementById("bar-pore").style.width = poreN + "%";
+      document.getElementById("bar-power").style.width = powerN + "%";
+      document.getElementById("bar-consent").style.width = consentN + "%";
+      document.getElementById("bar-water-n").textContent = band(waterN);
+      document.getElementById("bar-pore-n").textContent = band(poreN);
+      document.getElementById("bar-power-n").textContent = band(powerN);
+      document.getElementById("bar-consent-n").textContent = band(consentN);
+
+      const geoFails = [];
+      if (farStorage && (industry || gasccs)) geoFails.push("Ch. 2: FEEDs must sit on storage or a real pipeline, not a map polygon; 65% of NGCC blocks are already the wrong size");
+      if ((site === "arid" || waterTight) && (h2new || dacgas || dacclean)) geoFails.push("Water is already in use. Leadership letter: H₂/DAC belong on water + later clean power, not a dry gas field");
+      if (site === "trilocation" && fuels) geoFails.push("Ch. 3 tri-location: CO₂, cheap clean kWh, and the product market are split — conversion is not one plant here");
+      if (site === "ocean" && (industry || gasccs || storage)) geoFails.push("Ocean CDR is not industrial CCS. NOAA-grade governance; not a 2030 Class VI activation site");
+      if (site === "basalt" && (gasccs || h2new)) geoFails.push("Basalt/serpentine mineralization is geology-specific. It does not turn a gas plant into a hub");
+      if (noConsent) geoFails.push("Ch. 1: engage before the shapefile. A drawn corridor on a DA tract is not implementable until the community can change or kill it");
+      if (poreTight && (storage || industry || dacgas || dacclean)) geoFails.push("Ch. 4: this pore space is already bid. That is path dependence, not spare geology");
+      if (noPower && (dacgas || dacclean || fuels)) geoFails.push("No spare carbon-free kWh. Early DAC may not be life-cycle negative; conversion needs the clean-power vertex of tri-location");
+      if (biomassTight && h2new) geoFails.push("Biomass/land already claimed. BiCRS or biomass H₂ is not additional here");
+      if (site === "methanefield" && !methane && (gasccs || h2new)) geoFails.push("This map is wells and gas pipes. That supports methane repair, not a new CCS/H₂ demand sink");
+      if (site === "fenceline" && (gasccs || h2new || farStorage)) geoFails.push("Fenceline burden plus new infrastructure fails the census-tract test unless benefits land here first");
+
+      let geoLabel = "Yes";
+      let geoNote = "Site matches a geography the Vision can actually use.";
+      if (site === "cluster" && industry && store === "saline" && !poreTight && !noConsent) {
+        geoLabel = "Yes — hub";
+        geoNote = "Industrial cluster + CarbonSAFE/saline is the FEED linkage Ch. 2 already started in 2019. Spend scarce demo slots here.";
+      } else if (site === "methanefield" && methane && !gasccs && !h2new) {
+        geoLabel = "Yes — methane";
+        geoNote = "Wells and pipes already exist. Methane repair and §40601 plugging follow current use instead of adding a new draw on water or pore space.";
+      } else if (site === "coalwaste" && !h2new && !dacgas) {
+        geoLabel = "Yes — cleanup";
+        geoNote = "Ch. 7: minerals from wastes and produced water, with water-quality and reclamation acres as the metric. Not a license for a new sacrifice zone.";
+      } else if (site === "basalt" && !gasccs && !h2new) {
+        geoLabel = "Narrow";
+        geoNote = "Mineralization only where that rock exists. Demonstration, not a national 65 Mt/yr activation plan.";
+      } else if (site === "ocean") {
+        geoLabel = "Not 2030";
+        geoNote = "Ocean CDR needs NOAA-grade humility. Do not count it toward this decade’s storage activation.";
+      }
+      if (geoFails.length) {
+        geoLabel = "Not here";
+        geoNote = "Not implementable on this geography / current resource use. " + geoFails.join(" ");
+      }
+      document.getElementById("out-geo").textContent = geoLabel;
+      document.getElementById("out-geo-note").innerHTML = "<strong>Siting screen:</strong> " + geoNote;
+      const draws = [["water", waterN], ["pore space", poreN], ["clean power", powerN], ["consent", consentN]].sort((a, b) => b[1] - a[1]);
+      document.getElementById("out-draw").textContent = draws[0][1] >= 40 ? draws[0][0] : "none high";
+
+      const keeps = [];
+      if (methane) keeps.push("methane repair");
+      if (industry) keeps.push("industrial process CCS");
+      if (storage && store === "saline") keeps.push("dedicated saline storage");
+      if (dacclean && !dacgas) keeps.push("DAC as residual insurance on clean power");
+
+      let verdict;
+      if (fails.length) {
+        verdict = "<strong>Lock-in screen: do not fund as climate infrastructure.</strong> Failed tests: " + fails.join("; ") + ".";
+        if (keeps.length) verdict += " The parts that still belong in a demonstration or methane program: " + keeps.join(", ") + ".";
+      } else if (keeps.length) {
+        verdict = "<strong>Lock-in screen: fundable as transition work, with receipts.</strong> Selected modes match the Vision’s own 2050 test: " + keeps.join(", ") + ". Write capture ≥" + Math.round(capture * 100) + "% and saline offtake into the award. Residual " + fmt(resid) + " Mt/yr from this source still needs phase-out or CDR (Ch. 2 note on uncaptured emissions).";
+      } else {
+        verdict = "<strong>Lock-in screen: empty portfolio.</strong> Turn on a mode of action that the Vision actually owns this decade (methane, industrial CCS, saline storage).";
+      }
+      document.getElementById("out-verdict").innerHTML = verdict;
+
+      let math = "Math: 8 MMT CH₄ × " + gwp + " = " + fmt(ch4) + " MMT CO₂e. GHGI oil & gas 197 × (" + gwp + "/25) = " + fmt(og) + ". Source " + source.toFixed(1) + " Mt/yr × " + Math.round(capture * 100) + "% = " + fmt(stored) + " captured, " + fmt(resid) + " residual.";
+      if (store !== "saline") math += " Captured tonnes are not counted as climate storage under this screen unless destination is saline.";
+      if (gwp === 82.5) math += " GWP-20 82.5 is IPCC AR6 (fossil methane), not a FECM figure — the Vision only contrasts EPA 25 with AR6 ~30.";
+      math += " Resource bars are a qualitative conflict index (current use vs this mode), not acre-feet or kWh. They rise when the Vision says that resource is scarce or already claimed at this site.";
+      document.getElementById("out-math").textContent = math;
+    }
+
+    ["mode-methane","mode-industry","mode-storage","mode-gasccs","mode-h2new","mode-fuels","mode-dacgas","mode-dacclean","lab-gwp","lab-capture","lab-source","lab-store","lab-site","res-water","res-pore","res-power","res-biomass","res-consent"].forEach((id) => {
+      const el = document.getElementById(id);
+      el.addEventListener("input", updateLab);
+      el.addEventListener("change", updateLab);
+    });
+    updateLab();
   </script>
 </body>
 </html>
