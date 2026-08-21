@@ -243,6 +243,27 @@
     }
     .brief p, .brief li { color: #e7deca; }
     .brief ol { margin: 0.4rem 0 0.9rem; padding-left: 1.2rem; }
+    .laid {
+      background: #1a140c;
+      color: var(--paper);
+      border-radius: 16px;
+      padding: 1.4rem 1.45rem 1.25rem;
+      margin: 0 0 2rem;
+      border: 1px solid rgba(201, 162, 39, 0.4);
+    }
+    .laid h2 {
+      color: var(--gold);
+      margin: 0 0 0.7rem;
+      font-size: 1.35rem;
+    }
+    .laid h3 {
+      color: var(--paper);
+      font-size: 1.08rem;
+      margin: 1.15rem 0 0.4rem;
+    }
+    .laid p, .laid li { color: #e7deca; }
+    .laid a { color: var(--gold); }
+    .laid ul { margin: 0.3rem 0 0.85rem; }
     .legend {
       display: flex;
       flex-wrap: wrap;
@@ -399,7 +420,7 @@
       header.top { position: static; }
       nav, .actions, .stripes, .cite button { display: none; }
       body { background: #fff; }
-      .hero, .brief, .callout, footer { background: #fff !important; color: #111 !important; }
+      .hero, .brief, .laid, .callout, footer { background: #fff !important; color: #111 !important; }
       .panel { background: #fff; }
       a { color: #111; }
     }
@@ -420,6 +441,7 @@
       <a class="brand" href="#top">Environmental Science AI</a>
       <nav>
         <a href="#brief">Decision brief</a>
+        <a href="#laid">Laid out</a>
         <a href="#updates">Updates</a>
         <a href="#metrics">Metrics</a>
         <a href="#siting">Siting</a>
@@ -456,7 +478,7 @@
         </div>
         <div class="actions">
           <a class="btn btn-primary" href="#metrics">See the charts</a>
-          <a class="btn btn-ghost" href="#updates">What changed since 2022</a>
+          <a class="btn btn-ghost" href="#laid">Laid out</a>
           <a class="btn btn-ghost" href="#lab">Test modes of action</a>
           <button class="btn btn-ghost" type="button" id="copy-link">Copy shareable link</button>
         </div>
@@ -497,6 +519,48 @@
           <p>
             <strong>Fund only with written 2035 and 2050 off-ramps:</strong> gas power + CCS; fossil hydrogen hubs; CO<sub>2</sub> pipelines; biomass hydrogen.
             <strong>Do not treat as climate infrastructure:</strong> short-lived CO<sub>2</sub>-derived fuels; any capture project without storage or durable-use offtake; DAC sited for 2022 gas convenience.
+          </p>
+        </div>
+
+        <div class="laid" id="laid">
+          <h2>Laid out</h2>
+          <p>
+            Paradise Unlocked means we say the thing. The April 2022 Vision already wrote the charge:
+            design for 2050, not the next budget cycle; do not create path dependencies that lock in patterns of the past;
+            remediate legacy harms while stopping new ones. <span class="pin">Leadership letter, pp. iii–v; Ch. 1</span>
+            This page turns that charge into tools a decision-maker can actually use.
+          </p>
+
+          <h3>What was built, and how to use it</h3>
+          <ul>
+            <li><a href="#brief">Decision brief</a> — three award questions from the leadership letter. If a project fails one, it can be research. It should not be infrastructure.</li>
+            <li><a href="#metrics">Charts</a> — numbers the Vision already published. No private forecast. Scan them before the brochure.</li>
+            <li><a href="#siting">Siting</a> — where the Vision’s own resource tests say a project cannot go: water, pore space, power, biomass, consent, no pipe and no storage.</li>
+            <li><a href="#lab">Action lab</a> — flip a mode before you fund it. Methane, industrial capture, saline storage, gas CCS, new fossil hydrogen, short-lived fuels, DAC on 2022 gas. The meters use the document’s numbers.</li>
+            <li><a href="#ledger">Claim ledger</a> — every cited figure with a chapter pin a GS-15 or counsel can open the PDF and check.</li>
+            <li><a href="#goals">Goals and 2030 scoreboard</a> — three clocks: this decade, demonstration, after the grid is clean. Mixing them is lock-in. Keeping them separate is how the puzzle on the cover gets finished.</li>
+          </ul>
+
+          <h3>Who this is for</h3>
+          <p>
+            <strong>If you organize for climate and fenceline health:</strong> start with methane and orphan wells, a community “no” that can kill a route, no climate credit for EOR or short-lived fuels, and CDR only as residual insurance. Restorative justice is in Chapter 1: clean up places that already paid.
+          </p>
+          <p>
+            <strong>If you award or permit public money:</strong> use the three questions at FOA time. Couple every capture FEED to real pore space. Publish census-tract benefits and burdens. Write 2035 and 2050 off-ramps into the cooperative agreement, not the press release.
+          </p>
+          <p>
+            <strong>If you build or operate:</strong> the honest commercial path is industrial process CO<sub>2</sub> that still exists in 2050 (cement, existing hydrogen, ethanol, ammonia) tied to saline storage; nth-of-a-kind learning on those plants; hydrogen cleanup where gray hydrogen is already bought. New gas demand dressed as climate is not a transition.
+          </p>
+
+          <h3>The optimistic path is repair</h3>
+          <p>
+            Optimism here is not “every announced plant is fine.” It is plugging wells that are already blowing, catching super-emitters in hours, reclaiming coal waste and produced-water sites, and storing the process carbon that cement and existing hydrogen will still make.
+            That is how AI earns a place on this page: score the dollar against lock-in so past harm gets remedied instead of rebuilt with better plumbing.
+            The Vision named that work. Use the tools above to fund it.
+          </p>
+          <p>
+            What we will not pretend: EOR is not the destination. Captured-but-not-stored is not climate infrastructure. A DAC plant sited for 2022 low-leakage gas fails the leadership letter’s own 2050 test. Atlas prospective tonnes are not permitted injectivity. Selection is not operation.
+            Paradise stays unlocked when those sentences stay on the page.
           </p>
         </div>
 
