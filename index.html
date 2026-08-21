@@ -4,7 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thoughts on FECM’s Strategic Vision · Environmental Science AI</title>
-  <meta name="description" content="An independent engineering and environmental reading of DOE FECM’s 2022 Strategic Vision for net-zero greenhouse gas emissions." />
+  <meta name="description" content="Nicole Jury directed human-guided prompts; Cursor Grok 4.6 High Fast researched DOE FECM’s 2022 Strategic Vision and built this independent lock-in brief with her." />
+  <link rel="canonical" href="https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Optimize energy. Do not lock in the next fifty years of harm." />
+  <meta property="og:description" content="Nicole Jury, Paradise Unlocked Travel, directed human-guided prompts. Cursor Grok 4.6 High Fast researched the 2022 FECM Vision and built this page with her. Three award questions, chapter cites, no email." />
+  <meta property="og:url" content="https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/" />
+  <meta property="og:image" content="https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/og-share.png" />
+  <meta property="og:image:alt" content="Warming stripes over a dark green card: Optimize energy. Do not lock in the next fifty years of harm. Nicole Jury and Cursor Grok 4.6 High Fast." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Optimize energy. Do not lock in the next fifty years of harm." />
+  <meta name="twitter:description" content="An independent reading of DOE FECM’s 2022 Strategic Vision. Human-guided prompts by Nicole Jury; Grok researched and built the page with her." />
+  <meta name="twitter:image" content="https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/og-share.png" />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -124,6 +135,27 @@
       font-size: 1.15rem;
       color: var(--cream);
       margin: 0 0 1.8rem;
+    }
+    .meta a { color: var(--gold); }
+    .print-sheet { display: none; }
+    .glossary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.35rem 1.4rem;
+      margin: 0.6rem 0 1.5rem;
+      font-size: 0.92rem;
+    }
+    .glossary div { margin: 0; }
+    .glossary dt {
+      font-weight: 600;
+      color: var(--moss);
+      margin: 0.7rem 0 0.15rem;
+    }
+    .glossary dd { margin: 0 0 0.15rem; }
+    .example { margin: 0 0 2rem; }
+    .example .grid-2 { margin-top: 0.8rem; }
+    @media (max-width: 860px) {
+      .glossary { grid-template-columns: 1fr; }
     }
     .meta {
       display: flex;
@@ -532,12 +564,14 @@
       nav { gap: 0.65rem; }
     }
     @media print {
-      header.top { position: static; }
-      nav, .actions, .stripes, .cite button { display: none; }
+      .stripes, header.top, .hero, footer { display: none !important; }
+      .panel .wrap > *:not(.print-keep) { display: none !important; }
+      .print-sheet { display: block !important; margin: 0 0 1.2rem; font-size: 0.88rem; color: #111; }
+      .print-keep, .print-keep * { color: #111 !important; background: #fff !important; }
+      .print-keep .brief { border: 1px solid #ccc; padding: 1rem; }
+      .print-keep a { color: #111 !important; }
       body { background: #fff; }
-      .hero, .brief, .laid, .callout, footer { background: #fff !important; color: #111 !important; }
-      .panel { background: #fff; }
-      a, .laid a, footer a, .brief a { color: #111 !important; }
+      @page { margin: 1.2cm; }
     }
     @media (prefers-contrast: more) {
       :root {
@@ -567,6 +601,8 @@
       <a class="brand" href="#top">Environmental Science AI</a>
       <nav>
         <a href="#brief">Decision brief</a>
+        <a href="#glossary">Glossary</a>
+        <a href="#example">Example</a>
         <a href="#laid">Laid out</a>
         <a href="#updates">Updates</a>
         <a href="#metrics">Metrics</a>
@@ -603,14 +639,16 @@
         </p>
         <div class="meta">
           <span>Author: Nicole Jury, Paradise Unlocked Travel</span>
-          <span>Source: U.S. DOE Office of Fossil Energy and Carbon Management, April 2022 (28 Apr. update)</span>
+          <span>Source: <a href="https://www.energy.gov/sites/default/files/2022-04/2022-Strategic-Vision-The-Role-of-Fossil-Energy-and-Carbon-Management-in-Achieving-Net-Zero-Greenhouse-Gas-Emissions_Updated-4.28.22.pdf">U.S. DOE Office of Fossil Energy and Carbon Management, April 2022 (28 Apr. update) PDF</a></span>
           <span>Cover image: Ed Hawkins warming stripes, University of Reading</span>
           <span>First reading: 20 August 2026 · Reliability revision and docket check: 20 August 2026 (Rev. 3)</span>
         </div>
         <div class="actions">
-          <a class="btn btn-primary" href="#metrics">See the charts</a>
+          <a class="btn btn-primary" href="https://www.energy.gov/sites/default/files/2022-04/2022-Strategic-Vision-The-Role-of-Fossil-Energy-and-Carbon-Management-in-Achieving-Net-Zero-Greenhouse-Gas-Emissions_Updated-4.28.22.pdf">Open the Vision PDF</a>
+          <a class="btn btn-ghost" href="#metrics">See the charts</a>
           <a class="btn btn-ghost" href="#laid">Laid out</a>
           <a class="btn btn-ghost" href="#lab">Test modes of action</a>
+          <button class="btn btn-ghost" type="button" id="print-brief">Print the brief</button>
           <button class="btn btn-ghost" type="button" id="copy-link">Copy shareable link</button>
         </div>
       </div>
@@ -618,6 +656,12 @@
 
     <section class="panel">
       <div class="wrap">
+        <div class="print-keep" id="leavebehind">
+          <div class="print-sheet">
+            <p><strong>Nicole Jury, Paradise Unlocked Travel</strong> · Independent review · 20 August 2026</p>
+            <p>https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/</p>
+            <p>Not legal, engineering, or investment advice. Not a DOE position. Source: FECM Strategic Vision, April 2022.</p>
+          </div>
         <div class="verdict" id="verdict">
           <h2>Verdict</h2>
           <p>
@@ -653,6 +697,75 @@
           </p>
         </div>
 
+        <ul class="chart-key" aria-label="How to read the figures">
+          <li><span class="swatch moss" aria-hidden="true"></span> Solid moss — baseline in the Vision: world total, existing stock, published pathway, captured share</li>
+          <li><span class="swatch gold" aria-hidden="true"></span> Gold stripe — comparator: China, other countries, prospective tonnes, the 65 Mt/yr yardstick</li>
+          <li><span class="swatch ember" aria-hidden="true"></span> Ember hatch — U.S. number or U.S. constraint: American emissions, residual carbon, plants too small, siting conflict</li>
+        </ul>
+        </div>
+
+        <h2 id="glossary">Words this page uses</h2>
+        <p>Short definitions so a non-specialist can follow the brief. These are working senses for this review, not a statute.</p>
+        <dl class="glossary">
+          <div>
+            <dt>Class VI</dt>
+            <dd>EPA well class for injecting CO<sub>2</sub> into deep rock for storage, under the Safe Drinking Water Act.</dd>
+          </div>
+          <div>
+            <dt>45Q</dt>
+            <dd>Federal tax credit paid per tonne of captured CO<sub>2</sub>. The IRA raised the credit; a later statute changed how dedicated storage and EOR/utilization compare for some equipment. See Updates.</dd>
+          </div>
+          <div>
+            <dt>CarbonSAFE</dt>
+            <dd>DOE program that funds stepwise characterization of geologic storage sites toward Class VI permits. CarbonSTORE, in the Vision, is the shared field-lab idea.</dd>
+          </div>
+          <div>
+            <dt>Justice40</dt>
+            <dd>Federal goal (Executive Order 14008) that 40% of the benefits of certain climate and infrastructure investments reach disadvantaged communities.</dd>
+          </div>
+          <div>
+            <dt>EOR</dt>
+            <dd>Enhanced oil recovery: injecting CO<sub>2</sub> to produce more oil. This review does not count EOR as climate storage.</dd>
+          </div>
+          <div>
+            <dt>Saline storage</dt>
+            <dd>Injecting CO<sub>2</sub> into deep brine-filled rock so it stays out of the atmosphere for centuries. The Vision’s dedicated-storage destination.</dd>
+          </div>
+          <div>
+            <dt>DAC</dt>
+            <dd>Direct air capture: pulling CO<sub>2</sub> from ambient air (~400 ppm), not from a smokestack. The leadership letter sites it on clean power, as residual insurance.</dd>
+          </div>
+          <div>
+            <dt>NGCC</dt>
+            <dd>Natural-gas combined-cycle power plant. About 4% CO<sub>2</sub> in the flue gas; the Vision notes most U.S. units are too small for flagship CCS.</dd>
+          </div>
+        </dl>
+
+        <div class="example" id="example">
+          <h2>Worked example: the two dilute-stream plants the Vision names</h2>
+          <p>
+            This is an illustration of the three award questions, not a live 2026 award list.
+            Chapter 2 says that of the global CCS fleet to 2020 (n = 28), only two plants captured from streams below 20% CO<sub>2</sub>: Boundary Dam and Petra Nova. Most stored tonnes were EOR. <span class="pin">Ch. 2, GCCSI (2020)</span>
+          </p>
+          <div class="grid-2">
+            <article class="card">
+              <h3>Boundary Dam (coal power, Canada)</h3>
+              <p><strong>1. Carbon-free grid?</strong> A coal CCS unit is a learning plant, not a 2035 carbon-pollution-free power plant. Keep it in the demonstration column; do not treat it as infrastructure that should still run when the grid is clean.</p>
+              <p><strong>2. Out of the sky for centuries?</strong> If the captured CO<sub>2</sub> goes to EOR, this review does not count it as climate storage. Dedicated saline (or mineralization) would be the test. The 2020 fleet, as the Vision cites it, was largely EOR.</p>
+              <p><strong>3. Who breathes, who is paid?</strong> A coal unit already loads a fenceline. Capture gear does not pass the census-tract test unless benefits and burdens are published for that tract. <span class="pin">Ch. 1</span></p>
+            </article>
+            <article class="card">
+              <h3>Petra Nova (coal power, United States)</h3>
+              <p><strong>1. Carbon-free grid?</strong> Same as Boundary Dam: useful as a named dilute-stream experiment, not as a U.S. gas-or-coal CCS flagship without a written 2035 off-ramp.</p>
+              <p><strong>2. Out of the sky for centuries?</strong> Petra Nova was built around EOR. That is oil production with a capture step, not the Vision’s saline destination. Learning-by-doing numbers in Chapter 2 (about 30% lower EPC for a next plant) still apply — on sources that have a 2050 job.</p>
+              <p><strong>3. Who breathes, who is paid?</strong> A U.S. coal fenceline is exactly where Chapter 1’s restorative-justice test belongs. No census-tract ledger, no climate-infrastructure claim.</p>
+            </article>
+          </div>
+          <p>
+            What the example is for: spend scarce demo slots on high-purity process CO<sub>2</sub> that still exists in 2050 (cement, existing hydrogen, ethanol, ammonia) tied to saline storage. Use these two plants as the Vision used them — proof that dilute power flue gas is the hard case, not the template.
+          </p>
+        </div>
+
         <div class="laid" id="laid">
           <h2>Laid out</h2>
           <p>
@@ -665,6 +778,8 @@
           <h3>What was built, and how to use it</h3>
           <ul>
             <li><a href="#brief">Decision brief</a> — three award questions from the leadership letter. A project that is not ready for all three can still be useful research. Infrastructure should meet them.</li>
+            <li><a href="#glossary">Glossary</a> — Class VI, 45Q, CarbonSAFE, Justice40, EOR, saline, DAC, NGCC.</li>
+            <li><a href="#example">Worked example</a> — Boundary Dam and Petra Nova, the two dilute-stream plants Chapter 2 names, run through the three questions.</li>
             <li><a href="#metrics">Charts</a> — numbers the Vision already published, in a form a decision-maker can scan first.</li>
             <li><a href="#siting">Siting</a> — the Vision’s own resource tests: water, pore space, power, biomass, consent, and the need for storage or a pipe. Use them to find where a project can succeed.</li>
             <li><a href="#lab">Action lab</a> — try a mode before you fund it. Methane, industrial capture, saline storage, gas CCS, hydrogen, fuels, and DAC. The meters use the document’s numbers.</li>
@@ -722,13 +837,7 @@
           Axes are labeled. Captions name the page or chapter. Each bar has a name and a value, so the figure still reads if green, gold, and ember look the same; hatch and stripe are a second cue.
           This is not a re-plot of FECM’s figures; it is the same statistics in a form a decision-maker can scan.
         </p>
-        <ul class="chart-key" aria-label="How to read the figures">
-          <li><span class="swatch moss" aria-hidden="true"></span> Solid moss — baseline in the Vision: world total, existing stock, published pathway, captured share</li>
-          <li><span class="swatch gold" aria-hidden="true"></span> Gold stripe — comparator: China, other countries, prospective tonnes, the 65 Mt/yr yardstick</li>
-          <li><span class="swatch ember" aria-hidden="true"></span> Ember hatch — U.S. number or U.S. constraint: American emissions, residual carbon, plants too small, siting conflict</li>
-          <li><span class="swatch line" aria-hidden="true"></span> Moss line — same as solid moss: the published injectivity pathway (Ch. 5 Figure 5.1)</li>
-        </ul>
-        <p class="chart-src">Those three tokens mean the same thing on every figure. Bar length is the value. Read the name on the left.</p>
+        <p class="chart-src">Same three tokens as above. The injectivity line is moss: the published pathway. Bar length is the value. Read the name on the left.</p>
 
         <div class="chart-grid">
           <article class="chart-card">
@@ -1601,6 +1710,10 @@
   </footer>
   <script>
     const copyBtn = document.getElementById("copy-link");
+    const printBtn = document.getElementById("print-brief");
+    if (printBtn) {
+      printBtn.addEventListener("click", () => window.print());
+    }
     copyBtn.addEventListener("click", async () => {
       const url = "https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/";
       try {
