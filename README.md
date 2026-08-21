@@ -6,7 +6,7 @@ Independent review of the U.S. Department of Energy Office of Fossil Energy and 
 
 **https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/**
 
-The page is a decision-maker brief of the Vision: lock-in test, chapter cites, claim ledger, sourced bar and line charts, an interactive action lab, a 20 August 2026 docket check of what changed after April 2022, a glossary, a worked example of Boundary Dam and Petra Nova, and a Laid out map of those tools for activists, public agencies, and operators. Open the Vision PDF from the hero. Print the brief (verdict, three questions, color key). The Vision reading is not a live award list; check current DOE and EPA dockets before treating any project as real.
+The page is a decision-maker brief of the Vision: lock-in test, chapter cites, claim ledger, sourced bar and line charts, an interactive action lab, a 20 August 2026 docket check of what changed after April 2022, a glossary, a worked example of Boundary Dam and Petra Nova, and a Laid out map of those tools for activists, public agencies, and operators. Open the Vision PDF from the hero. Charts sit with the brief, after the color key. Print the brief (verdict, three questions, color key, and the Vision figures). The Vision reading is not a live award list; check current DOE and EPA dockets before treating any project as real.
 
 ## Pulls 1–13 on this page
 

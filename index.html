@@ -567,9 +567,14 @@
       .stripes, header.top, .hero, footer { display: none !important; }
       .panel .wrap > *:not(.print-keep) { display: none !important; }
       .print-sheet { display: block !important; margin: 0 0 1.2rem; font-size: 0.88rem; color: #111; }
-      .print-keep, .print-keep * { color: #111 !important; background: #fff !important; }
+      .print-keep { color: #111; background: #fff; }
       .print-keep .brief { border: 1px solid #ccc; padding: 1rem; }
       .print-keep a { color: #111 !important; }
+      .print-keep .chart-card { break-inside: avoid; }
+      .hbar-fill, .swatch, .hbar-track, .print-keep svg {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
       body { background: #fff; }
       @page { margin: 1.2cm; }
     }
@@ -601,11 +606,11 @@
       <a class="brand" href="#top">Environmental Science AI</a>
       <nav>
         <a href="#brief">Decision brief</a>
+        <a href="#metrics">Metrics</a>
         <a href="#glossary">Glossary</a>
         <a href="#example">Example</a>
         <a href="#laid">Laid out</a>
         <a href="#updates">Updates</a>
-        <a href="#metrics">Metrics</a>
         <a href="#siting">Siting</a>
         <a href="#lab">Action lab</a>
         <a href="#keeps">What holds</a>
@@ -702,135 +707,6 @@
           <li><span class="swatch gold" aria-hidden="true"></span> Gold stripe — comparator: China, other countries, prospective tonnes, the 65 Mt/yr yardstick</li>
           <li><span class="swatch ember" aria-hidden="true"></span> Ember hatch — U.S. number or U.S. constraint: American emissions, residual carbon, plants too small, siting conflict</li>
         </ul>
-        </div>
-
-        <h2 id="glossary">Words this page uses</h2>
-        <p>Short definitions so a non-specialist can follow the brief. These are working senses for this review, not a statute.</p>
-        <dl class="glossary">
-          <div>
-            <dt>Class VI</dt>
-            <dd>EPA well class for injecting CO<sub>2</sub> into deep rock for storage, under the Safe Drinking Water Act.</dd>
-          </div>
-          <div>
-            <dt>45Q</dt>
-            <dd>Federal tax credit paid per tonne of captured CO<sub>2</sub>. The IRA raised the credit; a later statute changed how dedicated storage and EOR/utilization compare for some equipment. See Updates.</dd>
-          </div>
-          <div>
-            <dt>CarbonSAFE</dt>
-            <dd>DOE program that funds stepwise characterization of geologic storage sites toward Class VI permits. CarbonSTORE, in the Vision, is the shared field-lab idea.</dd>
-          </div>
-          <div>
-            <dt>Justice40</dt>
-            <dd>Federal goal (Executive Order 14008) that 40% of the benefits of certain climate and infrastructure investments reach disadvantaged communities.</dd>
-          </div>
-          <div>
-            <dt>EOR</dt>
-            <dd>Enhanced oil recovery: injecting CO<sub>2</sub> to produce more oil. This review does not count EOR as climate storage.</dd>
-          </div>
-          <div>
-            <dt>Saline storage</dt>
-            <dd>Injecting CO<sub>2</sub> into deep brine-filled rock so it stays out of the atmosphere for centuries. The Vision’s dedicated-storage destination.</dd>
-          </div>
-          <div>
-            <dt>DAC</dt>
-            <dd>Direct air capture: pulling CO<sub>2</sub> from ambient air (~400 ppm), not from a smokestack. The leadership letter sites it on clean power, as residual insurance.</dd>
-          </div>
-          <div>
-            <dt>NGCC</dt>
-            <dd>Natural-gas combined-cycle power plant. About 4% CO<sub>2</sub> in the flue gas; the Vision notes most U.S. units are too small for flagship CCS.</dd>
-          </div>
-        </dl>
-
-        <div class="example" id="example">
-          <h2>Worked example: the two dilute-stream plants the Vision names</h2>
-          <p>
-            This is an illustration of the three award questions, not a live 2026 award list.
-            Chapter 2 says that of the global CCS fleet to 2020 (n = 28), only two plants captured from streams below 20% CO<sub>2</sub>: Boundary Dam and Petra Nova. Most stored tonnes were EOR. <span class="pin">Ch. 2, GCCSI (2020)</span>
-          </p>
-          <div class="grid-2">
-            <article class="card">
-              <h3>Boundary Dam (coal power, Canada)</h3>
-              <p><strong>1. Carbon-free grid?</strong> A coal CCS unit is a learning plant, not a 2035 carbon-pollution-free power plant. Keep it in the demonstration column; do not treat it as infrastructure that should still run when the grid is clean.</p>
-              <p><strong>2. Out of the sky for centuries?</strong> If the captured CO<sub>2</sub> goes to EOR, this review does not count it as climate storage. Dedicated saline (or mineralization) would be the test. The 2020 fleet, as the Vision cites it, was largely EOR.</p>
-              <p><strong>3. Who breathes, who is paid?</strong> A coal unit already loads a fenceline. Capture gear does not pass the census-tract test unless benefits and burdens are published for that tract. <span class="pin">Ch. 1</span></p>
-            </article>
-            <article class="card">
-              <h3>Petra Nova (coal power, United States)</h3>
-              <p><strong>1. Carbon-free grid?</strong> Same as Boundary Dam: useful as a named dilute-stream experiment, not as a U.S. gas-or-coal CCS flagship without a written 2035 off-ramp.</p>
-              <p><strong>2. Out of the sky for centuries?</strong> Petra Nova was built around EOR. That is oil production with a capture step, not the Vision’s saline destination. Learning-by-doing numbers in Chapter 2 (about 30% lower EPC for a next plant) still apply — on sources that have a 2050 job.</p>
-              <p><strong>3. Who breathes, who is paid?</strong> A U.S. coal fenceline is exactly where Chapter 1’s restorative-justice test belongs. No census-tract ledger, no climate-infrastructure claim.</p>
-            </article>
-          </div>
-          <p>
-            What the example is for: spend scarce demo slots on high-purity process CO<sub>2</sub> that still exists in 2050 (cement, existing hydrogen, ethanol, ammonia) tied to saline storage. Use these two plants as the Vision used them — proof that dilute power flue gas is the hard case, not the template.
-          </p>
-        </div>
-
-        <div class="laid" id="laid">
-          <h2>Laid out</h2>
-          <p>
-            The April 2022 Vision already wrote a generous charge:
-            design for 2050, not only the next budget cycle; enable decarbonization without locking in patterns of the past;
-            remediate legacy harms while avoiding new ones. <span class="pin">Leadership letter, pp. iii–v; Ch. 1</span>
-            This page turns that charge into tools people can share — organizers, agencies, and operators — so the puzzle on the cover can actually be finished.
-          </p>
-
-          <h3>What was built, and how to use it</h3>
-          <ul>
-            <li><a href="#brief">Decision brief</a> — three award questions from the leadership letter. A project that is not ready for all three can still be useful research. Infrastructure should meet them.</li>
-            <li><a href="#glossary">Glossary</a> — Class VI, 45Q, CarbonSAFE, Justice40, EOR, saline, DAC, NGCC.</li>
-            <li><a href="#example">Worked example</a> — Boundary Dam and Petra Nova, the two dilute-stream plants Chapter 2 names, run through the three questions.</li>
-            <li><a href="#metrics">Charts</a> — numbers the Vision already published, in a form a decision-maker can scan first.</li>
-            <li><a href="#siting">Siting</a> — the Vision’s own resource tests: water, pore space, power, biomass, consent, and the need for storage or a pipe. Use them to find where a project can succeed.</li>
-            <li><a href="#lab">Action lab</a> — try a mode before you fund it. Methane, industrial capture, saline storage, gas CCS, hydrogen, fuels, and DAC. The meters use the document’s numbers.</li>
-            <li><a href="#ledger">Claim ledger</a> — every cited figure with a chapter pin, so anyone can open the PDF and check.</li>
-            <li><a href="#goals">Goals and 2030 scoreboard</a> — three clocks: this decade, demonstration, and after the grid is clean. Keep them separate and the cover puzzle has a path to completion.</li>
-          </ul>
-
-          <h3>Who this is for</h3>
-          <p>
-            <strong>If you organize for climate and fenceline health:</strong> the near-term wins are methane repair and orphan wells, community voice before a route is drawn, durable storage rather than EOR or short-lived fuels, and CDR as residual insurance. Chapter 1 already calls for remediating places that have paid the most.
-          </p>
-          <p>
-            <strong>If you award or permit public money:</strong> the three questions belong at FOA time. Pair every capture study with real pore space. Publish census-tract benefits and burdens. Put 2035 and 2050 off-ramps in the cooperative agreement so everyone can see the same conditions.
-          </p>
-          <p>
-            <strong>If you build or operate:</strong> there is a commercial path that still exists in 2050: process CO<sub>2</sub> from cement, existing hydrogen, ethanol, and ammonia, tied to saline storage; learning-by-doing on those plants; hydrogen cleanup where gray hydrogen is already bought. Site new work for later electrolysis — water, storage, and wires — so it still makes sense when the grid is clean.
-          </p>
-
-          <h3>The optimistic path is repair</h3>
-          <p>
-            Optimism is the work that is ready now: plugging high-emitting wells, catching super-emitters in hours, reclaiming coal-waste and produced-water sites, and storing the process carbon that cement and existing hydrogen will still make.
-            AI belongs on this page as a way to score dollars against the Vision’s own 2050 test, so funding can follow repair and honest industry rather than a 2022 map.
-            The Vision named that work. The tools above are how to do it together.
-          </p>
-          <p>
-            A few distinctions keep the page useful to everyone: dedicated saline storage is the destination; EOR is history. Captured carbon needs storage or a durable use. DAC belongs on clean power, as the leadership letter already asked. Prospective Atlas tonnes are not yet permitted injectivity. An announced project is a starting point, not an operating plant.
-            Those lines are invitations to get the puzzle pieces in the right places.
-          </p>
-        </div>
-
-        <p class="legend">
-          <span><strong>FECM says</strong> = in the April 2022 Vision.</span>
-          <span><strong>This review requires</strong> = judgment, not a DOE position.</span>
-          <span><strong>Outside the source</strong> = 2022–2026 implementation. A dated check of the named items is in Updates.</span>
-        </p>
-
-        <div class="grid-3">
-          <article class="card">
-            <p class="num">2035 / 2050</p>
-            <p>FECM orients around a carbon pollution-free power sector by 2035 and net-zero U.S. GHG emissions by 2050, with an interim 50–52% cut by 2030 versus 2005. <span class="pin">Exec. summary; EO 14008</span></p>
-          </article>
-          <article class="card">
-            <p class="num">$100 / t</p>
-            <p>Carbon Negative Shot: just, sustainable, scalable CDR below $100 per net metric ton of CO<sub>2</sub>e (Ch. 4 also dates this to 2032). Useful as a cost and justice screen — dangerous if it becomes a substitute for abatement. <span class="pin">Summary; Ch. 4, p. 22</span></p>
-          </article>
-          <article class="card">
-            <p class="num">≥65 Mt / yr</p>
-            <p>Storage infrastructure “must accommodate at least 65 million tonnes of CO<sub>2</sub> per year by 2030,” “roughly equivalent to the demand of the entire CO<sub>2</sub> EOR industry” (Larson et al., 2020). Thirty years at that rate is two billion tonnes of commercial capacity. Permitting and consent, not geology, are the binding constraints. <span class="pin">Ch. 5, p. 26</span></p>
-          </article>
-        </div>
-
         <h2 id="metrics">Numbers in the Vision, plotted</h2>
         <p>
           Every bar and point below is a number the April 2022 document publishes or cites.
@@ -948,6 +824,136 @@
               <div class="hbar-row"><span>Petra Nova EPC</span><div class="hbar-track"><span class="hbar-fill ember" style="width:30%"></span></div><span>−30%</span></div>
             </div>
             <p class="chart-src">Source: Ch. 2. Taylor et al. (2005) FGD; CCS Knowledge (2018) Boundary Dam total capital; Tanaka et al. (2018) Petra Nova EPC. Different metrics — do not average them into one “CCS learning rate.”</p>
+          </article>
+        </div>
+
+        </div>
+
+
+        <h2 id="glossary">Words this page uses</h2>
+        <p>Short definitions so a non-specialist can follow the brief. These are working senses for this review, not a statute.</p>
+        <dl class="glossary">
+          <div>
+            <dt>Class VI</dt>
+            <dd>EPA well class for injecting CO<sub>2</sub> into deep rock for storage, under the Safe Drinking Water Act.</dd>
+          </div>
+          <div>
+            <dt>45Q</dt>
+            <dd>Federal tax credit paid per tonne of captured CO<sub>2</sub>. The IRA raised the credit; a later statute changed how dedicated storage and EOR/utilization compare for some equipment. See Updates.</dd>
+          </div>
+          <div>
+            <dt>CarbonSAFE</dt>
+            <dd>DOE program that funds stepwise characterization of geologic storage sites toward Class VI permits. CarbonSTORE, in the Vision, is the shared field-lab idea.</dd>
+          </div>
+          <div>
+            <dt>Justice40</dt>
+            <dd>Federal goal (Executive Order 14008) that 40% of the benefits of certain climate and infrastructure investments reach disadvantaged communities.</dd>
+          </div>
+          <div>
+            <dt>EOR</dt>
+            <dd>Enhanced oil recovery: injecting CO<sub>2</sub> to produce more oil. This review does not count EOR as climate storage.</dd>
+          </div>
+          <div>
+            <dt>Saline storage</dt>
+            <dd>Injecting CO<sub>2</sub> into deep brine-filled rock so it stays out of the atmosphere for centuries. The Vision’s dedicated-storage destination.</dd>
+          </div>
+          <div>
+            <dt>DAC</dt>
+            <dd>Direct air capture: pulling CO<sub>2</sub> from ambient air (~400 ppm), not from a smokestack. The leadership letter sites it on clean power, as residual insurance.</dd>
+          </div>
+          <div>
+            <dt>NGCC</dt>
+            <dd>Natural-gas combined-cycle power plant. About 4% CO<sub>2</sub> in the flue gas; the Vision notes most U.S. units are too small for flagship CCS.</dd>
+          </div>
+        </dl>
+
+        <div class="example" id="example">
+          <h2>Worked example: the two dilute-stream plants the Vision names</h2>
+          <p>
+            This is an illustration of the three award questions, not a live 2026 award list.
+            Chapter 2 says that of the global CCS fleet to 2020 (n = 28), only two plants captured from streams below 20% CO<sub>2</sub>: Boundary Dam and Petra Nova. Most stored tonnes were EOR. <span class="pin">Ch. 2, GCCSI (2020)</span>
+          </p>
+          <div class="grid-2">
+            <article class="card">
+              <h3>Boundary Dam (coal power, Canada)</h3>
+              <p><strong>1. Carbon-free grid?</strong> A coal CCS unit is a learning plant, not a 2035 carbon-pollution-free power plant. Keep it in the demonstration column; do not treat it as infrastructure that should still run when the grid is clean.</p>
+              <p><strong>2. Out of the sky for centuries?</strong> If the captured CO<sub>2</sub> goes to EOR, this review does not count it as climate storage. Dedicated saline (or mineralization) would be the test. The 2020 fleet, as the Vision cites it, was largely EOR.</p>
+              <p><strong>3. Who breathes, who is paid?</strong> A coal unit already loads a fenceline. Capture gear does not pass the census-tract test unless benefits and burdens are published for that tract. <span class="pin">Ch. 1</span></p>
+            </article>
+            <article class="card">
+              <h3>Petra Nova (coal power, United States)</h3>
+              <p><strong>1. Carbon-free grid?</strong> Same as Boundary Dam: useful as a named dilute-stream experiment, not as a U.S. gas-or-coal CCS flagship without a written 2035 off-ramp.</p>
+              <p><strong>2. Out of the sky for centuries?</strong> Petra Nova was built around EOR. That is oil production with a capture step, not the Vision’s saline destination. Learning-by-doing numbers in Chapter 2 (about 30% lower EPC for a next plant) still apply — on sources that have a 2050 job.</p>
+              <p><strong>3. Who breathes, who is paid?</strong> A U.S. coal fenceline is exactly where Chapter 1’s restorative-justice test belongs. No census-tract ledger, no climate-infrastructure claim.</p>
+            </article>
+          </div>
+          <p>
+            What the example is for: spend scarce demo slots on high-purity process CO<sub>2</sub> that still exists in 2050 (cement, existing hydrogen, ethanol, ammonia) tied to saline storage. Use these two plants as the Vision used them — proof that dilute power flue gas is the hard case, not the template.
+          </p>
+        </div>
+
+        <div class="laid" id="laid">
+          <h2>Laid out</h2>
+          <p>
+            The April 2022 Vision already wrote a generous charge:
+            design for 2050, not only the next budget cycle; enable decarbonization without locking in patterns of the past;
+            remediate legacy harms while avoiding new ones. <span class="pin">Leadership letter, pp. iii–v; Ch. 1</span>
+            This page turns that charge into tools people can share — organizers, agencies, and operators — so the puzzle on the cover can actually be finished.
+          </p>
+
+          <h3>What was built, and how to use it</h3>
+          <ul>
+            <li><a href="#brief">Decision brief</a> — three award questions from the leadership letter. A project that is not ready for all three can still be useful research. Infrastructure should meet them.</li>
+            <li><a href="#metrics">Charts</a> — numbers the Vision already published, in a form a decision-maker can scan first.</li>
+            <li><a href="#glossary">Glossary</a> — Class VI, 45Q, CarbonSAFE, Justice40, EOR, saline, DAC, NGCC.</li>
+            <li><a href="#example">Worked example</a> — Boundary Dam and Petra Nova, the two dilute-stream plants Chapter 2 names, run through the three questions.</li>
+            <li><a href="#siting">Siting</a> — the Vision’s own resource tests: water, pore space, power, biomass, consent, and the need for storage or a pipe. Use them to find where a project can succeed.</li>
+            <li><a href="#lab">Action lab</a> — try a mode before you fund it. Methane, industrial capture, saline storage, gas CCS, hydrogen, fuels, and DAC. The meters use the document’s numbers.</li>
+            <li><a href="#ledger">Claim ledger</a> — every cited figure with a chapter pin, so anyone can open the PDF and check.</li>
+            <li><a href="#goals">Goals and 2030 scoreboard</a> — three clocks: this decade, demonstration, and after the grid is clean. Keep them separate and the cover puzzle has a path to completion.</li>
+          </ul>
+
+          <h3>Who this is for</h3>
+          <p>
+            <strong>If you organize for climate and fenceline health:</strong> the near-term wins are methane repair and orphan wells, community voice before a route is drawn, durable storage rather than EOR or short-lived fuels, and CDR as residual insurance. Chapter 1 already calls for remediating places that have paid the most.
+          </p>
+          <p>
+            <strong>If you award or permit public money:</strong> the three questions belong at FOA time. Pair every capture study with real pore space. Publish census-tract benefits and burdens. Put 2035 and 2050 off-ramps in the cooperative agreement so everyone can see the same conditions.
+          </p>
+          <p>
+            <strong>If you build or operate:</strong> there is a commercial path that still exists in 2050: process CO<sub>2</sub> from cement, existing hydrogen, ethanol, and ammonia, tied to saline storage; learning-by-doing on those plants; hydrogen cleanup where gray hydrogen is already bought. Site new work for later electrolysis — water, storage, and wires — so it still makes sense when the grid is clean.
+          </p>
+
+          <h3>The optimistic path is repair</h3>
+          <p>
+            Optimism is the work that is ready now: plugging high-emitting wells, catching super-emitters in hours, reclaiming coal-waste and produced-water sites, and storing the process carbon that cement and existing hydrogen will still make.
+            AI belongs on this page as a way to score dollars against the Vision’s own 2050 test, so funding can follow repair and honest industry rather than a 2022 map.
+            The Vision named that work. The tools above are how to do it together.
+          </p>
+          <p>
+            A few distinctions keep the page useful to everyone: dedicated saline storage is the destination; EOR is history. Captured carbon needs storage or a durable use. DAC belongs on clean power, as the leadership letter already asked. Prospective Atlas tonnes are not yet permitted injectivity. An announced project is a starting point, not an operating plant.
+            Those lines are invitations to get the puzzle pieces in the right places.
+          </p>
+        </div>
+
+        <p class="legend">
+          <span><strong>FECM says</strong> = in the April 2022 Vision.</span>
+          <span><strong>This review requires</strong> = judgment, not a DOE position.</span>
+          <span><strong>Outside the source</strong> = 2022–2026 implementation. A dated check of the named items is in Updates.</span>
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <p class="num">2035 / 2050</p>
+            <p>FECM orients around a carbon pollution-free power sector by 2035 and net-zero U.S. GHG emissions by 2050, with an interim 50–52% cut by 2030 versus 2005. <span class="pin">Exec. summary; EO 14008</span></p>
+          </article>
+          <article class="card">
+            <p class="num">$100 / t</p>
+            <p>Carbon Negative Shot: just, sustainable, scalable CDR below $100 per net metric ton of CO<sub>2</sub>e (Ch. 4 also dates this to 2032). Useful as a cost and justice screen — dangerous if it becomes a substitute for abatement. <span class="pin">Summary; Ch. 4, p. 22</span></p>
+          </article>
+          <article class="card">
+            <p class="num">≥65 Mt / yr</p>
+            <p>Storage infrastructure “must accommodate at least 65 million tonnes of CO<sub>2</sub> per year by 2030,” “roughly equivalent to the demand of the entire CO<sub>2</sub> EOR industry” (Larson et al., 2020). Thirty years at that rate is two billion tonnes of commercial capacity. Permitting and consent, not geology, are the binding constraints. <span class="pin">Ch. 5, p. 26</span></p>
           </article>
         </div>
 
