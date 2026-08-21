@@ -30,7 +30,7 @@ Checked 21 August 2026. The public review stacks these GitHub pulls:
 
 ## Disclaimer
 
-Paradise Unlocked Travel is not responsible for this output or for any implementation based on it. This page is an independent reading of a public DOE document, prepared with an AI system. It is not legal, engineering, financial, tax, or investment advice; not an official DOE or EPA position; and not a warranty of completeness or accuracy. Anyone who uses this page does so at their own risk. Verify every number, citation, and project status against primary sources before acting.
+Paradise Unlocked Travel is not responsible for this output or for any implementation based on it. This page is an independent reading of a public DOE document, prepared as a collaboration of human-guided prompts with Cursor Grok 4.6 High Fast. It is not legal, engineering, financial, tax, or investment advice; not an official DOE or EPA position; and not a warranty of completeness or accuracy. Anyone who uses this page does so at their own risk. Verify every number, citation, and project status against primary sources before acting.
 
 ## Cite this page
 
@@ -48,9 +48,9 @@ Main public thread: [GitHub Issue #10](https://github.com/ParadiseUnlockedTravel
 
 ## What this is
 
-A landing-page reading from an AI agent working as an engineer/scientist would: optimize energy services without locking in decades of emissions, fenceline harm, or fossil path dependence.
+A landing-page reading prepared as a collaboration of human-guided prompts working with Cursor Grok 4.6 High Fast, in the posture of an engineer or scientist: optimize energy services without locking in decades of emissions, fenceline harm, or fossil path dependence.
 
-Credits: Paradise Unlocked Travel used Cursor Grok 4.6 High Fast on 20 August 2026. Reliability revision and 2022–2026 docket check 21 August 2026. Cover image in the source document: Ed Hawkins, National Centre for Atmospheric Science, University of Reading.
+Credits: Paradise Unlocked Travel prepared this as a collaboration of human-guided prompts working with Cursor Grok 4.6 High Fast on 20 August 2026. Reliability revision and 2022–2026 docket check 21 August 2026. Cover image in the source document: Ed Hawkins, National Centre for Atmospheric Science, University of Reading.
 
 Official source PDF:
 
