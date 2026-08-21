@@ -333,7 +333,7 @@
     .lab-box select, .lab-box input[type="range"] { width: 100%; margin: 0.2rem 0 0.55rem; }
     .live-nums { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin: 0.4rem 0 0.8rem; }
     .live-num { background: #10241c; color: var(--paper); border-radius: 12px; padding: 0.7rem 0.8rem; }
-    .live-num b { display: block; font-family: Fraunces, Georgia, serif; font-size: 1.35rem; color: var(--gold); }
+    .live-num b { display: block; font-family: Fraunces, Georgia, serif; font-size: 1.15rem; color: var(--gold); }
     .live-num span { font-size: 0.75rem; color: #c9d3cc; }
     .lab-verdict { font-size: 0.95rem; margin: 0; }
     @media (max-width: 860px) {
@@ -417,6 +417,7 @@
       <nav>
         <a href="#brief">Decision brief</a>
         <a href="#metrics">Metrics</a>
+        <a href="#siting">Siting</a>
         <a href="#lab">Action lab</a>
         <a href="#keeps">What holds</a>
         <a href="#risks">Risks</a>
@@ -449,6 +450,7 @@
         </div>
         <div class="actions">
           <a class="btn btn-primary" href="#verdict">Read the verdict</a>
+          <a class="btn btn-ghost" href="#lab">Test modes of action</a>
           <button class="btn btn-ghost" type="button" id="copy-link">Copy shareable link</button>
         </div>
       </div>
@@ -646,6 +648,95 @@
           </article>
         </div>
 
+        <h2 id="siting">Resources, current use, and where it cannot go</h2>
+        <p>
+          Until this section, the lab scored <em>what</em> to fund, not <em>where</em> it can exist.
+          This is still not a GIS of U.S. basins. It encodes the Vision’s own geographic and resource tests:
+          capture must be co-located with storage or a pipeline; hydrogen needs water, not just gas;
+          CDR competes for energy, water, and land; pore space, biomass, and transport can be bid for by more than one pathway;
+          CO<sub>2</sub> pipelines already exist in some states and not others; methane work is the distributed exception.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Resource already in use</th>
+              <th>What the Vision says it is needed for</th>
+              <th>Where implementation fails</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pore space / mineral rights (DOI, Class VI)</td>
+              <td>Dedicated saline storage, DAC + storage, BiCRS, sometimes H<sub>2</sub> with CCS. Ch. 4 warns pathways can compete for the same pore space.</td>
+              <td>No characterized saline site, no CarbonSAFE linkage, or the pore space is already EOR. Prospective Atlas tonnes (8.328 Gt) are not the same as permitted commercial capacity.</td>
+            </tr>
+            <tr>
+              <td>Water (current irrigation, cities, cooling, drought)</td>
+              <td>H<sub>2</sub> pipes should sit where there is water and storage, not today’s gas laterals. CDR’s water demand competes with other uses.</td>
+              <td>Arid gas fields used as a “cheap H<sub>2</sub> or DAC” site. Leadership letter: that is 2022 logic, not 2050 logic.</td>
+            </tr>
+            <tr>
+              <td>Carbon-free electricity and transmission</td>
+              <td>Flexible DAC and CCS as demand on a clean grid. Conversion’s “tri-location” problem: CO<sub>2</sub>, cheap clean power, and a market are often in three places.</td>
+              <td>DAC or electrolytic H<sub>2</sub> on a gas-only node. Ch. 4: early DAC may not even be life-cycle negative before the grid is clean.</td>
+            </tr>
+            <tr>
+              <td>Land, biomass, USDA-relevant acres</td>
+              <td>BiCRS / biomass H<sub>2</sub> need sustainable biomass. CDR land competes with food and habitat.</td>
+              <td>Gigatonne biomass stories in places that already use the residue. No biomass surplus → that pathway is not implementable there.</td>
+            </tr>
+            <tr>
+              <td>Existing CO<sub>2</sub> pipes (5,000 miles, 13 states) vs everyone else</td>
+              <td>A mature industry in some regions. National-scale build-out is still required to move hundreds of millions of tonnes per year.</td>
+              <td>A capture plant with no nearby pipe and no storage is not “shovel-ready CCS.” It is a new corridor — Ch. 1 says engage before the shapefile, not after.</td>
+            </tr>
+            <tr>
+              <td>Small gas plants (65% of NGCC &lt; 2 Mt CO<sub>2</sub>/yr)</td>
+              <td>CCS economics were shown on ~2 Mt/yr blocks. Smaller units are unattractive at classical scale.</td>
+              <td>Most U.S. gas plants geographically cannot host flagship CCS without pretending they are Boundary Dam.</td>
+            </tr>
+            <tr>
+              <td>Oil &amp; gas wells and pipes already in the ground</td>
+              <td>~8 MMT methane; &gt;2 million wells; &gt;2 million miles of pipe. Methane repair and orphan plugging (BIL §40601) follow the existing footprint.</td>
+              <td>This is the rare pathway that <em>is</em> implementable almost everywhere that fossil infrastructure already exists. That is why it is the highest near-term ROI.</td>
+            </tr>
+            <tr>
+              <td>Basalts, serpentines, offshore pore space, ocean</td>
+              <td>Non-traditional storage and ocean CDR are geology- and governance-specific. NOAA on ocean; offshore CarbonSAFE is an expansion, not a default.</td>
+              <td>Mineralization or ocean CDR in a place without that geology or without governance is not a 2030 activation project.</td>
+            </tr>
+            <tr>
+              <td>Fenceline air, truck traffic, induced seismicity, brine</td>
+              <td>Extraction already contaminates water and can induce seismicity. Justice40 census-tract accounting. A route can die.</td>
+              <td>If the host community was not in the model before the corridor was drawn, procedural justice has already failed — wherever the geology is.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="chart-grid">
+          <article class="chart-card">
+            <h3>Storage: prospective vs actually stored vs needed</h3>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>RCSP stored</span><div class="hbar-track"><span class="hbar-fill" style="width:1%"></span></div><span>11 Mt</span></div>
+              <div class="hbar-row"><span>Global to 2020</span><div class="hbar-track"><span class="hbar-fill gold" style="width:10%"></span></div><span>&gt;200 Mt</span></div>
+              <div class="hbar-row"><span>Commercial by 2030</span><div class="hbar-track"><span class="hbar-fill ember" style="width:24%"></span></div><span>2,000 Mt</span></div>
+              <div class="hbar-row"><span>Atlas saline*</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>8,328 Mt</span></div>
+            </div>
+            <p class="chart-src">Source: Ch. 5. *Prospective onshore saline (NETL Atlas 2015) is not permitted injectivity. Most of the 200 Mt already stored was EOR, geographically tied to oilfields, not a national saline network. Geology is widespread; commercial, consented pore space is not.</p>
+          </article>
+          <article class="chart-card">
+            <h3>Geographic mismatch: gas CCS vs methane</h3>
+            <div class="hbar" aria-hidden="true">
+              <div class="hbar-row"><span>NGCC too small for CCS</span><div class="hbar-track"><span class="hbar-fill ember" style="width:65%"></span></div><span>65%</span></div>
+              <div class="hbar-row"><span>CO<sub>2</sub> pipes today</span><div class="hbar-track"><span class="hbar-fill gold" style="width:25%"></span></div><span>5,000 mi / 13 states</span></div>
+              <div class="hbar-row"><span>O&amp;G pipe network</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>&gt;2 million mi</span></div>
+              <div class="hbar-row"><span>Wells (active/abandoned)</span><div class="hbar-track"><span class="hbar-fill" style="width:100%"></span></div><span>&gt;2 million</span></div>
+            </div>
+            <p class="chart-src">Source: Ch. 2 and Ch. 5 and Ch. 8. CCS is hub-and-geology limited. Methane work follows pipes and wells that already exist. Those are different maps.</p>
+          </article>
+        </div>
+
         <h2 id="lab">Action lab — test a mode before you fund it</h2>
         <p>
           This is not an integrated assessment model. It applies the Vision’s published numbers to the three award questions
@@ -683,6 +774,24 @@
               <option value="eor">EOR (most of the historical 200 Mt; not the 2050 destination)</option>
               <option value="none">Captured but not stored</option>
             </select>
+
+            <label for="lab-site">Where is this project? (geography / current resource use)</label>
+            <select id="lab-site">
+              <option value="cluster" selected>Industrial cluster next to CarbonSAFE / saline (Ch. 2 FEED linkage)</option>
+              <option value="stranded">Small NGCC far from storage — typical of 65% of U.S. gas blocks</option>
+              <option value="arid">Gas supply, scarce water (bad 2050 siting for H₂ / DAC)</option>
+              <option value="trilocation">CO₂, cheap clean power, and the market are in three different places</option>
+              <option value="coalwaste">Coal community with wastes / produced water and a cleanup job</option>
+              <option value="methanefield">Existing wells and gas pipes (methane geography)</option>
+              <option value="ocean">Coastal / ocean CDR</option>
+              <option value="basalt">Basalt or serpentine mineralization geology</option>
+              <option value="fenceline">Disadvantaged census tract, corridor already drawn</option>
+            </select>
+            <label><input type="checkbox" id="res-water" /> Water is already fully allocated (drought, cities, irrigation, cooling)</label>
+            <label><input type="checkbox" id="res-pore" /> Pore space already used or bid (EOR, another hub, DAC vs CCS)</label>
+            <label><input type="checkbox" id="res-power" /> No spare carbon-free kWh or transmission</label>
+            <label><input type="checkbox" id="res-biomass" /> Biomass / land already claimed for food or fuel</label>
+            <label><input type="checkbox" id="res-consent" /> Host community was not in the model before the route existed</label>
           </fieldset>
 
           <div class="lab-box" style="border-style:solid;border-width:1px;border-radius:14px;background:#fffaf0;padding:0.85rem 1rem 1rem;">
@@ -692,12 +801,19 @@
               <div class="live-num"><b id="out-og">236</b><span>Oil &amp; gas GHGI 197 Mt CO₂e at GWP-25, rescaled</span></div>
               <div class="live-num"><b id="out-stored">0.95</b><span>Captured from this source, Mt/yr</span></div>
               <div class="live-num"><b id="out-resid">0.05</b><span>Residual from this source, Mt/yr (needs phase-out or CDR)</span></div>
+              <div class="live-num"><b id="out-geo">Check site</b><span>Implementable at this geography?</span></div>
+              <div class="live-num"><b id="out-draw">—</b><span>Highest resource conflict with current use</span></div>
             </div>
             <div class="hbar" aria-hidden="true">
               <div class="hbar-row"><span>Captured</span><div class="hbar-track"><span class="hbar-fill" id="bar-cap" style="width:95%"></span></div><span id="bar-cap-n">95%</span></div>
               <div class="hbar-row"><span>Residual</span><div class="hbar-track"><span class="hbar-fill ember" id="bar-res" style="width:5%"></span></div><span id="bar-res-n">5%</span></div>
               <div class="hbar-row"><span>vs 65 Mt/yr</span><div class="hbar-track"><span class="hbar-fill gold" id="bar-vs65" style="width:1.5%"></span></div><span id="bar-vs65-n">1.5%</span></div>
+              <div class="hbar-row"><span>Water conflict</span><div class="hbar-track"><span class="hbar-fill ember" id="bar-water" style="width:10%"></span></div><span id="bar-water-n">low</span></div>
+              <div class="hbar-row"><span>Pore conflict</span><div class="hbar-track"><span class="hbar-fill gold" id="bar-pore" style="width:20%"></span></div><span id="bar-pore-n">med</span></div>
+              <div class="hbar-row"><span>Power conflict</span><div class="hbar-track"><span class="hbar-fill" id="bar-power" style="width:15%"></span></div><span id="bar-power-n">low</span></div>
+              <div class="hbar-row"><span>Consent risk</span><div class="hbar-track"><span class="hbar-fill ember" id="bar-consent" style="width:10%"></span></div><span id="bar-consent-n">low</span></div>
             </div>
+            <p class="lab-verdict" id="out-geo-note"></p>
             <p class="lab-verdict" id="out-verdict"></p>
             <p class="chart-src" id="out-math"></p>
           </div>
@@ -1282,6 +1398,77 @@
       if (!methane) fails.push("skipping methane this decade (Ch. 8 vision is eliminate non-trivial leaks by 2030)");
       if (!storage && industry) fails.push("industrial capture with no saline/Class VI path");
 
+      const site = document.getElementById("lab-site").value;
+      const waterTight = document.getElementById("res-water").checked || site === "arid";
+      const poreTight = document.getElementById("res-pore").checked;
+      const noPower = document.getElementById("res-power").checked;
+      const biomassTight = document.getElementById("res-biomass").checked;
+      const noConsent = document.getElementById("res-consent").checked || site === "fenceline";
+      const farStorage = site === "stranded" || site === "trilocation";
+
+      let waterN = 12, poreN = 18, powerN = 12, consentN = 12;
+      if (h2new || dacgas || dacclean) waterN += 38;
+      if (waterTight) waterN += 42;
+      if (industry || storage || dacgas || dacclean) poreN += 28;
+      if (poreTight || store === "eor") poreN += 40;
+      if (dacgas || dacclean || fuels) powerN += 38;
+      if (noPower || site === "arid") powerN += 35;
+      if (farStorage && (industry || gasccs || storage)) consentN += 40;
+      if (noConsent) consentN += 48;
+      waterN = Math.min(waterN, 100);
+      poreN = Math.min(poreN, 100);
+      powerN = Math.min(powerN, 100);
+      consentN = Math.min(consentN, 100);
+      const band = (n) => n >= 70 ? "high" : n >= 40 ? "med" : "low";
+      document.getElementById("bar-water").style.width = waterN + "%";
+      document.getElementById("bar-pore").style.width = poreN + "%";
+      document.getElementById("bar-power").style.width = powerN + "%";
+      document.getElementById("bar-consent").style.width = consentN + "%";
+      document.getElementById("bar-water-n").textContent = band(waterN);
+      document.getElementById("bar-pore-n").textContent = band(poreN);
+      document.getElementById("bar-power-n").textContent = band(powerN);
+      document.getElementById("bar-consent-n").textContent = band(consentN);
+
+      const geoFails = [];
+      if (farStorage && (industry || gasccs)) geoFails.push("Ch. 2: FEEDs must sit on storage or a real pipeline, not a map polygon; 65% of NGCC blocks are already the wrong size");
+      if ((site === "arid" || waterTight) && (h2new || dacgas || dacclean)) geoFails.push("Water is already in use. Leadership letter: H₂/DAC belong on water + later clean power, not a dry gas field");
+      if (site === "trilocation" && fuels) geoFails.push("Ch. 3 tri-location: CO₂, cheap clean kWh, and the product market are split — conversion is not one plant here");
+      if (site === "ocean" && (industry || gasccs || storage)) geoFails.push("Ocean CDR is not industrial CCS. NOAA-grade governance; not a 2030 Class VI activation site");
+      if (site === "basalt" && (gasccs || h2new)) geoFails.push("Basalt/serpentine mineralization is geology-specific. It does not turn a gas plant into a hub");
+      if (noConsent) geoFails.push("Ch. 1: engage before the shapefile. A drawn corridor on a DA tract is not implementable until the community can change or kill it");
+      if (poreTight && (storage || industry || dacgas || dacclean)) geoFails.push("Ch. 4: this pore space is already bid. That is path dependence, not spare geology");
+      if (noPower && (dacgas || dacclean || fuels)) geoFails.push("No spare carbon-free kWh. Early DAC may not be life-cycle negative; conversion needs the clean-power vertex of tri-location");
+      if (biomassTight && h2new) geoFails.push("Biomass/land already claimed. BiCRS or biomass H₂ is not additional here");
+      if (site === "methanefield" && !methane && (gasccs || h2new)) geoFails.push("This map is wells and gas pipes. That supports methane repair, not a new CCS/H₂ demand sink");
+      if (site === "fenceline" && (gasccs || h2new || farStorage)) geoFails.push("Fenceline burden plus new infrastructure fails the census-tract test unless benefits land here first");
+
+      let geoLabel = "Yes";
+      let geoNote = "Site matches a geography the Vision can actually use.";
+      if (site === "cluster" && industry && store === "saline" && !poreTight && !noConsent) {
+        geoLabel = "Yes — hub";
+        geoNote = "Industrial cluster + CarbonSAFE/saline is the FEED linkage Ch. 2 already started in 2019. Spend scarce demo slots here.";
+      } else if (site === "methanefield" && methane && !gasccs && !h2new) {
+        geoLabel = "Yes — methane";
+        geoNote = "Wells and pipes already exist. Methane repair and §40601 plugging follow current use instead of adding a new draw on water or pore space.";
+      } else if (site === "coalwaste" && !h2new && !dacgas) {
+        geoLabel = "Yes — cleanup";
+        geoNote = "Ch. 7: minerals from wastes and produced water, with water-quality and reclamation acres as the metric. Not a license for a new sacrifice zone.";
+      } else if (site === "basalt" && !gasccs && !h2new) {
+        geoLabel = "Narrow";
+        geoNote = "Mineralization only where that rock exists. Demonstration, not a national 65 Mt/yr activation plan.";
+      } else if (site === "ocean") {
+        geoLabel = "Not 2030";
+        geoNote = "Ocean CDR needs NOAA-grade humility. Do not count it toward this decade’s storage activation.";
+      }
+      if (geoFails.length) {
+        geoLabel = "Not here";
+        geoNote = "Not implementable on this geography / current resource use. " + geoFails.join(" ");
+      }
+      document.getElementById("out-geo").textContent = geoLabel;
+      document.getElementById("out-geo-note").innerHTML = "<strong>Siting screen:</strong> " + geoNote;
+      const draws = [["water", waterN], ["pore space", poreN], ["clean power", powerN], ["consent", consentN]].sort((a, b) => b[1] - a[1]);
+      document.getElementById("out-draw").textContent = draws[0][1] >= 40 ? draws[0][0] : "none high";
+
       const keeps = [];
       if (methane) keeps.push("methane repair");
       if (industry) keeps.push("industrial process CCS");
@@ -1302,10 +1489,11 @@
       let math = "Math: 8 MMT CH₄ × " + gwp + " = " + fmt(ch4) + " MMT CO₂e. GHGI oil & gas 197 × (" + gwp + "/25) = " + fmt(og) + ". Source " + source.toFixed(1) + " Mt/yr × " + Math.round(capture * 100) + "% = " + fmt(stored) + " captured, " + fmt(resid) + " residual.";
       if (store !== "saline") math += " Captured tonnes are not counted as climate storage under this screen unless destination is saline.";
       if (gwp === 82.5) math += " GWP-20 82.5 is IPCC AR6 (fossil methane), not a FECM figure — the Vision only contrasts EPA 25 with AR6 ~30.";
+      math += " Resource bars are a qualitative conflict index (current use vs this mode), not acre-feet or kWh. They rise when the Vision says that resource is scarce or already claimed at this site.";
       document.getElementById("out-math").textContent = math;
     }
 
-    ["mode-methane","mode-industry","mode-storage","mode-gasccs","mode-h2new","mode-fuels","mode-dacgas","mode-dacclean","lab-gwp","lab-capture","lab-source","lab-store"].forEach((id) => {
+    ["mode-methane","mode-industry","mode-storage","mode-gasccs","mode-h2new","mode-fuels","mode-dacgas","mode-dacclean","lab-gwp","lab-capture","lab-source","lab-store","lab-site","res-water","res-pore","res-power","res-biomass","res-consent"].forEach((id) => {
       const el = document.getElementById(id);
       el.addEventListener("input", updateLab);
       el.addEventListener("change", updateLab);
