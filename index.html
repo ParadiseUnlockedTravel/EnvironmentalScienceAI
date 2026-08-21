@@ -40,7 +40,7 @@
       font-family: "IBM Plex Sans", system-ui, sans-serif;
       line-height: 1.55;
     }
-    a { color: var(--moss); }
+    a { color: var(--moss); text-decoration-thickness: from-font; text-underline-offset: 0.18em; }
     a:hover { color: var(--moss-2); }
     :focus-visible {
       outline: 3px solid var(--moss-2);
@@ -88,10 +88,11 @@
     }
     nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
     nav a {
-      text-decoration: none;
       color: var(--ink-soft);
       font-size: 0.86rem;
       font-weight: 500;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
     }
     nav a:hover { color: var(--ink); }
     .hero {
@@ -238,9 +239,18 @@
       border-radius: 999px;
       background: #dce8df;
       color: var(--moss);
+      border: 1px solid var(--moss);
     }
-    .pill.risk { background: #f4d4c6; color: #8a2d12; }
-    .pill.mixed { background: #efe3b8; color: #6b5410; }
+    .pill.risk {
+      background: #f4d4c6;
+      color: #8a2d12;
+      border: 1px dashed #8a2d12;
+    }
+    .pill.mixed {
+      background: #efe3b8;
+      color: #6b5410;
+      border: 1px dotted #6b5410;
+    }
     .pin {
       display: inline-block;
       font-size: 0.72rem;
@@ -282,7 +292,12 @@
       margin: 1.15rem 0 0.4rem;
     }
     .laid p, .laid li { color: var(--cream); }
-    .laid a { color: var(--gold); text-underline-offset: 0.18em; }
+    .laid a {
+      color: var(--gold);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.18em;
+    }
     .laid ul { margin: 0.3rem 0 0.85rem; }
     .legend {
       display: flex;
@@ -352,9 +367,29 @@
     .hbar-row span:first-child { font-size: 0.78rem; color: var(--ink-soft); }
     .hbar-row span:last-child { font-size: 0.78rem; font-weight: 600; text-align: right; }
     .hbar-track { height: 1.15rem; background: var(--track); border-radius: 999px; overflow: hidden; }
-    .hbar-fill { display: block; height: 1.15rem; min-height: 1.15rem; border-radius: 999px; background: var(--moss); }
-    .hbar-fill.ember { background: var(--ember); }
-    .hbar-fill.gold { background: var(--gold-fill); }
+    .hbar-fill {
+      display: block;
+      height: 1.15rem;
+      min-height: 1.15rem;
+      border-radius: 999px;
+      background: var(--moss);
+    }
+    .hbar-fill.ember {
+      background-color: var(--ember);
+      background-image: repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.4) 0 3px,
+        transparent 3px 8px
+      );
+    }
+    .hbar-fill.gold {
+      background-color: var(--gold-fill);
+      background-image: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.35) 0 2px,
+        transparent 2px 6px
+      );
+    }
     .chart-card svg { width: 100%; height: auto; display: block; }
     .lab {
       display: grid;
@@ -391,7 +426,12 @@
       padding: 2rem 0 2.6rem;
       font-size: 0.9rem;
     }
-    footer a { color: var(--gold); text-underline-offset: 0.18em; }
+    footer a {
+      color: var(--gold);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.18em;
+    }
     .cite {
       background: var(--card);
       border: 1px solid var(--rule);
@@ -619,8 +659,8 @@
         <h2 id="metrics">Numbers in the Vision, plotted</h2>
         <p>
           Every bar and point below is a number the April 2022 document publishes or cites.
-          Axes are labeled. Captions name the page or chapter. This is not a re-plot of FECM’s figures;
-          it is the same statistics in a form a decision-maker can scan.
+          Axes are labeled. Captions name the page or chapter. Each bar has a name and a value, so the figure still reads if green, gold, and ember look the same; hatch and stripe are a second cue.
+          This is not a re-plot of FECM’s figures; it is the same statistics in a form a decision-maker can scan.
         </p>
 
         <div class="chart-grid">
@@ -668,10 +708,10 @@
               <text x="540" y="252" font-size="12" fill="#2f433b">2040</text>
               <text x="78" y="22" font-size="12" fill="#2f433b">Million tonnes CO₂ / year injectivity</text>
               <polyline fill="none" stroke="#184a38" stroke-width="3" points="100,228 250,203 400,124 550,40"/>
-              <circle cx="100" cy="228" r="5" fill="#9b3410"/><text x="110" y="224" font-size="11" fill="#10211a">5</text>
-              <circle cx="250" cy="203" r="5" fill="#9b3410"/><text x="260" y="198" font-size="11" fill="#10211a">65</text>
-              <circle cx="400" cy="124" r="5" fill="#9b3410"/><text x="410" y="120" font-size="11" fill="#10211a">250</text>
-              <circle cx="550" cy="40" r="5" fill="#9b3410"/><text x="512" y="36" font-size="11" fill="#10211a">450</text>
+              <circle cx="100" cy="228" r="5" fill="#9b3410" stroke="#10211a" stroke-width="1.5"/><text x="110" y="224" font-size="11" fill="#10211a">5</text>
+              <circle cx="250" cy="203" r="5" fill="#9b3410" stroke="#10211a" stroke-width="1.5"/><text x="260" y="198" font-size="11" fill="#10211a">65</text>
+              <circle cx="400" cy="124" r="5" fill="#9b3410" stroke="#10211a" stroke-width="1.5"/><text x="410" y="120" font-size="11" fill="#10211a">250</text>
+              <circle cx="550" cy="40" r="5" fill="#9b3410" stroke="#10211a" stroke-width="1.5"/><text x="512" y="36" font-size="11" fill="#10211a">450</text>
             </svg>
             <p class="chart-src">Source: Ch. 5 Figure 5.1 labels (5 / 65 / 250 / 450 Mt/yr) with 2030 = 65 Mt/yr also in chapter prose (Larson et al., 2020). Years 2025/2035/2040 follow the figure’s Activation / Expansion / At-scale markers.</p>
           </article>
