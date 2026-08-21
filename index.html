@@ -11,20 +11,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,640;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --ink: #101814;
-      --ink-soft: #3a4a42;
-      --paper: #f3ead8;
-      --paper-2: #e7dcc4;
+      --ink: #10211a;
+      --ink-soft: #2f433b;
+      --paper: #f7f0de;
+      --paper-2: #ebe2cc;
+      --card: #fffdf6;
       --deep: #07110e;
-      --moss: #1f4f3d;
-      --moss-2: #2f6b52;
-      --ember: #c24a1a;
-      --gold: #c9a227;
-      --rule: rgba(16, 24, 20, 0.14);
+      --hero: #0d1c16;
+      --panel-dark: #10241c;
+      --laid: #1a140c;
+      --moss: #184a38;
+      --moss-2: #1b6b4c;
+      --ember: #9b3410;
+      --gold: #f0d060;
+      --gold-fill: #6b5208;
+      --cream: #f4ead4;
+      --muted-dark: #d2c6a8;
+      --track: #eee4cc;
+      --rule: rgba(16, 24, 20, 0.2);
       --max: 72rem;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; color-scheme: light; }
     body {
       margin: 0;
       color: var(--ink);
@@ -33,6 +41,18 @@
       line-height: 1.55;
     }
     a { color: var(--moss); }
+    a:hover { color: var(--moss-2); }
+    :focus-visible {
+      outline: 3px solid var(--moss-2);
+      outline-offset: 3px;
+    }
+    .hero :focus-visible,
+    .brief :focus-visible,
+    .laid :focus-visible,
+    .callout :focus-visible,
+    footer :focus-visible {
+      outline-color: var(--gold);
+    }
     .stripes {
       display: flex;
       height: 14px;
@@ -76,8 +96,8 @@
     nav a:hover { color: var(--ink); }
     .hero {
       background:
-        radial-gradient(1200px 400px at 80% -10%, rgba(194, 74, 26, 0.18), transparent 50%),
-        linear-gradient(180deg, #0d1c16, #07110e 80%);
+        radial-gradient(1200px 400px at 80% -10%, rgba(155, 52, 16, 0.28), transparent 50%),
+        linear-gradient(180deg, var(--hero), var(--deep) 80%);
       color: var(--paper);
       padding: 4.2rem 0 3.4rem;
     }
@@ -101,7 +121,7 @@
     .lede {
       max-width: 42rem;
       font-size: 1.15rem;
-      color: #d9d0bc;
+      color: var(--cream);
       margin: 0 0 1.8rem;
     }
     .meta {
@@ -109,7 +129,7 @@
       flex-wrap: wrap;
       gap: 0.6rem 1.4rem;
       font-size: 0.86rem;
-      color: #b7c4ba;
+      color: var(--muted-dark);
     }
     .actions { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1.8rem; }
     .btn {
@@ -133,7 +153,7 @@
       color: var(--moss);
       border: 1px solid var(--moss);
     }
-    .btn-ghost { background: transparent; color: var(--paper); border: 1px solid rgba(243, 234, 216, 0.35); }
+    .btn-ghost { background: transparent; color: var(--paper); border: 2px solid var(--muted-dark); }
     .discuss-actions {
       display: flex;
       flex-wrap: wrap;
@@ -171,7 +191,7 @@
     .grid-3 { grid-template-columns: repeat(3, 1fr); }
     .grid-2 { grid-template-columns: 1fr 1fr; }
     .card {
-      background: #fffaf0;
+      background: var(--card);
       border: 1px solid var(--rule);
       border-radius: 14px;
       padding: 1rem 1.05rem 0.85rem;
@@ -187,7 +207,7 @@
     ul { margin: 0 0 1rem; padding-left: 1.15rem; }
     li { margin: 0 0 0.45rem; }
     .callout {
-      background: #10241c;
+      background: var(--panel-dark);
       color: var(--paper);
       border-radius: 16px;
       padding: 1.2rem 1.3rem;
@@ -199,7 +219,7 @@
       border-collapse: collapse;
       font-size: 0.92rem;
       margin: 0.8rem 0 1.4rem;
-      background: #fffaf0;
+      background: var(--card);
     }
     th, td {
       text-align: left;
@@ -230,7 +250,7 @@
       white-space: nowrap;
     }
     .brief {
-      background: #10241c;
+      background: var(--panel-dark);
       color: var(--paper);
       border-radius: 16px;
       padding: 1.35rem 1.4rem 1.2rem;
@@ -241,15 +261,15 @@
       margin: 0 0 0.7rem;
       font-size: 1.35rem;
     }
-    .brief p, .brief li { color: #e7deca; }
+    .brief p, .brief li { color: var(--cream); }
     .brief ol { margin: 0.4rem 0 0.9rem; padding-left: 1.2rem; }
     .laid {
-      background: #1a140c;
+      background: var(--laid);
       color: var(--paper);
       border-radius: 16px;
       padding: 1.4rem 1.45rem 1.25rem;
       margin: 0 0 2rem;
-      border: 1px solid rgba(201, 162, 39, 0.4);
+      border: 1px solid var(--gold);
     }
     .laid h2 {
       color: var(--gold);
@@ -261,8 +281,8 @@
       font-size: 1.08rem;
       margin: 1.15rem 0 0.4rem;
     }
-    .laid p, .laid li { color: #e7deca; }
-    .laid a { color: var(--gold); }
+    .laid p, .laid li { color: var(--cream); }
+    .laid a { color: var(--gold); text-underline-offset: 0.18em; }
     .laid ul { margin: 0.3rem 0 0.85rem; }
     .legend {
       display: flex;
@@ -273,7 +293,7 @@
       color: var(--ink-soft);
     }
     .note {
-      background: #fffaf0;
+      background: var(--card);
       border-left: 4px solid var(--moss);
       padding: 0.9rem 1rem;
       margin: 1rem 0 1.4rem;
@@ -290,7 +310,7 @@
     .thread .meta-line { font-size: 0.8rem; color: var(--ink-soft); margin: 0 0 0.4rem; }
     .thread p { margin: 0; font-size: 0.92rem; }
     .thread-featured {
-      background: #fffaf0;
+      background: var(--card);
       border: 1px solid var(--rule);
       border-radius: 14px;
       padding: 1rem 1.05rem 0.9rem;
@@ -316,7 +336,7 @@
       margin: 1.1rem 0 1.6rem;
     }
     .chart-card {
-      background: #fffaf0;
+      background: var(--card);
       border: 1px solid var(--rule);
       border-radius: 14px;
       padding: 1rem 1.05rem 0.9rem;
@@ -331,10 +351,10 @@
     .hbar-row { display: grid; grid-template-columns: 7.2rem 1fr 3.6rem; gap: 0.45rem; align-items: center; }
     .hbar-row span:first-child { font-size: 0.78rem; color: var(--ink-soft); }
     .hbar-row span:last-child { font-size: 0.78rem; font-weight: 600; text-align: right; }
-    .hbar-track { height: 1.15rem; background: #d9ccb0; border-radius: 999px; overflow: hidden; }
+    .hbar-track { height: 1.15rem; background: var(--track); border-radius: 999px; overflow: hidden; }
     .hbar-fill { display: block; height: 1.15rem; min-height: 1.15rem; border-radius: 999px; background: var(--moss); }
     .hbar-fill.ember { background: var(--ember); }
-    .hbar-fill.gold { background: var(--gold); }
+    .hbar-fill.gold { background: var(--gold-fill); }
     .chart-card svg { width: 100%; height: auto; display: block; }
     .lab {
       display: grid;
@@ -342,10 +362,10 @@
       gap: 1rem;
       margin: 1rem 0 1.5rem;
     }
-    fieldset.lab-box {
+    .lab-box, fieldset.lab-box {
       border: 1px solid var(--rule);
       border-radius: 14px;
-      background: #fffaf0;
+      background: var(--card);
       padding: 0.85rem 1rem 1rem;
       margin: 0;
     }
@@ -357,9 +377,9 @@
     .lab-box label { display: flex; gap: 0.45rem; align-items: flex-start; font-size: 0.9rem; margin: 0.35rem 0; }
     .lab-box select, .lab-box input[type="range"] { width: 100%; margin: 0.2rem 0 0.55rem; }
     .live-nums { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin: 0.4rem 0 0.8rem; }
-    .live-num { background: #10241c; color: var(--paper); border-radius: 12px; padding: 0.7rem 0.8rem; }
+    .live-num { background: var(--panel-dark); color: var(--paper); border-radius: 12px; padding: 0.7rem 0.8rem; }
     .live-num b { display: block; font-family: Fraunces, Georgia, serif; font-size: 1.15rem; color: var(--gold); }
-    .live-num span { font-size: 0.75rem; color: #c9d3cc; }
+    .live-num span { font-size: 0.75rem; color: var(--muted-dark); }
     .lab-verdict { font-size: 0.95rem; margin: 0; }
     @media (max-width: 860px) {
       .chart-grid, .lab { grid-template-columns: 1fr; }
@@ -367,13 +387,13 @@
     }
     footer {
       background: var(--deep);
-      color: #c9d3cc;
+      color: var(--muted-dark);
       padding: 2rem 0 2.6rem;
       font-size: 0.9rem;
     }
-    footer a { color: var(--gold); }
+    footer a { color: var(--gold); text-underline-offset: 0.18em; }
     .cite {
-      background: #fffaf0;
+      background: var(--card);
       border: 1px solid var(--rule);
       border-radius: 12px;
       padding: 0.85rem 1rem;
@@ -422,7 +442,18 @@
       body { background: #fff; }
       .hero, .brief, .laid, .callout, footer { background: #fff !important; color: #111 !important; }
       .panel { background: #fff; }
-      a { color: #111; }
+      a, .laid a, footer a, .brief a { color: #111 !important; }
+    }
+    @media (prefers-contrast: more) {
+      :root {
+        --ink: #000000;
+        --ink-soft: #1a1a1a;
+        --gold: #ffe58a;
+        --gold-fill: #4a3800;
+        --ember: #7a2408;
+        --moss: #08382a;
+        --rule: rgba(0, 0, 0, 0.45);
+      }
     }
   </style>
 </head>
@@ -619,28 +650,28 @@
           <article class="chart-card">
             <h3>Storage injectivity pathway (line)</h3>
             <svg viewBox="0 0 640 280" role="img" aria-label="CO2 injectivity rising from 5 million tonnes per year around 2025 to 65 in 2030, 250 in 2035, and 450 in 2040">
-              <rect x="0" y="0" width="640" height="280" fill="#fffaf0"/>
-              <g stroke="rgba(16,24,20,0.14)" stroke-width="1">
+              <rect x="0" y="0" width="640" height="280" fill="#fffdf6"/>
+              <g stroke="rgba(16,24,20,0.2)" stroke-width="1">
                 <line x1="70" y1="40" x2="70" y2="230"/>
                 <line x1="70" y1="230" x2="610" y2="230"/>
                 <line x1="70" y1="203" x2="610" y2="203"/>
                 <line x1="70" y1="124" x2="610" y2="124"/>
                 <line x1="70" y1="40" x2="610" y2="40"/>
               </g>
-              <text x="8" y="44" font-size="11" fill="#3a4a42">450</text>
-              <text x="8" y="128" font-size="11" fill="#3a4a42">250</text>
-              <text x="14" y="207" font-size="11" fill="#3a4a42">65</text>
-              <text x="22" y="234" font-size="11" fill="#3a4a42">0</text>
-              <text x="78" y="252" font-size="12" fill="#3a4a42">2025</text>
-              <text x="232" y="252" font-size="12" fill="#3a4a42">2030</text>
-              <text x="386" y="252" font-size="12" fill="#3a4a42">2035</text>
-              <text x="540" y="252" font-size="12" fill="#3a4a42">2040</text>
-              <text x="78" y="22" font-size="12" fill="#3a4a42">Million tonnes CO₂ / year injectivity</text>
-              <polyline fill="none" stroke="#1f4f3d" stroke-width="3" points="100,228 250,203 400,124 550,40"/>
-              <circle cx="100" cy="228" r="5" fill="#c24a1a"/><text x="110" y="224" font-size="11" fill="#101814">5</text>
-              <circle cx="250" cy="203" r="5" fill="#c24a1a"/><text x="260" y="198" font-size="11" fill="#101814">65</text>
-              <circle cx="400" cy="124" r="5" fill="#c24a1a"/><text x="410" y="120" font-size="11" fill="#101814">250</text>
-              <circle cx="550" cy="40" r="5" fill="#c24a1a"/><text x="512" y="36" font-size="11" fill="#101814">450</text>
+              <text x="8" y="44" font-size="11" fill="#2f433b">450</text>
+              <text x="8" y="128" font-size="11" fill="#2f433b">250</text>
+              <text x="14" y="207" font-size="11" fill="#2f433b">65</text>
+              <text x="22" y="234" font-size="11" fill="#2f433b">0</text>
+              <text x="78" y="252" font-size="12" fill="#2f433b">2025</text>
+              <text x="232" y="252" font-size="12" fill="#2f433b">2030</text>
+              <text x="386" y="252" font-size="12" fill="#2f433b">2035</text>
+              <text x="540" y="252" font-size="12" fill="#2f433b">2040</text>
+              <text x="78" y="22" font-size="12" fill="#2f433b">Million tonnes CO₂ / year injectivity</text>
+              <polyline fill="none" stroke="#184a38" stroke-width="3" points="100,228 250,203 400,124 550,40"/>
+              <circle cx="100" cy="228" r="5" fill="#9b3410"/><text x="110" y="224" font-size="11" fill="#10211a">5</text>
+              <circle cx="250" cy="203" r="5" fill="#9b3410"/><text x="260" y="198" font-size="11" fill="#10211a">65</text>
+              <circle cx="400" cy="124" r="5" fill="#9b3410"/><text x="410" y="120" font-size="11" fill="#10211a">250</text>
+              <circle cx="550" cy="40" r="5" fill="#9b3410"/><text x="512" y="36" font-size="11" fill="#10211a">450</text>
             </svg>
             <p class="chart-src">Source: Ch. 5 Figure 5.1 labels (5 / 65 / 250 / 450 Mt/yr) with 2030 = 65 Mt/yr also in chapter prose (Larson et al., 2020). Years 2025/2035/2040 follow the figure’s Activation / Expansion / At-scale markers.</p>
           </article>
@@ -954,7 +985,7 @@
             <label><input type="checkbox" id="res-consent" /> Host community was not in the model before the route existed</label>
           </fieldset>
 
-          <div class="lab-box" style="border-style:solid;border-width:1px;border-radius:14px;background:#fffaf0;padding:0.85rem 1rem 1rem;">
+          <div class="lab-box">
             <h3 style="margin-top:0;">Live result</h3>
             <div class="live-nums">
               <div class="live-num"><b id="out-ch4">240</b><span id="out-ch4-cap">8 MMT CH₄ × GWP-30, million t CO₂e</span></div>
