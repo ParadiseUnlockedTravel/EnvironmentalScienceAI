@@ -8,6 +8,10 @@ Independent review of the U.S. Department of Energy Office of Fossil Energy and 
 
 The page is a decision-maker brief of the Vision: lock-in test, chapter cites, claim ledger, sourced bar and line charts, an interactive action lab, and a 21 August 2026 docket check of what changed after April 2022. The Vision reading is not a live award list; check current DOE and EPA dockets before treating any project as real.
 
+## Disclaimer
+
+Paradise Unlocked Travel is not responsible for this output or for any implementation based on it. This page is an independent reading of a public DOE document, prepared with an AI system. It is not legal, engineering, financial, tax, or investment advice; not an official DOE or EPA position; and not a warranty of completeness or accuracy. Anyone who uses this page does so at their own risk. Verify every number, citation, and project status against primary sources before acting.
+
 ## Cite this page
 
 APA 7th (environmental science):
