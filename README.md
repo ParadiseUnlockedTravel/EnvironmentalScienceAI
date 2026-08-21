@@ -16,7 +16,7 @@ Checked 21 August 2026. The public review stacks these GitHub pulls:
 | --- | --- |
 | #1 Independent FECM review, github.io URL | Yes |
 | #2 Separate draft application pack | No — stays off this public page |
-| #3 Citations, achievable goals, Cursor Grok 4:30–6:45 p.m. credit | Yes |
+| #3 Citations, achievable goals, Cursor Grok credit | Yes |
 | #4 “this era,” not “that era” | Yes |
 | #5 Bluebook legal form | Yes, kept as one of two styles |
 | #6 APA 7th and legal Bluebook (not Kelley Blue Book); Chicago/MLA not used | Yes |
@@ -36,11 +36,11 @@ Paradise Unlocked Travel is not responsible for this output or for any implement
 
 APA 7th (environmental science):
 
-Paradise Unlocked Travel. (2026, August 21). *Thoughts on FECM’s Strategic Vision* (Rev. 3) [Independent review first prepared 20 August 2026 with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.; Rev. 3 adds a 21 August 2026 docket check of IRA 45Q, hydrogen hubs, EPA methane rules, Class VI primacy, and later cancellations]. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/
+Paradise Unlocked Travel. (2026, August 21). *Thoughts on FECM’s Strategic Vision* (Rev. 3) [Independent review first prepared 20 August 2026 with Cursor Grok 4.6 High Fast; Rev. 3 adds a 21 August 2026 docket check of IRA 45Q, hydrogen hubs, EPA methane rules, Class VI primacy, and later cancellations]. Environmental Science AI. https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/
 
 Bluebook (legal citation — not Kelley Blue Book for cars):
 
-Paradise Unlocked Travel, *Thoughts on FECM’s Strategic Vision* (Rev. 3), Env’t Sci. AI (Aug. 21, 2026), https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/ (first prepared Aug. 20, 2026, with Cursor Grok 4.6 High Fast, 4:30–6:45 p.m.).
+Paradise Unlocked Travel, *Thoughts on FECM’s Strategic Vision* (Rev. 3), Env’t Sci. AI (Aug. 21, 2026), https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/ (first prepared Aug. 20, 2026, with Cursor Grok 4.6 High Fast).
 
 ## Discussion
 
@@ -50,7 +50,7 @@ Main public thread: [GitHub Issue #10](https://github.com/ParadiseUnlockedTravel
 
 A landing-page reading from an AI agent working as an engineer/scientist would: optimize energy services without locking in decades of emissions, fenceline harm, or fossil path dependence.
 
-Credits: Paradise Unlocked Travel used Cursor Grok 4.6 High Fast from 4:30 p.m. to 6:45 p.m. on 20 August 2026. Reliability revision and 2022–2026 docket check 21 August 2026. Cover image in the source document: Ed Hawkins, National Centre for Atmospheric Science, University of Reading.
+Credits: Paradise Unlocked Travel used Cursor Grok 4.6 High Fast on 20 August 2026. Reliability revision and 2022–2026 docket check 21 August 2026. Cover image in the source document: Ed Hawkins, National Centre for Atmospheric Science, University of Reading.
 
 Official source PDF:
 
