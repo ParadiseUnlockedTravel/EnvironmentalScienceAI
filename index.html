@@ -1338,6 +1338,7 @@
         }).join("");
       })
       .catch(() => {
+        if (!commentList) return;
         commentList.innerHTML = "<p>Comments could not be loaded here. Open <a href=\"" + ISSUE_URL + "\">Issue #10</a> on GitHub.</p>";
       });
 
@@ -1364,6 +1365,7 @@
         }).join("");
       })
       .catch(() => {
+        if (!threadList) return;
         threadList.innerHTML = "<p>Other threads could not be loaded here. The main discussion is <a href=\"" + ISSUE_URL + "\">Issue #10</a>.</p>";
       });
 
