@@ -6,7 +6,7 @@ Independent review of the U.S. Department of Energy Office of Fossil Energy and 
 
 **https://paradiseunlockedtravel.github.io/EnvironmentalScienceAI/**
 
-The page is a decision-maker brief of the Vision: lock-in test, chapter cites, claim ledger, and realistic near-term goals. It is a reading of the April 2022 document, not a 2026 program audit.
+The page is a decision-maker brief of the Vision: lock-in test, chapter cites, claim ledger, sourced bar and line charts, and an interactive action lab. It is a reading of the April 2022 document, not a 2026 program audit.
 
 ## Cite this page
 
