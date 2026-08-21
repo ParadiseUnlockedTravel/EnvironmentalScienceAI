@@ -20,7 +20,7 @@ Paradise Unlocked Travel, *Thoughts on FECMâ€™s Strategic Vision* (Rev. 2), Envâ
 
 ## Discussion
 
-Public comments are GitHub Issues titled `Discussion:` (GitHub username is the name). There is no email contact form.
+Main public thread: [GitHub Issue #10](https://github.com/ParadiseUnlockedTravel/EnvironmentalScienceAI/issues/10). Additional topics can use Issues titled `Discussion:` (GitHub username is the name). There is no email contact form.
 
 ## What this is
 
